@@ -1,5 +1,4 @@
-#include <bsp.h>
-#include <RpmBarDisplay.h>
+#include "RpmBarDisplay.h"
 
 RpmBarDisplay::RpmBarDisplay(void)
 {

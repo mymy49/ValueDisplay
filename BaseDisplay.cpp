@@ -1,5 +1,4 @@
-#include <bsp.h>
-#include <BaseDisplay.h>
+#include "BaseDisplay.h"
 #include <string.h>
 
 BaseDisplay::BaseDisplay(void)

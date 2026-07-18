@@ -1,6 +1,6 @@
-#include <bsp.h>
-#include <ValueDisplay.h>
+#include "ValueDisplay.h"
 #include <string.h>
+#include <stdio.h>
 
 ValueDisplay::ValueDisplay()
 {

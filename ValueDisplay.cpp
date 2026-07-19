@@ -102,7 +102,6 @@ void ValueDisplay::drawValue(float value)
 	mFb->setBackgroundColor(mValueBgColor);
 	mFb->setFont(*mValueFont);
 	mFb->setBrushColor(mValueColor);
-	mFb->setFont(*mValueFont);
 	mFb->clear();
 	mFb->drawString(mValuePos, str);
 	mLcd->drawBitmap(area.getPosition(), mFb->getBitmap());

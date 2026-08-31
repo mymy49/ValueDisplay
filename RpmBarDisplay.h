@@ -5,10 +5,10 @@
  * See the file "LICENSE" in the main directory of this archive for more details.
  */
 
-#ifndef __H_
-#define VALUE_DISPLAY__H_
+#ifndef RPM_BAR_DISPLAY__H_
+#define RPM_BAR_DISPLAY__H_
 
-#include <TurtleShip.h>
+#include <TurtleShip/TurtleShip.h>
 
 #include "BaseDisplay.h"
 

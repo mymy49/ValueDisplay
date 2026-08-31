@@ -8,7 +8,7 @@
 #ifndef BASE_DISPLAY__H_
 #define BASE_DISPLAY__H_
 
-#include <TurtleShip.h>
+#include <TurtleShip/TurtleShip.h>
 
 class BaseDisplay
 {
@@ -36,6 +36,8 @@ public :
 	void setPosition(Position pos);
 
 	void setBgColor(Color color);
+
+	void setBgColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
 
 	Position getPosition(void);
 

@@ -53,6 +53,11 @@ void BaseDisplay::setBgColor(Color color)
 	mBgColor = color;
 }
 
+void BaseDisplay::setBgColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha)
+{
+	mBgColor.setColor(red, green, blue, alpha);
+}
+
 Position BaseDisplay::getPosition(void)
 {
 	return mArea.getPosition();

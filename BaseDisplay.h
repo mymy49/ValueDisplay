@@ -8,7 +8,7 @@
 #ifndef BASE_DISPLAY__H_
 #define BASE_DISPLAY__H_
 
-#include <TurtleShip/TurtleShip.h>
+#include <TurtleShip.h>
 
 class BaseDisplay
 {
@@ -26,6 +26,8 @@ public :
 	void setFrameBuffer(FrameBuffer *fb);
 
 	void setArea(Area &area);
+
+	void setArea(Area area);
 
 	void setSize(uint16_t width, uint16_t height);
 

@@ -8,7 +8,7 @@
 #ifndef RPM_BAR_DISPLAY__H_
 #define RPM_BAR_DISPLAY__H_
 
-#include <TurtleShip/TurtleShip.h>
+#include <TurtleShip.h>
 
 #include "BaseDisplay.h"
 

@@ -27,6 +27,11 @@ void BaseDisplay::setArea(Area &area)
 	mArea = area;
 }
 
+void BaseDisplay::setArea(Area area)
+{
+	mArea = area;
+}
+
 void BaseDisplay::setSize(uint16_t width, uint16_t height)
 {
 	mArea.setWidth(width);

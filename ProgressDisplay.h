@@ -8,7 +8,7 @@
 #ifndef PROGRESS_DISPLAY__H_
 #define PROGRESS_DISPLAY__H_
 
-#include <TurtleShip/TurtleShip.h>
+#include <TurtleShip.h>
 
 #include "BaseDisplay.h"
 

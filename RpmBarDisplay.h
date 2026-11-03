@@ -35,9 +35,9 @@ public :
 
 	void setToplineThickness(int32_t thickness);
 
-	virtual void drawValue(float value) override;
+	void drawValue(float value) override;
 
-	virtual void drawBackground() override;
+	void drawBackground() override;
 };
 
 #endif

@@ -22,7 +22,7 @@ protected :
 public :
 	AlertValueDisplay();
 
-	virtual void drawValue(float value) override;
+	void drawValue(float value) override;
 
 	void setAlertColor(Color lowColor, Color normalColor, Color highColor);
 

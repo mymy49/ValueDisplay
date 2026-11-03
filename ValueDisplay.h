@@ -24,9 +24,11 @@ protected :
 public :
 	ValueDisplay();
 
-	virtual void drawValue(float value) override;
+	void drawValue(float value) override;
 
-	virtual void drawBackground() override;
+	void drawValueWithCursor(float value, uint8_t index, bool on);
+
+	void drawBackground() override;
 
 	void setUnitConfig(Font &font, Area area, Color fontColor, const char *unit);
 

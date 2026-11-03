@@ -106,3 +106,29 @@ void ValueDisplay::drawValue(float value)
 	mFb->drawString(mValuePos, str);
 	mLcd->drawBitmap(area.getPosition(), mFb->getBitmap());
 }
+
+void ValueDisplay::drawValueWithCursor(float value, uint8_t index, bool on)
+{
+	char str[64];
+	uint32_t len;
+
+	if(mFb == nullptr || mValueFont == nullptr || mLcd == nullptr)
+		return;
+
+	sprintf(str, mFormat, value);
+	len = strlen(str);
+
+	if(!on && len > index)
+		str[index] = ' ';
+
+	Area area = mArea;
+	area += mValueArea.getPosition();
+
+	mFb->setSize(mValueArea.getSize());
+	mFb->setBackgroundColor(mValueBgColor);
+	mFb->setFont(*mValueFont);
+	mFb->setBrushColor(mValueColor);
+	mFb->clear();
+	mFb->drawString(mValuePos, str);
+	mLcd->drawBitmap(area.getPosition(), mFb->getBitmap());
+}

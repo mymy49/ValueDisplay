@@ -25,7 +25,7 @@ public :
 
 	void setFrameBuffer(FrameBuffer *fb);
 
-	void setArea(Area &area);
+	void setArea(Area *area);
 
 	void setArea(Area area);
 

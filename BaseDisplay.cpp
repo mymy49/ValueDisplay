@@ -22,9 +22,9 @@ void BaseDisplay::setFrameBuffer(FrameBuffer *fb)
 	mFb = fb;
 }
 
-void BaseDisplay::setArea(Area &area)
+void BaseDisplay::setArea(Area *area)
 {
-	mArea = area;
+	mArea = *area;
 }
 
 void BaseDisplay::setArea(Area area)

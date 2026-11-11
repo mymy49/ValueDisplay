@@ -1,0 +1,9 @@
+<map id="ValueDisplay.h" name="ValueDisplay.h">
+<area shape="rect" id="Node000001" title="Widget for displaying numerical values with optional title, unit text, and cursor blinking support." alt="" coords="109,5,227,31"/>
+<area shape="rect" id="Node000002" href="$AlertValueDisplay_8h.html" title="Display widget extending ValueDisplay with threshold&#45;based alert colors." alt="" coords="13,79,161,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,42,102,80,98,76,143,38"/>
+<area shape="rect" id="Node000004" href="$ValueDisplay_8cpp.html" title="Implementation of ValueDisplay member functions." alt="" coords="185,79,317,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="193,38,239,76,235,80,190,42"/>
+<area shape="rect" id="Node000003" href="$AlertValueDisplay_8cpp.html" title="Implementation of AlertValueDisplay member functions." alt="" coords="5,152,168,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,118,89,152,84,152,84,118"/>
+</map>

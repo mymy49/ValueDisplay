@@ -1,0 +1,316 @@
+\doxysection{Alert\+Value\+Display Class Reference}
+\hypertarget{classAlertValueDisplay}{}\label{classAlertValueDisplay}\index{AlertValueDisplay@{AlertValueDisplay}}
+
+
+Specialized \doxylink{classValueDisplay}{Value\+Display} that changes text color based on low/high threshold comparisons.  
+
+
+
+
+{\ttfamily \#include $<$Alert\+Value\+Display.\+h$>$}
+
+
+
+Inheritance diagram for Alert\+Value\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classAlertValueDisplay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Alert\+Value\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classAlertValueDisplay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAlertValueDisplay_af774bcfb33292aab56978d9bd0d48a34}{Alert\+Value\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classAlertValueDisplay}{Alert\+Value\+Display} object with default thresholds (10 / 90) and colors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlertValueDisplay_adcfd4a0e9ba4c78c4bbb3a6cca48ea61}{draw\+Value}} (float value) override
+\begin{DoxyCompactList}\small\item\em Evaluates the value against thresholds to select the appropriate alert color, then renders it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlertValueDisplay_a74b9b324482d32f7ac87245bdee0bc0c}{set\+Alert\+Color}} (Color low\+Color, Color normal\+Color, Color high\+Color)
+\begin{DoxyCompactList}\small\item\em Sets the alert colors for low, normal, and high value ranges. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAlertValueDisplay_a4f3eb05fd720a173a11a3f516c5826de}{set\+Alert\+Value}} (float low\+Threshold, float high\+Threshold)
+\begin{DoxyCompactList}\small\item\em Sets the low and high alert threshold limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classValueDisplay}{Value\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classValueDisplay_a8ab3f4abb1ae836b5ce567537340d01b}{Value\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classValueDisplay}{Value\+Display} object with default values and styles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}{draw\+Value}} (float value) override
+\begin{DoxyCompactList}\small\item\em Formats and renders the given floating-\/point value onto the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525}{draw\+Value\+With\+Cursor}} (float value, uint8\+\_\+t index, bool on)
+\begin{DoxyCompactList}\small\item\em Formats and renders the numerical value with an optional cursor blink effect at a specified character index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}{draw\+Background}} () override
+\begin{DoxyCompactList}\small\item\em Renders the static background, title label, and unit string onto the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973}{set\+Unit\+Config}} (Font \&font, Area area, Color font\+Color, const char \texorpdfstring{$\ast$}{*}unit)
+\begin{DoxyCompactList}\small\item\em Configures font, area, color, and text string for the unit label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e}{set\+Value\+Config}} (Font \&font, Area area, Position value\+Pos, Color font\+Color, Color bg\+Color, const char \texorpdfstring{$\ast$}{*}format)
+\begin{DoxyCompactList}\small\item\em Configures font, area, position, colors, and format string for the numeric value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc}{set\+Title\+Config}} (Font \&font, Position pos, Color font\+Color, const char \texorpdfstring{$\ast$}{*}title)
+\begin{DoxyCompactList}\small\item\em Configures font, position, color, and text string for the title. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade}{Base\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classBaseDisplay}{Base\+Display} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{set\+Frame\+Buffer}} (Frame\+Buffer \&fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer reference used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98}{set\+Frame\+Buffer}} (Frame\+Buffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer pointer used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{set\+Area}} (Area \texorpdfstring{$\ast$}{*}area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae78377c200b496fff2ac026da34b4212}{set\+Area}} (Area area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}{set\+Size}} (uint16\+\_\+t width, uint16\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Sets the width and height of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a502493591ecd9351491cc7e2766bba46}{set\+Size}} (Size size)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the display widget using a Size object. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classBaseDisplay_a9978c590b9585bcb32942b45abbab343}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current dimensions of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a}{set\+Position}} (Position pos)
+\begin{DoxyCompactList}\small\item\em Sets the screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{set\+Bg\+Color}} (Color color)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using a Color object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b}{set\+Bg\+Color}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue, uint8\+\_\+t alpha=0x\+FF)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using RGBA color components. \end{DoxyCompactList}\item 
+Position \mbox{\hyperlink{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055}{get\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd}{get\+Frame\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the currently associated framebuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a}{set\+Font}} (Font \&font)
+\begin{DoxyCompactList}\small\item\em Sets the font reference for text rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{set\+Lcd}} (Brush \&brush)
+\begin{DoxyCompactList}\small\item\em Sets the target LCD display drawing brush/surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAlertValueDisplay_af1a8e59bd5e3e1507a5fcebdfcb5965f}\label{classAlertValueDisplay_af1a8e59bd5e3e1507a5fcebdfcb5965f} 
+Color {\bfseries m\+Low\+Color}
+\begin{DoxyCompactList}\small\item\em Text color applied when value falls below low threshold. \end{DoxyCompactList}\item 
+\Hypertarget{classAlertValueDisplay_a7379943b0d901cfcb783033cfaa71ead}\label{classAlertValueDisplay_a7379943b0d901cfcb783033cfaa71ead} 
+Color {\bfseries m\+High\+Color}
+\begin{DoxyCompactList}\small\item\em Text color applied when value exceeds high threshold. \end{DoxyCompactList}\item 
+\Hypertarget{classAlertValueDisplay_ab972a28ad541047ffd41128ad8c2736b}\label{classAlertValueDisplay_ab972a28ad541047ffd41128ad8c2736b} 
+Color {\bfseries m\+Normal\+Color}
+\begin{DoxyCompactList}\small\item\em Text color applied when value is within normal operating range. \end{DoxyCompactList}\item 
+\Hypertarget{classAlertValueDisplay_ad653efdc27f9158b579d0e5f7a602736}\label{classAlertValueDisplay_ad653efdc27f9158b579d0e5f7a602736} 
+float {\bfseries m\+Low\+Threshold}
+\begin{DoxyCompactList}\small\item\em Threshold value for low alert condition. \end{DoxyCompactList}\item 
+\Hypertarget{classAlertValueDisplay_afd62774c71dc2d3821d09f0431359f75}\label{classAlertValueDisplay_afd62774c71dc2d3821d09f0431359f75} 
+float {\bfseries m\+High\+Threshold}
+\begin{DoxyCompactList}\small\item\em Threshold value for high alert condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classValueDisplay}{Value\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+Area {\bfseries m\+Unit\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area for the unit label. \end{DoxyCompactList}\item 
+Area {\bfseries m\+Value\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area for the formatted value text. \end{DoxyCompactList}\item 
+Position {\bfseries m\+Title\+Pos}
+\begin{DoxyCompactList}\small\item\em Relative text coordinates for the title. \end{DoxyCompactList}\item 
+Position {\bfseries m\+Value\+Pos}
+\begin{DoxyCompactList}\small\item\em Relative text coordinates for the formatted value. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Unit\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the unit label. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Value\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the formatted value. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Title\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the title. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Value\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Background fill color for the value and unit areas. \end{DoxyCompactList}\item 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Unit\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the unit text. \end{DoxyCompactList}\item 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Value\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the value text. \end{DoxyCompactList}\item 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Title\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the title text. \end{DoxyCompactList}\item 
+char {\bfseries m\+Unit} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the unit label. \end{DoxyCompactList}\item 
+char {\bfseries m\+Format} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the printf-\/compatible formatting string. \end{DoxyCompactList}\item 
+char {\bfseries m\+Title} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the title text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} {\bfseries m\+Fb}
+\begin{DoxyCompactList}\small\item\em Pointer to working framebuffer for off-\/screen rendering. \end{DoxyCompactList}\item 
+Area {\bfseries m\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area and screen coordinates. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Widget background color. \end{DoxyCompactList}\item 
+Brush \texorpdfstring{$\ast$}{*} {\bfseries m\+Lcd}
+\begin{DoxyCompactList}\small\item\em Pointer to target drawing surface (LCD display interface) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialized \doxylink{classValueDisplay}{Value\+Display} that changes text color based on low/high threshold comparisons. 
+
+{\ttfamily \doxylink{classAlertValueDisplay}{Alert\+Value\+Display}} inherits from {\ttfamily \doxylink{classValueDisplay}{Value\+Display}} and provides an automatic tri-\/state color-\/alerting mechanism based on configurable low and high thresholds.\hypertarget{classAlertValueDisplay_autotoc_md0}{}\doxysubsubsubsection{\texorpdfstring{Operating Threshold Zones}{Operating Threshold Zones}}\label{classAlertValueDisplay_autotoc_md0}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Low Alert Zone ({\ttfamily value \texorpdfstring{$<$}{<} m\+Low\+Threshold})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+: Renders the numerical value in {\ttfamily m\+Low\+Color} (e.\+g. Blue for cold engine coolant or low fuel pressure).
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Normal Zone ({\ttfamily m\+Low\+Threshold \texorpdfstring{$<$}{<}= value \texorpdfstring{$<$}{<} m\+High\+Threshold})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+: Renders the numerical value in {\ttfamily m\+Normal\+Color} (e.\+g. Green for safe operating conditions).
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+High Alert Zone ({\ttfamily value \texorpdfstring{$>$}{>}= m\+High\+Threshold})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+: Renders the numerical value in {\ttfamily m\+High\+Color} (e.\+g. Red for overheating, overpressure, or redline conditions).
+\end{DoxyItemize}
+
+All other features (title, formatted string, measurement unit, cursor blinking, background rendering) are fully inherited from {\ttfamily \doxylink{classValueDisplay}{Value\+Display}}.\hypertarget{classAlertValueDisplay_autotoc_md1}{}\doxysubsubsubsection{\texorpdfstring{Example Usage}{Example Usage}}\label{classAlertValueDisplay_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{AlertValueDisplay_8h}{ValueDisplay/AlertValueDisplay.h}}>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <font/Ubuntu\_14\_B.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <font/Ubuntu\_20\_B.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classAlertValueDisplay}{AlertValueDisplay}}\ tempGauge;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ setupTempGauge(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 1.\ Configure\ geometry,\ framebuffer,\ and\ LCD\ brush}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{setFrameBuffer}}(brush);}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{setLcd}}(lcd);}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{setArea}}(\{10,\ 90,\ 130,\ 60\});}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{setBgColor}}(0x20,\ 0x20,\ 0x20);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 2.\ Configure\ title,\ value\ box,\ and\ unit}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc}{setTitleConfig}}(Font\_Ubuntu\_14\_B,\ \{5,\ 5\},\ Color\{0xAA,\ 0xAA,\ 0xAA\},\ \textcolor{stringliteral}{"{}COOLANT"{}});}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e}{setValueConfig}}(Font\_Ubuntu\_20\_B,\ \{5,\ 25,\ 80,\ 30\},\ \{2,\ 5\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\{0x00,\ 0xFF,\ 0x00\},\ Color\{0x10,\ 0x10,\ 0x10\},\ \textcolor{stringliteral}{"{}\%3.0f"{}});}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973}{setUnitConfig}}(Font\_Ubuntu\_14\_B,\ \{90,\ 25,\ 35,\ 30\},\ Color\{0xFF,\ 0xFF,\ 0xFF\},\ \textcolor{stringliteral}{"{}'C"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 3.\ Set\ alert\ thresholds:\ Low\ <\ 50.0'C,\ High\ >=\ 105.0'C}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classAlertValueDisplay_a4f3eb05fd720a173a11a3f516c5826de}{setAlertValue}}(50.0f,\ 105.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 4.\ Set\ alert\ colors:\ Blue\ (cold),\ Green\ (normal),\ Red\ (overheat)}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classAlertValueDisplay_a74b9b324482d32f7ac87245bdee0bc0c}{setAlertColor}}(Color\{0x00,\ 0x80,\ 0xFF\},\ Color\{0x00,\ 0xFF,\ 0x00\},\ Color\{0xFF,\ 0x00,\ 0x00\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 5.\ Draw\ static\ background}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}{drawBackground}}();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ updateTemperature(\textcolor{keywordtype}{float}\ coolantTemp)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 6.\ Draw\ value\ (color\ updates\ automatically\ depending\ on\ coolantTemp)}}
+\DoxyCodeLine{\ \ \ \ tempGauge.\mbox{\hyperlink{classAlertValueDisplay_adcfd4a0e9ba4c78c4bbb3a6cca48ea61}{drawValue}}(coolantTemp);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAlertValueDisplay_af774bcfb33292aab56978d9bd0d48a34}\label{classAlertValueDisplay_af774bcfb33292aab56978d9bd0d48a34} 
+\index{AlertValueDisplay@{AlertValueDisplay}!AlertValueDisplay@{AlertValueDisplay}}
+\index{AlertValueDisplay@{AlertValueDisplay}!AlertValueDisplay@{AlertValueDisplay}}
+\doxysubsubsection{\texorpdfstring{AlertValueDisplay()}{AlertValueDisplay()}}
+{\footnotesize\ttfamily Alert\+Value\+Display\+::\+Alert\+Value\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classAlertValueDisplay}{Alert\+Value\+Display} object with default thresholds (10 / 90) and colors. 
+
+Initializes an \doxylink{classAlertValueDisplay}{Alert\+Value\+Display} instance with default threshold values and standard alert colors. The default normal color is set to green (RGB\+: 0x00, 0x\+FF, 0x00), low alert color to blue (RGB\+: 0x00, 0x00, 0x\+FF), and high alert color to red (RGB\+: 0x\+FF, 0x00, 0x00). The default low threshold is set to 10.\+0f and the high threshold to 90.\+0f. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAlertValueDisplay_adcfd4a0e9ba4c78c4bbb3a6cca48ea61}\label{classAlertValueDisplay_adcfd4a0e9ba4c78c4bbb3a6cca48ea61} 
+\index{AlertValueDisplay@{AlertValueDisplay}!drawValue@{drawValue}}
+\index{drawValue@{drawValue}!AlertValueDisplay@{AlertValueDisplay}}
+\doxysubsubsection{\texorpdfstring{drawValue()}{drawValue()}}
+{\footnotesize\ttfamily void Alert\+Value\+Display\+::draw\+Value (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Evaluates the value against thresholds to select the appropriate alert color, then renders it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point value to display.\\
+\hline
+\end{DoxyParams}
+Evaluates the provided numerical value against the configured low and high threshold limits\+:
+\begin{DoxyItemize}
+\item If value \texorpdfstring{$<$}{<} m\+Low\+Threshold\+: m\+Value\+Color is set to m\+Low\+Color (low alert state).
+\item If m\+Low\+Threshold \texorpdfstring{$<$}{<}= value \texorpdfstring{$<$}{<} m\+High\+Threshold\+: m\+Value\+Color is set to m\+Normal\+Color (normal state).
+\item If value \texorpdfstring{$>$}{>}= m\+High\+Threshold\+: m\+Value\+Color is set to m\+High\+Color (high alert state).
+\end{DoxyItemize}
+
+After determining the active text color, it invokes Value\+Display\+::draw\+Value(value) to perform formatting, off-\/screen rendering, and display blitting.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point value to evaluate and display. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}{Base\+Display}}.
+
+\Hypertarget{classAlertValueDisplay_a74b9b324482d32f7ac87245bdee0bc0c}\label{classAlertValueDisplay_a74b9b324482d32f7ac87245bdee0bc0c} 
+\index{AlertValueDisplay@{AlertValueDisplay}!setAlertColor@{setAlertColor}}
+\index{setAlertColor@{setAlertColor}!AlertValueDisplay@{AlertValueDisplay}}
+\doxysubsubsection{\texorpdfstring{setAlertColor()}{setAlertColor()}}
+{\footnotesize\ttfamily void Alert\+Value\+Display\+::set\+Alert\+Color (\begin{DoxyParamCaption}\item[{Color}]{low\+Color,  }\item[{Color}]{normal\+Color,  }\item[{Color}]{high\+Color }\end{DoxyParamCaption})}
+
+
+
+Sets the alert colors for low, normal, and high value ranges. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em low\+Color} & Color for values below the low threshold. \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal\+Color} & Color for values within normal range. \\
+\hline
+\mbox{\texttt{ in}}  & {\em high\+Color} & Color for values exceeding the high threshold.\\
+\hline
+\end{DoxyParams}
+Sets the three distinct colors corresponding to the three threshold operational zones\+: low condition (e.\+g. blue for cold/low pressure), normal operating range (e.\+g. green), and high condition (e.\+g. red for overheat/overpressure).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em low\+Color} & Color applied when the value falls below the low threshold. \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal\+Color} & Color applied when the value is within normal boundaries. \\
+\hline
+\mbox{\texttt{ in}}  & {\em high\+Color} & Color applied when the value reaches or exceeds the high threshold. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlertValueDisplay_a4f3eb05fd720a173a11a3f516c5826de}\label{classAlertValueDisplay_a4f3eb05fd720a173a11a3f516c5826de} 
+\index{AlertValueDisplay@{AlertValueDisplay}!setAlertValue@{setAlertValue}}
+\index{setAlertValue@{setAlertValue}!AlertValueDisplay@{AlertValueDisplay}}
+\doxysubsubsection{\texorpdfstring{setAlertValue()}{setAlertValue()}}
+{\footnotesize\ttfamily void Alert\+Value\+Display\+::set\+Alert\+Value (\begin{DoxyParamCaption}\item[{float}]{low\+Threshold,  }\item[{float}]{high\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Sets the low and high alert threshold limits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em low\+Threshold} & The lower threshold value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em high\+Threshold} & The upper threshold value.\\
+\hline
+\end{DoxyParams}
+Sets the boundary limits separating low, normal, and high alert states. Values below low\+Threshold will trigger the low alert color, values above or equal to high\+Threshold will trigger the high alert color, and values in between will display in the normal color.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em low\+Threshold} & The lower threshold value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em high\+Threshold} & The upper threshold value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AlertValueDisplay_8h}{Alert\+Value\+Display.\+h}}\item 
+\mbox{\hyperlink{AlertValueDisplay_8cpp}{Alert\+Value\+Display.\+cpp}}\end{DoxyCompactItemize}

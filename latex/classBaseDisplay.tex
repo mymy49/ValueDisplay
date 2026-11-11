@@ -1,0 +1,483 @@
+\doxysection{Base\+Display Class Reference}
+\hypertarget{classBaseDisplay}{}\label{classBaseDisplay}\index{BaseDisplay@{BaseDisplay}}
+
+
+Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widgets.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Display.\+h$>$}
+
+
+
+Inheritance diagram for Base\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBaseDisplay__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade}{Base\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classBaseDisplay}{Base\+Display} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{set\+Frame\+Buffer}} (Frame\+Buffer \&fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer reference used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98}{set\+Frame\+Buffer}} (Frame\+Buffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer pointer used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{set\+Area}} (Area \texorpdfstring{$\ast$}{*}area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae78377c200b496fff2ac026da34b4212}{set\+Area}} (Area area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}{set\+Size}} (uint16\+\_\+t width, uint16\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Sets the width and height of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a502493591ecd9351491cc7e2766bba46}{set\+Size}} (Size size)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the display widget using a Size object. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classBaseDisplay_a9978c590b9585bcb32942b45abbab343}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current dimensions of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a}{set\+Position}} (Position pos)
+\begin{DoxyCompactList}\small\item\em Sets the screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{set\+Bg\+Color}} (Color color)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using a Color object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b}{set\+Bg\+Color}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue, uint8\+\_\+t alpha=0x\+FF)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using RGBA color components. \end{DoxyCompactList}\item 
+Position \mbox{\hyperlink{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055}{get\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd}{get\+Frame\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the currently associated framebuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a}{set\+Font}} (Font \&font)
+\begin{DoxyCompactList}\small\item\em Sets the font reference for text rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{set\+Lcd}} (Brush \&brush)
+\begin{DoxyCompactList}\small\item\em Sets the target LCD display drawing brush/surface. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}{draw\+Value}} (float value)=0
+\begin{DoxyCompactList}\small\item\em Renders the numerical value onto the display. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99}{draw\+Background}} ()=0
+\begin{DoxyCompactList}\small\item\em Renders the static background graphics of the widget onto the display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBaseDisplay_ad2fa954aef2feb387f6ecab7df9c43b3}\label{classBaseDisplay_ad2fa954aef2feb387f6ecab7df9c43b3} 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} {\bfseries m\+Fb}
+\begin{DoxyCompactList}\small\item\em Pointer to working framebuffer for off-\/screen rendering. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseDisplay_a29135f90659f9f2a950d10710191fee7}\label{classBaseDisplay_a29135f90659f9f2a950d10710191fee7} 
+Area {\bfseries m\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area and screen coordinates. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseDisplay_a9a75aaac93b74176c11a7738d0e4901a}\label{classBaseDisplay_a9a75aaac93b74176c11a7738d0e4901a} 
+Color {\bfseries m\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Widget background color. \end{DoxyCompactList}\item 
+\Hypertarget{classBaseDisplay_ab0aa6cf255202d8b99c6b13e622e1e52}\label{classBaseDisplay_ab0aa6cf255202d8b99c6b13e622e1e52} 
+Brush \texorpdfstring{$\ast$}{*} {\bfseries m\+Lcd}
+\begin{DoxyCompactList}\small\item\em Pointer to target drawing surface (LCD display interface) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widgets. 
+
+The {\ttfamily \doxylink{classBaseDisplay}{Base\+Display}} class serves as the core foundation for visual UI indicators within the Turtle\+Ship GUI framework (e.\+g. {\ttfamily \doxylink{classValueDisplay}{Value\+Display}}, {\ttfamily \doxylink{classProgressDisplay}{Progress\+Display}}, {\ttfamily \doxylink{classRpmBarDisplay}{Rpm\+Bar\+Display}}).\hypertarget{classBaseDisplay_autotoc_md2}{}\doxysubsubsubsection{\texorpdfstring{Rendering Architecture}{Rendering Architecture}}\label{classBaseDisplay_autotoc_md2}
+This class uses an off-\/screen double-\/buffering architecture to eliminate visual screen flickering\+:
+\begin{DoxyEnumerate}
+\item Off-\/screen Rendering\+: Graphical components are first rendered into a working {\ttfamily Frame\+Buffer} ({\ttfamily m\+Fb}).
+\item Blitting\+: Once rendering is complete, the resulting bitmap is transferred to the physical LCD display surface via a {\ttfamily Brush} ({\ttfamily m\+Lcd}).
+\end{DoxyEnumerate}\hypertarget{classBaseDisplay_autotoc_md3}{}\doxysubsubsubsection{\texorpdfstring{Key Responsibilities}{Key Responsibilities}}\label{classBaseDisplay_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Geometry Management\+: Stores and manipulates widget boundaries, screen coordinates, width, and height via {\ttfamily m\+Area}.
+\item Style Management\+: Manages base background fill color ({\ttfamily m\+Bg\+Color}).
+\item Surface Binding\+: Connects to off-\/screen buffer ({\ttfamily m\+Fb}) and screen output brush ({\ttfamily m\+Lcd}).
+\item Virtual Pipeline\+: Enforces implementation of {\ttfamily \doxylink{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99}{draw\+Background()}} and {\ttfamily \doxylink{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}{draw\+Value()}} across all derived widgets.
+\end{DoxyItemize}\hypertarget{classBaseDisplay_autotoc_md4}{}\doxysubsubsubsection{\texorpdfstring{Typical Derived Implementation Example}{Typical Derived Implementation Example}}\label{classBaseDisplay_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }CustomGauge\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDisplay}{BaseDisplay}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ drawBackground()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mFb\ ==\ \textcolor{keyword}{nullptr}\ ||\ mLcd\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ mFb-\/>\mbox{\hyperlink{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}{setSize}}(mArea.getSize());}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ mFb-\/>setBackgroundColor(mBgColor);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ mFb-\/>clear();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ mLcd-\/>drawBitmap(mArea.getPosition(),\ mFb-\/>getBitmap());}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ drawValue(\textcolor{keywordtype}{float}\ value)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Render\ dynamic\ custom\ graphics\ and\ blit\ to\ mLcd...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Usage:}}
+\DoxyCodeLine{CustomGauge\ gauge;}
+\DoxyCodeLine{gauge.setFrameBuffer(brush);}
+\DoxyCodeLine{gauge.setLcd(lcd);}
+\DoxyCodeLine{gauge.setArea(\{10,\ 20,\ 100,\ 40\});}
+\DoxyCodeLine{gauge.setBgColor(0x30,\ 0x30,\ 0x30);}
+\DoxyCodeLine{gauge.drawBackground();}
+\DoxyCodeLine{gauge.drawValue(42.0f);}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade}\label{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade} 
+\index{BaseDisplay@{BaseDisplay}!BaseDisplay@{BaseDisplay}}
+\index{BaseDisplay@{BaseDisplay}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{BaseDisplay()}{BaseDisplay()}}
+{\footnotesize\ttfamily Base\+Display\+::\+Base\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classBaseDisplay}{Base\+Display} object. 
+
+Initializes a new instance of the \doxylink{classBaseDisplay}{Base\+Display} class. It resets the internal off-\/screen framebuffer pointer (m\+Fb) and the target display drawing interface brush (m\+Lcd) to nullptr, ensuring that rendering methods will safely return early until both drawing targets are configured. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99}\label{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99} 
+\index{BaseDisplay@{BaseDisplay}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily virtual void Base\+Display\+::draw\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Renders the static background graphics of the widget onto the display. 
+
+
+
+Implemented in \mbox{\hyperlink{classProgressDisplay_aa7a15380790f0d2b541f522953c1d7da}{Progress\+Display}}, \mbox{\hyperlink{classRpmBarDisplay_a2e0fec8b40e13e57d002a67d36500943}{Rpm\+Bar\+Display}}, and \mbox{\hyperlink{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}{Value\+Display}}.
+
+\Hypertarget{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}\label{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7} 
+\index{BaseDisplay@{BaseDisplay}!drawValue@{drawValue}}
+\index{drawValue@{drawValue}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{drawValue()}{drawValue()}}
+{\footnotesize\ttfamily virtual void Base\+Display\+::draw\+Value (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Renders the numerical value onto the display. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point value to display. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classAlertValueDisplay_adcfd4a0e9ba4c78c4bbb3a6cca48ea61}{Alert\+Value\+Display}}, \mbox{\hyperlink{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}{Progress\+Display}}, \mbox{\hyperlink{classRpmBarDisplay_aba4b45df1270b9d5234b4749838ae49c}{Rpm\+Bar\+Display}}, and \mbox{\hyperlink{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}{Value\+Display}}.
+
+\Hypertarget{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd}\label{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd} 
+\index{BaseDisplay@{BaseDisplay}!getFrameBuffer@{getFrameBuffer}}
+\index{getFrameBuffer@{getFrameBuffer}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{getFrameBuffer()}{getFrameBuffer()}}
+{\footnotesize\ttfamily Frame\+Buffer \texorpdfstring{$\ast$}{*} Base\+Display\+::get\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the pointer to the currently associated framebuffer. 
+
+\begin{DoxyReturn}{Returns}
+Frame\+Buffer\texorpdfstring{$\ast$}{*} Pointer to the framebuffer, or nullptr if not set.
+\end{DoxyReturn}
+Returns the pointer to the currently assigned off-\/screen Frame\+Buffer object, allowing caller inspection or external modifications.
+
+\begin{DoxyReturn}{Returns}
+Frame\+Buffer\texorpdfstring{$\ast$}{*} Pointer to the current Frame\+Buffer instance, or nullptr if none is configured. 
+\end{DoxyReturn}
+\Hypertarget{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055}\label{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055} 
+\index{BaseDisplay@{BaseDisplay}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily Position Base\+Display\+::get\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current screen position coordinates of the display widget. 
+
+\begin{DoxyReturn}{Returns}
+Position The current screen position.
+\end{DoxyReturn}
+Retrieves the current screen placement coordinates (X, Y) of the widget relative to the display root.
+
+\begin{DoxyReturn}{Returns}
+Position The current top-\/left screen position. 
+\end{DoxyReturn}
+\Hypertarget{classBaseDisplay_a9978c590b9585bcb32942b45abbab343}\label{classBaseDisplay_a9978c590b9585bcb32942b45abbab343} 
+\index{BaseDisplay@{BaseDisplay}!getSize@{getSize}}
+\index{getSize@{getSize}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily Size Base\+Display\+::get\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current dimensions of the display widget. 
+
+\begin{DoxyReturn}{Returns}
+Size The current size of the widget.
+\end{DoxyReturn}
+Retrieves the current visual dimensions (width and height) of the widget bounding area.
+
+\begin{DoxyReturn}{Returns}
+Size A Size object containing the width and height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}\label{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e} 
+\index{BaseDisplay@{BaseDisplay}!setArea@{setArea}}
+\index{setArea@{setArea}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setArea()}{setArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Area (\begin{DoxyParamCaption}\item[{Area \texorpdfstring{$\ast$}{*}}]{area }\end{DoxyParamCaption})}
+
+
+
+Sets the widget display area (position and dimensions) by pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em area} & Pointer to the Area object.\\
+\hline
+\end{DoxyParams}
+Updates the widget\textquotesingle{}s bounding area by dereferencing the provided Area pointer. The screen coordinates (X, Y) and dimensions (width, height) are copied directly into member variable m\+Area.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em area} & Pointer to the Area structure containing position and dimension settings. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_ae78377c200b496fff2ac026da34b4212}\label{classBaseDisplay_ae78377c200b496fff2ac026da34b4212} 
+\index{BaseDisplay@{BaseDisplay}!setArea@{setArea}}
+\index{setArea@{setArea}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setArea()}{setArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Area (\begin{DoxyParamCaption}\item[{Area}]{area }\end{DoxyParamCaption})}
+
+
+
+Sets the widget display area (position and dimensions) by value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em area} & The Area object.\\
+\hline
+\end{DoxyParams}
+Overwrites the widget\textquotesingle{}s bounding area with the passed Area value, defining its screen placement and visual dimensions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em area} & The Area object containing position and dimension settings. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}\label{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a} 
+\index{BaseDisplay@{BaseDisplay}!setBgColor@{setBgColor}}
+\index{setBgColor@{setBgColor}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setBgColor()}{setBgColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Bg\+Color (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the background color of the widget using a Color object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em color} & The background color.\\
+\hline
+\end{DoxyParams}
+Configures the default background fill color for the widget using a Color object. This color is used when clearing or redrawing the base widget area.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em color} & The Color to apply to the widget background. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b}\label{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b} 
+\index{BaseDisplay@{BaseDisplay}!setBgColor@{setBgColor}}
+\index{setBgColor@{setBgColor}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setBgColor()}{setBgColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Bg\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red,  }\item[{uint8\+\_\+t}]{green,  }\item[{uint8\+\_\+t}]{blue,  }\item[{uint8\+\_\+t}]{alpha = {\ttfamily 0xFF} }\end{DoxyParamCaption})}
+
+
+
+Sets the background color of the widget using RGBA color components. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & Red component (0 \texorpdfstring{$\sim$}{\string~} 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em green} & Green component (0 \texorpdfstring{$\sim$}{\string~} 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em blue} & Blue component (0 \texorpdfstring{$\sim$}{\string~} 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em alpha} & Alpha transparency component (0 \texorpdfstring{$\sim$}{\string~} 255, default\+: 0x\+FF).\\
+\hline
+\end{DoxyParams}
+Configures the default background color by specifying individual 8-\/bit RGBA channel intensities.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & Intensity of the red color component (0 to 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em green} & Intensity of the green color component (0 to 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em blue} & Intensity of the blue color component (0 to 255). \\
+\hline
+\mbox{\texttt{ in}}  & {\em alpha} & Opacity/alpha transparency level (0 to 255, where 255 is fully opaque). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a}\label{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a} 
+\index{BaseDisplay@{BaseDisplay}!setFont@{setFont}}
+\index{setFont@{setFont}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Font (\begin{DoxyParamCaption}\item[{Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Sets the font reference for text rendering. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the Font object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}\label{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85} 
+\index{BaseDisplay@{BaseDisplay}!setFrameBuffer@{setFrameBuffer}}
+\index{setFrameBuffer@{setFrameBuffer}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setFrameBuffer()}{setFrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{Frame\+Buffer \&}]{fb }\end{DoxyParamCaption})}
+
+
+
+Sets the framebuffer reference used for off-\/screen rendering. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fb} & Reference to the framebuffer object.\\
+\hline
+\end{DoxyParams}
+Associates a working off-\/screen Frame\+Buffer with the widget by storing its memory address. Off-\/screen rendering techniques are utilized by this widget to prevent visual flickering before the final composited bitmap is blitted to the display surface.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fb} & Reference to the Frame\+Buffer instance to be used. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98}\label{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98} 
+\index{BaseDisplay@{BaseDisplay}!setFrameBuffer@{setFrameBuffer}}
+\index{setFrameBuffer@{setFrameBuffer}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setFrameBuffer()}{setFrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{Frame\+Buffer \texorpdfstring{$\ast$}{*}}]{fb }\end{DoxyParamCaption})}
+
+
+
+Sets the framebuffer pointer used for off-\/screen rendering. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fb} & Pointer to the framebuffer object.\\
+\hline
+\end{DoxyParams}
+Stores the pointer to an off-\/screen Frame\+Buffer instance. Can be passed as nullptr to detach the current framebuffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fb} & Pointer to the target Frame\+Buffer object, or nullptr to disassociate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}\label{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d} 
+\index{BaseDisplay@{BaseDisplay}!setLcd@{setLcd}}
+\index{setLcd@{setLcd}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setLcd()}{setLcd()}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Lcd (\begin{DoxyParamCaption}\item[{Brush \&}]{brush }\end{DoxyParamCaption})}
+
+
+
+Sets the target LCD display drawing brush/surface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em brush} & Reference to the target Brush/display surface.\\
+\hline
+\end{DoxyParams}
+Assigns the target LCD drawing surface (brush) by storing its address into m\+Lcd. All subsequent screen output operations (such as copying off-\/screen framebuffers to the display) will be directed to this brush.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em brush} & Reference to the target LCD Brush/surface to draw on. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a}\label{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a} 
+\index{BaseDisplay@{BaseDisplay}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Position (\begin{DoxyParamCaption}\item[{Position}]{pos }\end{DoxyParamCaption})}
+
+
+
+Sets the screen position coordinates of the display widget. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & The target screen position.\\
+\hline
+\end{DoxyParams}
+Relocates the widget on the display surface by updating the top-\/left X and Y coordinates within m\+Area, preserving its current width and height.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & The new screen coordinate Position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a502493591ecd9351491cc7e2766bba46}\label{classBaseDisplay_a502493591ecd9351491cc7e2766bba46} 
+\index{BaseDisplay@{BaseDisplay}!setSize@{setSize}}
+\index{setSize@{setSize}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Size (\begin{DoxyParamCaption}\item[{Size}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the dimensions of the display widget using a Size object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & The Size object containing width and height.\\
+\hline
+\end{DoxyParams}
+Sets the widget dimensions from a Size object while preserving the existing top-\/left screen position coordinates.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & The Size structure specifying the width and height in pixels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}\label{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a} 
+\index{BaseDisplay@{BaseDisplay}!setSize@{setSize}}
+\index{setSize@{setSize}!BaseDisplay@{BaseDisplay}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Display\+::set\+Size (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the width and height of the display widget. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & Width in pixels. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & Height in pixels.\\
+\hline
+\end{DoxyParams}
+Explicitly modifies the horizontal and vertical pixel dimensions of the widget bounding area without altering its current screen coordinate offsets (X and Y).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & The width of the display widget in pixels. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & Height of the display widget in pixels. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BaseDisplay_8h}{Base\+Display.\+h}}\item 
+\mbox{\hyperlink{BaseDisplay_8cpp}{Base\+Display.\+cpp}}\end{DoxyCompactItemize}

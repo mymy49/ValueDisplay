@@ -1,0 +1,398 @@
+\doxysection{Value\+Display Class Reference}
+\hypertarget{classValueDisplay}{}\label{classValueDisplay}\index{ValueDisplay@{ValueDisplay}}
+
+
+Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cursor blinking.  
+
+
+
+
+{\ttfamily \#include $<$Value\+Display.\+h$>$}
+
+
+
+Inheritance diagram for Value\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classValueDisplay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Value\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classValueDisplay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classValueDisplay_a8ab3f4abb1ae836b5ce567537340d01b}{Value\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classValueDisplay}{Value\+Display} object with default values and styles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}{draw\+Value}} (float value) override
+\begin{DoxyCompactList}\small\item\em Formats and renders the given floating-\/point value onto the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525}{draw\+Value\+With\+Cursor}} (float value, uint8\+\_\+t index, bool on)
+\begin{DoxyCompactList}\small\item\em Formats and renders the numerical value with an optional cursor blink effect at a specified character index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}{draw\+Background}} () override
+\begin{DoxyCompactList}\small\item\em Renders the static background, title label, and unit string onto the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973}{set\+Unit\+Config}} (Font \&font, Area area, Color font\+Color, const char \texorpdfstring{$\ast$}{*}unit)
+\begin{DoxyCompactList}\small\item\em Configures font, area, color, and text string for the unit label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e}{set\+Value\+Config}} (Font \&font, Area area, Position value\+Pos, Color font\+Color, Color bg\+Color, const char \texorpdfstring{$\ast$}{*}format)
+\begin{DoxyCompactList}\small\item\em Configures font, area, position, colors, and format string for the numeric value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc}{set\+Title\+Config}} (Font \&font, Position pos, Color font\+Color, const char \texorpdfstring{$\ast$}{*}title)
+\begin{DoxyCompactList}\small\item\em Configures font, position, color, and text string for the title. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade}{Base\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classBaseDisplay}{Base\+Display} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{set\+Frame\+Buffer}} (Frame\+Buffer \&fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer reference used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98}{set\+Frame\+Buffer}} (Frame\+Buffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer pointer used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{set\+Area}} (Area \texorpdfstring{$\ast$}{*}area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae78377c200b496fff2ac026da34b4212}{set\+Area}} (Area area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}{set\+Size}} (uint16\+\_\+t width, uint16\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Sets the width and height of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a502493591ecd9351491cc7e2766bba46}{set\+Size}} (Size size)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the display widget using a Size object. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classBaseDisplay_a9978c590b9585bcb32942b45abbab343}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current dimensions of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a}{set\+Position}} (Position pos)
+\begin{DoxyCompactList}\small\item\em Sets the screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{set\+Bg\+Color}} (Color color)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using a Color object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b}{set\+Bg\+Color}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue, uint8\+\_\+t alpha=0x\+FF)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using RGBA color components. \end{DoxyCompactList}\item 
+Position \mbox{\hyperlink{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055}{get\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd}{get\+Frame\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the currently associated framebuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a}{set\+Font}} (Font \&font)
+\begin{DoxyCompactList}\small\item\em Sets the font reference for text rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{set\+Lcd}} (Brush \&brush)
+\begin{DoxyCompactList}\small\item\em Sets the target LCD display drawing brush/surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classValueDisplay_abccd18f5b597deab1469d02bd9666d12}\label{classValueDisplay_abccd18f5b597deab1469d02bd9666d12} 
+Area {\bfseries m\+Unit\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area for the unit label. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a8921e6b675d025197a130ba34501853a}\label{classValueDisplay_a8921e6b675d025197a130ba34501853a} 
+Area {\bfseries m\+Value\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area for the formatted value text. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_acba3325610e6edcb511d264e23844536}\label{classValueDisplay_acba3325610e6edcb511d264e23844536} 
+Position {\bfseries m\+Title\+Pos}
+\begin{DoxyCompactList}\small\item\em Relative text coordinates for the title. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_ad3422380454c0f9d0bb34974cba7f441}\label{classValueDisplay_ad3422380454c0f9d0bb34974cba7f441} 
+Position {\bfseries m\+Value\+Pos}
+\begin{DoxyCompactList}\small\item\em Relative text coordinates for the formatted value. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a21492d592b5d2e0c45584169d3cc79a5}\label{classValueDisplay_a21492d592b5d2e0c45584169d3cc79a5} 
+Color {\bfseries m\+Unit\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the unit label. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a56d773260c44dcea26d4876d566c07a7}\label{classValueDisplay_a56d773260c44dcea26d4876d566c07a7} 
+Color {\bfseries m\+Value\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the formatted value. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_ad62cebabad8129e1d29e0c16470234c2}\label{classValueDisplay_ad62cebabad8129e1d29e0c16470234c2} 
+Color {\bfseries m\+Title\+Color}
+\begin{DoxyCompactList}\small\item\em Font color for the title. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_ae3db111d07d20521778a8683641c6cb2}\label{classValueDisplay_ae3db111d07d20521778a8683641c6cb2} 
+Color {\bfseries m\+Value\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Background fill color for the value and unit areas. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a268ebdd187a762f3009ca4635953a163}\label{classValueDisplay_a268ebdd187a762f3009ca4635953a163} 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Unit\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the unit text. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a7d3f472ad33fb76ebb982f337f35a2ad}\label{classValueDisplay_a7d3f472ad33fb76ebb982f337f35a2ad} 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Value\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the value text. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a272db80fe4016c9cef2eb347016ad21b}\label{classValueDisplay_a272db80fe4016c9cef2eb347016ad21b} 
+Font \texorpdfstring{$\ast$}{*} {\bfseries m\+Title\+Font}
+\begin{DoxyCompactList}\small\item\em Pointer to font used for the title text. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a6f49ae66034ce25e3fc94027400638f0}\label{classValueDisplay_a6f49ae66034ce25e3fc94027400638f0} 
+char {\bfseries m\+Unit} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the unit label. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_ab69788ae9265f4f97e0b22be8fcd706b}\label{classValueDisplay_ab69788ae9265f4f97e0b22be8fcd706b} 
+char {\bfseries m\+Format} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the printf-\/compatible formatting string. \end{DoxyCompactList}\item 
+\Hypertarget{classValueDisplay_a27a773609bd93f674bc3e38841db44c0}\label{classValueDisplay_a27a773609bd93f674bc3e38841db44c0} 
+char {\bfseries m\+Title} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em String buffer holding the title text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} {\bfseries m\+Fb}
+\begin{DoxyCompactList}\small\item\em Pointer to working framebuffer for off-\/screen rendering. \end{DoxyCompactList}\item 
+Area {\bfseries m\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area and screen coordinates. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Widget background color. \end{DoxyCompactList}\item 
+Brush \texorpdfstring{$\ast$}{*} {\bfseries m\+Lcd}
+\begin{DoxyCompactList}\small\item\em Pointer to target drawing surface (LCD display interface) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cursor blinking. 
+
+{\ttfamily \doxylink{classValueDisplay}{Value\+Display}} extends {\ttfamily \doxylink{classBaseDisplay}{Base\+Display}} to provide a complete, modular gauge widget suitable for instruments, sensor readouts, dashboards, and numeric input editing dialogs.\hypertarget{classValueDisplay_autotoc_md11}{}\doxysubsubsubsection{\texorpdfstring{Key Features}{Key Features}}\label{classValueDisplay_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\bfseries{Title Label}}\+: Displays an identifier string (e.\+g. "{}\+SPEED"{}, "{}\+VOLTAGE"{}) at an arbitrary position offset.
+\item {\bfseries{Formatted Value}}\+: Formats floating-\/point numbers using standard {\ttfamily sprintf} format specifiers (e.\+g. {\ttfamily "{}\%3.\+1f"{}}, {\ttfamily "{}\%02.\+0f"{}}), rendered inside its own sub-\/box area.
+\item {\bfseries{Measurement Unit}}\+: Displays the measurement unit suffix (e.\+g. {\ttfamily "{}km/h"{}}, {\ttfamily "{}\+V"{}}, {\ttfamily "{}°\+C"{}}) aligned at the bottom-\/left of the configured unit area.
+\item {\bfseries{Cursor Blinking Support}}\+: {\ttfamily \doxylink{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525}{draw\+Value\+With\+Cursor()}} enables cursor editing visualization by periodically replacing a character at a specified index with a space character when the cursor is off.
+\item {\bfseries{Selective Refreshing}}\+: {\ttfamily \doxylink{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}{draw\+Value()}} redraws only the numerical value sub-\/box, avoiding costly full-\/widget repaints on every value update.
+\end{DoxyItemize}\hypertarget{classValueDisplay_autotoc_md12}{}\doxysubsubsubsection{\texorpdfstring{Example Usage}{Example Usage}}\label{classValueDisplay_autotoc_md12}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ValueDisplay_8h}{ValueDisplay/ValueDisplay.h}}>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <font/Ubuntu\_14\_B.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <font/Ubuntu\_20\_B.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classValueDisplay}{ValueDisplay}}\ speedGauge;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ setupSpeedGauge(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 1.\ Associate\ working\ framebuffer,\ target\ LCD\ surface,\ and\ bounding\ geometry}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{setFrameBuffer}}(brush);}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{setLcd}}(lcd);}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{setArea}}(\{10,\ 20,\ 130,\ 60\});}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{setBgColor}}(0x20,\ 0x20,\ 0x20);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 2.\ Configure\ title\ label\ ("{}SPEED"{}\ at\ top-\/left)}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc}{setTitleConfig}}(Font\_Ubuntu\_14\_B,\ \{5,\ 5\},\ Color\{0xAA,\ 0xAA,\ 0xAA\},\ \textcolor{stringliteral}{"{}SPEED"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 3.\ Configure\ formatted\ value\ sub-\/box\ (white\ text\ on\ dark\ background)}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e}{setValueConfig}}(Font\_Ubuntu\_20\_B,\ \{5,\ 25,\ 80,\ 30\},\ \{2,\ 5\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\{0xFF,\ 0xFF,\ 0xFF\},\ Color\{0x10,\ 0x10,\ 0x10\},\ \textcolor{stringliteral}{"{}\%3.0f"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 4.\ Configure\ measurement\ unit\ label\ ("{}km/h"{})}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973}{setUnitConfig}}(Font\_Ubuntu\_14\_B,\ \{90,\ 25,\ 35,\ 30\},\ Color\{0x80,\ 0xFF,\ 0x80\},\ \textcolor{stringliteral}{"{}km/h"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 5.\ Draw\ static\ background,\ title,\ and\ unit\ box}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}{drawBackground}}();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ updateSpeed(\textcolor{keywordtype}{float}\ currentSpeed)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 6.\ Dynamically\ update\ the\ displayed\ number}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}{drawValue}}(currentSpeed);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ updateEditingValue(\textcolor{keywordtype}{float}\ targetValue,\ uint8\_t\ cursorIndex,\ \textcolor{keywordtype}{bool}\ cursorBlinkState)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 7.\ Update\ value\ with\ blinking\ cursor\ indicator\ during\ numeric\ entry}}
+\DoxyCodeLine{\ \ \ \ speedGauge.\mbox{\hyperlink{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525}{drawValueWithCursor}}(targetValue,\ cursorIndex,\ cursorBlinkState);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classValueDisplay_a8ab3f4abb1ae836b5ce567537340d01b}\label{classValueDisplay_a8ab3f4abb1ae836b5ce567537340d01b} 
+\index{ValueDisplay@{ValueDisplay}!ValueDisplay@{ValueDisplay}}
+\index{ValueDisplay@{ValueDisplay}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{ValueDisplay()}{ValueDisplay()}}
+{\footnotesize\ttfamily Value\+Display\+::\+Value\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classValueDisplay}{Value\+Display} object with default values and styles. 
+
+Initializes a new \doxylink{classValueDisplay}{Value\+Display} instance. It sets internal pointers for the working frame buffer, LCD drawing surface brush, and fonts (value, unit, title) to nullptr to prevent invalid memory dereferences before explicit configuration. It sets the default background color to dark-\/gray (RGB\+: 0x30, 0x30, 0x30), and clears the unit and title character buffers with zeroes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b}\label{classValueDisplay_a035a6edfd2be7db85fd4808e9b75033b} 
+\index{ValueDisplay@{ValueDisplay}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily void Value\+Display\+::draw\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the static background, title label, and unit string onto the LCD. 
+
+Renders the static visual elements of the widget, including the overall widget background, the optional title text, and the unit label sub-\/box. The operation resizes the off-\/screen frame buffer, clears it with the background color, draws the title if configured, transfers the composited bitmap to the LCD, and subsequently draws the unit sub-\/box if its dimensions are non-\/zero. 
+
+Implements \mbox{\hyperlink{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99}{Base\+Display}}.
+
+\Hypertarget{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197}\label{classValueDisplay_a08bb1d7b3710d7c167716f3c6468d197} 
+\index{ValueDisplay@{ValueDisplay}!drawValue@{drawValue}}
+\index{drawValue@{drawValue}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{drawValue()}{drawValue()}}
+{\footnotesize\ttfamily void Value\+Display\+::draw\+Value (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Formats and renders the given floating-\/point value onto the LCD. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point value to be displayed.\\
+\hline
+\end{DoxyParams}
+Formats the given floating-\/point number into a string buffer according to the configured format string (m\+Format). Then it resizes the off-\/screen frame buffer to match m\+Value\+Area, clears it with m\+Value\+Bg\+Color, renders the formatted string using m\+Value\+Font, and blits the resulting bitmap directly onto the target LCD at the calculated absolute screen coordinates.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point numerical value to format and render. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}{Base\+Display}}.
+
+\Hypertarget{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525}\label{classValueDisplay_a26bd603b45a10759db4620b4ed2a3525} 
+\index{ValueDisplay@{ValueDisplay}!drawValueWithCursor@{drawValueWithCursor}}
+\index{drawValueWithCursor@{drawValueWithCursor}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{drawValueWithCursor()}{drawValueWithCursor()}}
+{\footnotesize\ttfamily void Value\+Display\+::draw\+Value\+With\+Cursor (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{uint8\+\_\+t}]{index,  }\item[{bool}]{on }\end{DoxyParamCaption})}
+
+
+
+Formats and renders the numerical value with an optional cursor blink effect at a specified character index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point value to display. \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & 0-\/based character index within the formatted string where the cursor is placed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em on} & True to display the character normally; false to replace it with a space for blink effect.\\
+\hline
+\end{DoxyParams}
+Formats the given floating-\/point value into a string using m\+Format and applies a cursor blinking effect at a specific character position ({\ttfamily index}).
+
+If {\ttfamily on} is false and {\ttfamily index} is within the valid length of the formatted string, the character at that index is replaced with an ASCII space (\textquotesingle{} \textquotesingle{}), simulating a blinking cursor. The resulting string is then rendered into the off-\/screen frame buffer and transferred to the LCD at the widget\textquotesingle{}s value area position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & The floating-\/point numerical value to format. \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & Character position in the formatted string (0-\/based) where the cursor blinks. \\
+\hline
+\mbox{\texttt{ in}}  & {\em on} & Blink phase state\+: true to render the character normally, false to hide it (blank). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc}\label{classValueDisplay_ad21e5fe2648a19f1607cf87a9f5ab7fc} 
+\index{ValueDisplay@{ValueDisplay}!setTitleConfig@{setTitleConfig}}
+\index{setTitleConfig@{setTitleConfig}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{setTitleConfig()}{setTitleConfig()}}
+{\footnotesize\ttfamily void Value\+Display\+::set\+Title\+Config (\begin{DoxyParamCaption}\item[{Font \&}]{font,  }\item[{Position}]{pos,  }\item[{Color}]{font\+Color,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{title }\end{DoxyParamCaption})}
+
+
+
+Configures font, position, color, and text string for the title. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font to use for the title. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & Text coordinate offset relative to the widget area. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Text color for the title. \\
+\hline
+\mbox{\texttt{ in}}  & {\em title} & Null-\/terminated string for the widget title.\\
+\hline
+\end{DoxyParams}
+Sets up the title label configuration. It stores the font reference, coordinate offset relative to the widget area, text color, and copies up to 31 characters of the title string into m\+Title.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font used for the title label. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & Offset position of the title text relative to the widget top-\/left corner. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Color of the title text characters. \\
+\hline
+\mbox{\texttt{ in}}  & {\em title} & Null-\/terminated string for the widget title. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973}\label{classValueDisplay_aa00da94eb32e1600b93dcf5482f9e973} 
+\index{ValueDisplay@{ValueDisplay}!setUnitConfig@{setUnitConfig}}
+\index{setUnitConfig@{setUnitConfig}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{setUnitConfig()}{setUnitConfig()}}
+{\footnotesize\ttfamily void Value\+Display\+::set\+Unit\+Config (\begin{DoxyParamCaption}\item[{Font \&}]{font,  }\item[{Area}]{area,  }\item[{Color}]{font\+Color,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{unit }\end{DoxyParamCaption})}
+
+
+
+Configures font, area, color, and text string for the unit label. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font to use for the unit. \\
+\hline
+\mbox{\texttt{ in}}  & {\em area} & Display boundary area for the unit. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Text color for the unit. \\
+\hline
+\mbox{\texttt{ in}}  & {\em unit} & Null-\/terminated string representing the unit (e.\+g. "{}km/h"{}, "{}°\+C"{}).\\
+\hline
+\end{DoxyParams}
+Configures all presentation properties for the measurement unit label. It stores the font reference, boundary area, and text color, and copies up to 31 characters of the unit string into the internal buffer m\+Unit, ensuring safe null-\/termination.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font to be used when rendering the unit string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em area} & Display boundary area allocating screen space for the unit label. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Text brush color used to draw the unit characters. \\
+\hline
+\mbox{\texttt{ in}}  & {\em unit} & Null-\/terminated C-\/string representing the measurement unit. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e}\label{classValueDisplay_a51a0542aff986c4a0c1cd0407cc1cf1e} 
+\index{ValueDisplay@{ValueDisplay}!setValueConfig@{setValueConfig}}
+\index{setValueConfig@{setValueConfig}!ValueDisplay@{ValueDisplay}}
+\doxysubsubsection{\texorpdfstring{setValueConfig()}{setValueConfig()}}
+{\footnotesize\ttfamily void Value\+Display\+::set\+Value\+Config (\begin{DoxyParamCaption}\item[{Font \&}]{font,  }\item[{Area}]{area,  }\item[{Position}]{value\+Pos,  }\item[{Color}]{font\+Color,  }\item[{Color}]{bg\+Color,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format }\end{DoxyParamCaption})}
+
+
+
+Configures font, area, position, colors, and format string for the numeric value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font to use for the value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em area} & Display boundary area for the value box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value\+Pos} & Text drawing offset inside the value box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Text color for the numeric value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bg\+Color} & Background fill color behind the value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em format} & Format string for sprintf (e.\+g. "{}\%.\+1f"{}, "{}\%03d"{}).\\
+\hline
+\end{DoxyParams}
+Configures the display parameters for the numeric value. It stores the font reference, value area box, relative text offset position, font color, background color, and the printf-\/compatible format specifier string (e.\+g. "{}\%.\+1f"{}, "{}\%d"{}). Buffer length is safeguarded to a maximum of 63 characters to prevent buffer overflow.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em font} & Reference to the font used for rendering the numeric value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em area} & Bounding area defining the size and offset of the value sub-\/box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value\+Pos} & Internal text coordinate offset within the value sub-\/box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em font\+Color} & Color of the value text characters. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bg\+Color} & Background fill color behind the value text. \\
+\hline
+\mbox{\texttt{ in}}  & {\em format} & Format specification string (e.\+g. "{}\%.\+2f"{}) used by sprintf. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValueDisplay_8h}{Value\+Display.\+h}}\item 
+\mbox{\hyperlink{ValueDisplay_8cpp}{Value\+Display.\+cpp}}\end{DoxyCompactItemize}

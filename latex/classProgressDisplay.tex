@@ -1,0 +1,249 @@
+\doxysection{Progress\+Display Class Reference}
+\hypertarget{classProgressDisplay}{}\label{classProgressDisplay}\index{ProgressDisplay@{ProgressDisplay}}
+
+
+Widget for drawing a horizontal progress bar indicator.  
+
+
+
+
+{\ttfamily \#include $<$Progress\+Display.\+h$>$}
+
+
+
+Inheritance diagram for Progress\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classProgressDisplay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Progress\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classProgressDisplay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProgressDisplay_ab1dcc93996e3117272936b7ac3cc43a1}{Progress\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classProgressDisplay}{Progress\+Display} object with default colors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}{draw\+Value}} (float value) override
+\begin{DoxyCompactList}\small\item\em Renders the progress bar filling proportional to the given percentage value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgressDisplay_aa7a15380790f0d2b541f522953c1d7da}{draw\+Background}} () override
+\begin{DoxyCompactList}\small\item\em Renders the outer widget background and the empty progress track groove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgressDisplay_a6ea16235ae4f087a889ed8c2dfec29b4}{set\+Color}} (Color progress, Color background)
+\begin{DoxyCompactList}\small\item\em Sets the progress fill and track background colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDisplay_ac4cd0d50d761ae71643c15c1c36d3ade}{Base\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classBaseDisplay}{Base\+Display} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{set\+Frame\+Buffer}} (Frame\+Buffer \&fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer reference used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab9315d0bcde97fec9f5bbfa52fb9ad98}{set\+Frame\+Buffer}} (Frame\+Buffer \texorpdfstring{$\ast$}{*}fb)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer pointer used for off-\/screen rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{set\+Area}} (Area \texorpdfstring{$\ast$}{*}area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae78377c200b496fff2ac026da34b4212}{set\+Area}} (Area area)
+\begin{DoxyCompactList}\small\item\em Sets the widget display area (position and dimensions) by value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a973a860a6dd9fbb27dcb6fac6faaf62a}{set\+Size}} (uint16\+\_\+t width, uint16\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Sets the width and height of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a502493591ecd9351491cc7e2766bba46}{set\+Size}} (Size size)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the display widget using a Size object. \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{classBaseDisplay_a9978c590b9585bcb32942b45abbab343}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current dimensions of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6d2b804ec3ccfa6773c1d92b651d308a}{set\+Position}} (Position pos)
+\begin{DoxyCompactList}\small\item\em Sets the screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{set\+Bg\+Color}} (Color color)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using a Color object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a12f0bcbf1c1ff38fec8a39488c94781b}{set\+Bg\+Color}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue, uint8\+\_\+t alpha=0x\+FF)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the widget using RGBA color components. \end{DoxyCompactList}\item 
+Position \mbox{\hyperlink{classBaseDisplay_a08b84fe7d6825e04e954e4c9134ec055}{get\+Position}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current screen position coordinates of the display widget. \end{DoxyCompactList}\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBaseDisplay_a360c2560fb69db94b273574bc12ca7bd}{get\+Frame\+Buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the pointer to the currently associated framebuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a6278f7eb30679bba4c2879b4bd2e939a}{set\+Font}} (Font \&font)
+\begin{DoxyCompactList}\small\item\em Sets the font reference for text rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{set\+Lcd}} (Brush \&brush)
+\begin{DoxyCompactList}\small\item\em Sets the target LCD display drawing brush/surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classProgressDisplay_a4f892abbddf1e53ecbc55b0ce72a6033}\label{classProgressDisplay_a4f892abbddf1e53ecbc55b0ce72a6033} 
+Color {\bfseries m\+Progress\+Bg\+Color}
+\item 
+\Hypertarget{classProgressDisplay_a4ee7c3d1c41bf2c57d4537d7f34553e9}\label{classProgressDisplay_a4ee7c3d1c41bf2c57d4537d7f34553e9} 
+Color {\bfseries m\+Progress\+Color}
+\begin{DoxyCompactList}\small\item\em Background color of the groove and fill color of progress bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDisplay}{Base\+Display}}}
+\begin{DoxyCompactItemize}
+\item 
+Frame\+Buffer \texorpdfstring{$\ast$}{*} {\bfseries m\+Fb}
+\begin{DoxyCompactList}\small\item\em Pointer to working framebuffer for off-\/screen rendering. \end{DoxyCompactList}\item 
+Area {\bfseries m\+Area}
+\begin{DoxyCompactList}\small\item\em Display bounding area and screen coordinates. \end{DoxyCompactList}\item 
+Color {\bfseries m\+Bg\+Color}
+\begin{DoxyCompactList}\small\item\em Widget background color. \end{DoxyCompactList}\item 
+Brush \texorpdfstring{$\ast$}{*} {\bfseries m\+Lcd}
+\begin{DoxyCompactList}\small\item\em Pointer to target drawing surface (LCD display interface) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Widget for drawing a horizontal progress bar indicator. 
+
+{\ttfamily \doxylink{classProgressDisplay}{Progress\+Display}} is a dedicated progress visualization widget that displays a horizontal progress bar representing values between 0.\+0\% and 100.\+0\%.\hypertarget{classProgressDisplay_autotoc_md5}{}\doxysubsubsubsection{\texorpdfstring{Visual Layout}{Visual Layout}}\label{classProgressDisplay_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\bfseries{Outer Background}}\+: Filled with {\ttfamily m\+Bg\+Color} across the entire widget area.
+\item {\bfseries{Track Groove}}\+: Inset by 5 pixels on all sides (top, bottom, left, right) and filled with {\ttfamily m\+Progress\+Bg\+Color}.
+\item {\bfseries{Active Bar}}\+: Drawn inside the track groove starting from the left edge, with its width proportional to {\ttfamily (value / 100.\+0f) \texorpdfstring{$\ast$}{*} track\+Width} and filled with {\ttfamily m\+Progress\+Color}.
+\end{DoxyItemize}\hypertarget{classProgressDisplay_autotoc_md6}{}\doxysubsubsubsection{\texorpdfstring{Value Protection}{Value Protection}}\label{classProgressDisplay_autotoc_md6}
+Input values passed to {\ttfamily \doxylink{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}{draw\+Value()}} are automatically clamped between {\ttfamily 0.\+0f} and {\ttfamily 100.\+0f} to prevent visual glitches and buffer overruns.\hypertarget{classProgressDisplay_autotoc_md7}{}\doxysubsubsubsection{\texorpdfstring{Example Usage (from Touch Calibration Application)}{Example Usage (from Touch Calibration Application)}}\label{classProgressDisplay_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ProgressDisplay_8h}{ValueDisplay/ProgressDisplay.h}}>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ pageDisplayTouchCalibration(\textcolor{keywordtype}{void}*)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classProgressDisplay}{ProgressDisplay}}\ progressBar;}
+\DoxyCodeLine{\ \ \ \ ElapsedTime\ pressTime;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 1.\ Associate\ off-\/screen\ buffer\ and\ LCD\ drawing\ surface}}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classBaseDisplay_ac83c002aba8cf4043fb6e4124b1bed85}{setFrameBuffer}}(brush);}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classBaseDisplay_a626bb7b332c2c5323d26285192eb668d}{setLcd}}(lcd);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 2.\ Set\ widget\ area\ and\ colors}}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classBaseDisplay_ab7ac1ef1a8afe4902083216e0c65a74e}{setArea}}(\{50,\ 200,\ 140,\ 30\});}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classBaseDisplay_ae011b4f768f68c7eb903778a507af20a}{setBgColor}}(0x30,\ 0x30,\ 0x30);}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classProgressDisplay_a6ea16235ae4f087a889ed8c2dfec29b4}{setColor}}(Color\{0x30,\ 0xFF,\ 0x30\},\ Color\{0x80,\ 0x80,\ 0x80\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 3.\ Render\ initial\ background\ and\ empty\ progress\ bar\ (0\%)}}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classProgressDisplay_aa7a15380790f0d2b541f522953c1d7da}{drawBackground}}();}
+\DoxyCodeLine{\ \ \ \ progressBar.\mbox{\hyperlink{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}{drawValue}}(0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ 4.\ Update\ progress\ dynamically\ in\ a\ loop\ or\ callback}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{while}\ (calibrating)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ int32\_t\ elapsedMs\ =\ (int32\_t)pressTime.getMsec();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ progressPercent\ =\ (float)elapsedMs\ /\ 50.0f;\ \textcolor{comment}{//\ 0\ to\ 100\%\ over\ 5000\ ms}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ lcd.lock();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ progressBar.\mbox{\hyperlink{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}{drawValue}}(progressPercent);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ lcd.unlock();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ thread::yield();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classProgressDisplay_ab1dcc93996e3117272936b7ac3cc43a1}\label{classProgressDisplay_ab1dcc93996e3117272936b7ac3cc43a1} 
+\index{ProgressDisplay@{ProgressDisplay}!ProgressDisplay@{ProgressDisplay}}
+\index{ProgressDisplay@{ProgressDisplay}!ProgressDisplay@{ProgressDisplay}}
+\doxysubsubsection{\texorpdfstring{ProgressDisplay()}{ProgressDisplay()}}
+{\footnotesize\ttfamily Progress\+Display\+::\+Progress\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classProgressDisplay}{Progress\+Display} object with default colors. 
+
+Initializes a \doxylink{classProgressDisplay}{Progress\+Display} instance with default colors\+:
+\begin{DoxyItemize}
+\item Outer widget background\+: dark-\/gray (RGB\+: 0x30, 0x30, 0x30)
+\item Active progress indicator\+: bright green (RGB\+: 0x30, 0x\+FF, 0x30)
+\item Track/groove background\+: medium-\/gray (RGB\+: 0x80, 0x80, 0x80)
+\end{DoxyItemize}
+
+Internal pointers to the off-\/screen frame buffer and display surface brush are initialized to nullptr. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classProgressDisplay_aa7a15380790f0d2b541f522953c1d7da}\label{classProgressDisplay_aa7a15380790f0d2b541f522953c1d7da} 
+\index{ProgressDisplay@{ProgressDisplay}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!ProgressDisplay@{ProgressDisplay}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily void Progress\+Display\+::draw\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the outer widget background and the empty progress track groove. 
+
+Renders the static widget background and the un-\/filled progress track. It configures the frame buffer to match the entire widget area, clears it with the outer background color (m\+Bg\+Color), draws an inner groove rectangle using m\+Progress\+Bg\+Color with a 5-\/pixel inset margin on all sides, and blits the complete background bitmap to the LCD display. 
+
+Implements \mbox{\hyperlink{classBaseDisplay_a0a14a702c2df4739c58e4ab08facaf99}{Base\+Display}}.
+
+\Hypertarget{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a}\label{classProgressDisplay_aaff00d2530e2a899527a813c5dabab1a} 
+\index{ProgressDisplay@{ProgressDisplay}!drawValue@{drawValue}}
+\index{drawValue@{drawValue}!ProgressDisplay@{ProgressDisplay}}
+\doxysubsubsection{\texorpdfstring{drawValue()}{drawValue()}}
+{\footnotesize\ttfamily void Progress\+Display\+::draw\+Value (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the progress bar filling proportional to the given percentage value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & Progress percentage value (clamped between 0.\+0f and 100.\+0f).\\
+\hline
+\end{DoxyParams}
+Clamps the provided value between 0.\+0f and 100.\+0f to prevent visual rendering artifacts or overflow outside the allocated boundaries. It calculates the inner progress bar area by applying a 5-\/pixel margin on all four sides of the widget area.
+
+The method then\+:
+\begin{DoxyEnumerate}
+\item Resizes the frame buffer to the inner track dimensions.
+\item Clears it with the groove background color (m\+Progress\+Bg\+Color).
+\item Computes the active bar width proportional to the percentage (value / 100.\+0f \texorpdfstring{$\ast$}{*} total\+Width).
+\item Draws a solid filled rectangle with the active progress color (m\+Progress\+Color).
+\item Blits the composited progress bar bitmap onto the target LCD at the offset position.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & Current progress percentage, clamped between 0.\+0f and 100.\+0f. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBaseDisplay_af5b3bffb81f612b55dc86045b3d51db7}{Base\+Display}}.
+
+\Hypertarget{classProgressDisplay_a6ea16235ae4f087a889ed8c2dfec29b4}\label{classProgressDisplay_a6ea16235ae4f087a889ed8c2dfec29b4} 
+\index{ProgressDisplay@{ProgressDisplay}!setColor@{setColor}}
+\index{setColor@{setColor}!ProgressDisplay@{ProgressDisplay}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Progress\+Display\+::set\+Color (\begin{DoxyParamCaption}\item[{Color}]{progress,  }\item[{Color}]{background }\end{DoxyParamCaption})}
+
+
+
+Sets the progress fill and track background colors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em progress} & Fill color for the active progress bar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em background} & Track background color of the groove.\\
+\hline
+\end{DoxyParams}
+Updates the color configuration for the active progress bar fill and the background track groove.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em progress} & Color to use for the active filled portion of the progress bar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em background} & Color to use for the background groove/track of the progress bar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ProgressDisplay_8h}{Progress\+Display.\+h}}\item 
+\mbox{\hyperlink{ProgressDisplay_8cpp}{Progress\+Display.\+cpp}}\end{DoxyCompactItemize}

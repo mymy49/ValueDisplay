@@ -1,0 +1,10 @@
+<map id="RpmBarDisplay.cpp" name="RpmBarDisplay.cpp">
+<area shape="rect" id="Node000001" title="Implementation of RpmBarDisplay member functions." alt="" coords="5,5,153,33"/>
+<area shape="rect" id="Node000002" href="$RpmBarDisplay_8h.html" title="Multi&#45;segment tachometer bar display widget for engine RPM visualization." alt="" coords="13,81,145,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,31,82,66,76,65,78,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="30,232,128,260"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,107,60,157,60,184,70,218,65,218,55,185,55,156,72,112"/>
+<area shape="rect" id="Node000004" href="$BaseDisplay_8h.html" title="Base class for display widgets and value indicators." alt="" coords="70,157,182,184"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="88,107,112,143,107,144,87,112"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="120,183,97,221,93,218,115,186"/>
+</map>

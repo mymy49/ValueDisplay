@@ -1,0 +1,8 @@
+<map id="ProgressDisplay.h" name="ProgressDisplay.h">
+<area shape="rect" id="Node000001" title="Horizontal progress bar widget for displaying percentage (0 ~ 100%)." alt="" coords="5,5,142,33"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,157,122,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,31,55,81,55,108,64,142,59,142,50,109,50,81,66,36"/>
+<area shape="rect" id="Node000003" href="$BaseDisplay_8h.html" title="Base class for display widgets and value indicators." alt="" coords="64,81,176,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,31,106,68,101,68,81,36"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="114,108,92,145,88,142,110,111"/>
+</map>

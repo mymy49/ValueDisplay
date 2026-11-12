@@ -1,0 +1,30 @@
+name: Doxygen API Docs
+
+on:
+  push:
+    branches:
+      - doxygen_test  # main 브랜치에 푸시될 때마다 실행
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 저장소의 최신 코드 가져오기
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. 우분투 환경에 Doxygen과 Graphviz(다이어그램용) 설치
+    - name: Install Doxygen & Graphviz
+      run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+
+    # 3. 문서 빌드 (루트 경로에 Doxyfile이 있어야 함)
+    - name: Run Doxygen
+      run: doxygen Doxyfile
+
+    # 4. 생성된 html 폴더를 gh-pages 브랜치로 자동 푸시
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./html  # Doxyfile의 OUTPUT_DIRECTORY 및 HTML_OUTPUT 설정에 맞춰 수정

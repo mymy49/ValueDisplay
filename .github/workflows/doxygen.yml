@@ -3,8 +3,12 @@ name: Doxygen API Docs
 on:
   push:
     branches:
-      - doxygen_test  # main 브랜치에 푸시될 때마다 실행
+      - main
+      - doxygen_test
 
+permissions:
+  contents: write
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

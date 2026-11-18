@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['threshold_20zones_0',['Operating Threshold Zones',['../classAlertValueDisplay.html#autotoc_md0',1,'']]],
-  ['touch_20calibration_20application_1',['Example Usage (from Touch Calibration Application)',['../classProgressDisplay.html#autotoc_md7',1,'']]],
-  ['typical_20derived_20implementation_20example_2',['Typical Derived Implementation Example',['../classBaseDisplay.html#autotoc_md4',1,'']]]
+  ['key_20features_0',['Key Features',['../index.html#autotoc_md10',1,'1. Overview &amp;amp; Key Features'],['../classValueDisplay.html#autotoc_md31',1,'Key Features']]],
+  ['key_20highlights_1',['Key Highlights',['../index.html#autotoc_md11',1,'']]],
+  ['key_20responsibilities_2',['Key Responsibilities',['../classBaseDisplay.html#autotoc_md3',1,'']]]
 ];

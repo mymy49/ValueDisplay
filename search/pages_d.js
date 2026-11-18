@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['usage_0',['Usage',['../classAlertValueDisplay.html#autotoc_md1',1,'Example Usage'],['../classRpmBarDisplay.html#autotoc_md10',1,'Example Usage'],['../classValueDisplay.html#autotoc_md12',1,'Example Usage']]],
-  ['usage_20from_20touch_20calibration_20application_1',['Example Usage (from Touch Calibration Application)',['../classProgressDisplay.html#autotoc_md7',1,'']]]
+  ['implementation_20example_0',['Typical Derived Implementation Example',['../classBaseDisplay.html#autotoc_md4',1,'']]],
+  ['installation_20project_20setup_1',['3. Installation &amp;amp; Project Setup',['../index.html#autotoc_md16',1,'']]]
 ];

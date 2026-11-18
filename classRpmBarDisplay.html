@@ -199,7 +199,7 @@ Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Widget displaying engine RPM as a segmented colored bar and a colored top guideline. </p>
 <p><span class="tt"><a class="el" href="classRpmBarDisplay.html" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline.">RpmBarDisplay</a></span> is an automotive-style tachometer gauge widget designed to visualize engine revolutions per minute (RPM). It combines a static multi-colored top guideline bar with a dynamically filling bar underneath.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Dual-Bar Architecture</h3>
 <ol type="1">
 <li><b>Top Segmented Guideline</b>: Drawn across the top with a thickness of <span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Threshold RPM limits and topline height.">mToplineThickness</a></span> pixels. It remains statically divided into four color segments proportional to their respective operating RPM zones:<ul>
@@ -211,7 +211,7 @@ Dual-Bar Architecture</h3>
 </li>
 <li><b>Dynamic RPM Bar</b>: Positioned beneath the top guideline and inset by 3 pixels horizontally. Its width expands proportionately to <span class="tt">(value / mMaxRpm) * trackWidth</span>. The bar's color dynamically switches to match the active zone that the current RPM falls into.</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Example Usage</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="RpmBarDisplay_8h.html">ValueDisplay/RpmBarDisplay.h</a>&gt;</span></div>
 <div class="line"> </div>

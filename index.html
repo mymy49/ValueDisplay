@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ValueDisplay Module: Main Page</title>
+<title>ValueDisplay Module: ValueDisplay</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,10 +70,253 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">ValueDisplay Module Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a> </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<p>[<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/>](LICENSE) <a href="https://github.com/mymy49/ValueDisplay/actions"><img src="https://github.com/mymy49/ValueDisplay/actions/workflows/doxygen.yml/badge.svg" alt="Doxygen Build" style="pointer-events: none;" class="inline"/></a> <a href="https://mymy49.github.io/ValueDisplay/"><img src="https://img.shields.io/badge/docs-API%20Reference-brightgreen.svg" alt="Doxygen API Docs" style="pointer-events: none;" class="inline"/></a></p>
+<p>Modular visual display widgets and instrument gauges built on the <b>TurtleShip</b> GUI framework for <b>yss OS</b>.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+1. Overview &amp; Key Features</h1>
+<p>The <b><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></b> module provides a collection of reusable, flicker-free UI widgets designed for embedded instruments, dashboard displays, and numeric monitoring systems. Leveraging an off-screen double-buffering architecture, it renders graphics into a working <span class="tt">FrameBuffer</span> before blitting to the target display, eliminating visible screen tearing and flicker.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Key Highlights</h2>
+<ul>
+<li><b>Off-Screen Double-Buffering &amp; Selective Redraw</b>:<ul>
+<li>Graphical elements are composed inside a working <span class="tt">FrameBuffer</span> (e.g. <span class="tt">FrameBufferRgb565LE</span>) and blitted to the physical display via a <span class="tt">Brush</span>.</li>
+<li>Only modified sub-areas (such as the numerical readout box or progress bar fill) are transferred on dynamic updates, minimizing bus traffic and maximizing update frame rates.</li>
+</ul>
+</li>
+<li><b>Comprehensive Widget Suite</b>:<ul>
+<li><b><span class="tt"><a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a></span></b>:<ul>
+<li>Abstract foundation providing bounding box geometry (<span class="tt">Area</span>), background colors (<span class="tt">Color</span>), and surface binding (<span class="tt">setFrameBuffer()</span>, <span class="tt">setLcd()</span>).</li>
+<li>Standardized rendering lifecycle: <span class="tt">drawBackground()</span> and <span class="tt">drawValue()</span>.</li>
+</ul>
+</li>
+<li><b><span class="tt"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></span></b>:<ul>
+<li>Formatted floating-point numeric readout with configurable <span class="tt">sprintf</span> format specifiers (e.g. <span class="tt">"%3.1f"</span>, <span class="tt">"%02.0f"</span>).</li>
+<li>Customizable title label and measurement unit suffix (e.g. <span class="tt">"km/h"</span>, <span class="tt">"V"</span>, <span class="tt">"°C"</span>).</li>
+<li>Interactive numeric editing mode with cursor blinking visualization (<span class="tt">drawValueWithCursor()</span>).</li>
+</ul>
+</li>
+<li><b><span class="tt"><a class="el" href="classAlertValueDisplay.html" title="Specialized ValueDisplay that changes text color based on low/high threshold comparisons.">AlertValueDisplay</a></span></b>:<ul>
+<li>Extends <span class="tt"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></span> with tri-state threshold-based alerting.</li>
+<li>Automatically switches text color across <b>Low Alert Zone</b> (<span class="tt">value &lt; lowThreshold</span>), <b>Normal Zone</b>, and <b>High Alert Zone</b> (<span class="tt">value &gt;= highThreshold</span>).</li>
+</ul>
+</li>
+<li><b><span class="tt"><a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a></span></b>:<ul>
+<li>Horizontal percentage progress bar indicator (0.0% ~ 100.0%).</li>
+<li>Inset track groove, configurable fill/track colors, and automatic boundary clamping.</li>
+</ul>
+</li>
+<li><b><span class="tt"><a class="el" href="classRpmBarDisplay.html" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline.">RpmBarDisplay</a></span></b>:<ul>
+<li>Automotive-style engine tachometer gauge.</li>
+<li>Dual-bar visual design: static segmented top guideline bar divided into 4 operating zones (Idle, Normal, Warning, Over-rev) and dynamic filling bar underneath.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+2. System Specifications &amp; Hardware Environment</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Supported Targets &amp; Tools</h2>
+<ul>
+<li><b>Target Microcontrollers &amp; Development Boards</b>:<ul>
+<li>Nuvoton NuMicro® M251 series (e.g., <b>NuMaker-M251KG</b> / Cortex®-M23).</li>
+<li>Any microcontroller platform supported by the <b>yss OS</b> framework.</li>
+</ul>
+</li>
+<li><b>Display Compatibility</b>:<ul>
+<li>Any display controller supported by the <b>TurtleShip</b> graphics engine (e.g., ST7789V, ILI9341, ST7735).</li>
+<li>Validated on the <b>2.8-inch TFT Touch Shield Rev2.1</b> (240x320 RGB565).</li>
+</ul>
+</li>
+<li><b>Required Software &amp; Toolchains</b>:<ul>
+<li>Toolchain: ARM GNU Toolchain or CrossWorks for ARM (v5.x or higher).<ul>
+<li><b>Note on CrossWorks for ARM</b>: CrossWorks for ARM does not natively support the Nuvoton M251 series. You must install the custom <a href="https://github.com/mymy49/CrossworksForARM_Nuvoton_M251">CrossworksForARM_Nuvoton_M251 Support Package</a> before building M251 projects.</li>
+</ul>
+</li>
+<li>Operating System: <a href="https://github.com/mymy49/yss">yss OS</a> (embedded RTOS &amp; HAL).</li>
+<li>Graphics Framework: <a href="https://github.com/mymy49/TurtleShip">TurtleShip</a> (providing <span class="tt">FrameBuffer</span>, <span class="tt">Brush</span>, <span class="tt">Area</span>, <span class="tt">Color</span>).</li>
+<li>Language: C++11 or higher.</li>
+</ul>
+</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+3. Installation &amp; Project Setup</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Cloning with Submodules</h2>
+<p>To clone a project that includes this repository as a submodule: </p><div class="fragment"><div class="line">git clone --recursive https://github.com/mymy49/NuMaker-M251KG_example.git</div>
+</div><!-- fragment --><p>To add this repository as a submodule into your existing yss OS application: </p><div class="fragment"><div class="line">git submodule add https://github.com/mymy49/ValueDisplay.git module/ValueDisplay</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+Prerequisites: Nuvoton M251 Support Package for CrossWorks for ARM</h2>
+<p>CrossWorks for ARM does not natively provide device support for Nuvoton NuMicro® M251 microcontrollers in its default package manager. A custom device support package must be installed beforehand:</p>
+<ol type="1">
+<li>Clone or download the <a href="https://github.com/mymy49/CrossworksForARM_Nuvoton_M251">CrossworksForARM_Nuvoton_M251</a> repository.</li>
+<li>Open the package project file (<span class="tt">.hzp</span>) in CrossWorks for ARM and build it (<span class="tt">F7</span> or <span class="tt">Build -&gt; Build Project</span>) to generate the package file (<span class="tt">.hzq</span>).</li>
+<li>In CrossWorks for ARM, navigate to <b>Tools -&gt; Packages -&gt; Manually Install Packages...</b> and select the generated <span class="tt">.hzq</span> package file.</li>
+<li>Once installed, M251 target device definitions, CMSIS headers, and project templates will be fully available in CrossWorks for ARM.</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+Build and Firmware Flashing</h2>
+<ul>
+<li><b>CrossWorks for ARM</b>:<ol type="1">
+<li>Ensure the <a href="https://github.com/mymy49/CrossworksForARM_Nuvoton_M251">CrossworksForARM_Nuvoton_M251</a> package has been installed.</li>
+<li>Open the project solution file (e.g., <span class="tt">Example.hzp</span>).</li>
+<li>Select target configuration (<span class="tt">Example THUMB Release</span> or <span class="tt">Example THUMB Debug</span>).</li>
+<li>Build solution via <span class="tt">F7</span> or <span class="tt">Build -&gt; Build Solution</span>.</li>
+<li>Connect the board via Nu-Link ICE and flash with <span class="tt">Ctrl+D</span> (<span class="tt">Target -&gt; Download</span>).</li>
+</ol>
+</li>
+<li><b>Command Line (pyOCD / OpenOCD)</b>: <div class="fragment"><div class="line"># Flash prebuilt binary using pyocd</div>
+<div class="line">pyocd flash -t m251kg firmware.bin</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+4. Quick Start &amp; Example Code</h1>
+<p>Below are practical examples demonstrating how to use <span class="tt"><a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a></span>, <span class="tt"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></span>, and <span class="tt"><a class="el" href="classAlertValueDisplay.html" title="Specialized ValueDisplay that changes text color based on low/high threshold comparisons.">AlertValueDisplay</a></span> with yss OS and TurtleShip:</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+1. Horizontal Progress Bar (<span class="tt">ProgressDisplay</span>)</h2>
+<p><em>(From touch calibration in <span class="tt">page_touchCalibration.cpp</span>)</em> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;bsp.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ProgressDisplay_8h.html">ValueDisplay/ProgressDisplay.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classProgressDisplay.html">ProgressDisplay</a> progressBar;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> initializeCalibrationProgress(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 1. Associate off-screen buffer and LCD drawing surface</span></div>
+<div class="line">    progressBar.<a class="code hl_function" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">setFrameBuffer</a>(brush);</div>
+<div class="line">    progressBar.<a class="code hl_function" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">setLcd</a>(lcd);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 2. Configure bounding area and colors</span></div>
+<div class="line">    progressBar.<a class="code hl_function" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">setArea</a>({50, 200, 140, 30});</div>
+<div class="line">    progressBar.<a class="code hl_function" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a>(0x30, 0x30, 0x30);</div>
+<div class="line">    progressBar.<a class="code hl_function" href="classProgressDisplay.html#a6ea16235ae4f087a889ed8c2dfec29b4">setColor</a>(Color{0x30, 0xFF, 0x30}, Color{0x80, 0x80, 0x80});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 3. Render initial background and empty progress bar (0%)</span></div>
+<div class="line">    progressBar.<a class="code hl_function" href="classProgressDisplay.html#aa7a15380790f0d2b541f522953c1d7da">drawBackground</a>();</div>
+<div class="line">    progressBar.<a class="code hl_function" href="classProgressDisplay.html#aaff00d2530e2a899527a813c5dabab1a">drawValue</a>(0);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> updateCalibrationProgress(<span class="keywordtype">float</span> percent)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Dynamically update progress (automatically clamped between 0 and 100)</span></div>
+<div class="line">    progressBar.<a class="code hl_function" href="classProgressDisplay.html#aaff00d2530e2a899527a813c5dabab1a">drawValue</a>(percent);</div>
+<div class="line">}</div>
+<div class="ttc" id="aProgressDisplay_8h_html"><div class="ttname"><a href="ProgressDisplay_8h.html">ProgressDisplay.h</a></div><div class="ttdoc">Horizontal progress bar widget for displaying percentage (0 ~ 100%).</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:28</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:64</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:41</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:133</div></div>
+<div class="ttc" id="aclassProgressDisplay_html"><div class="ttname"><a href="classProgressDisplay.html">ProgressDisplay</a></div><div class="ttdoc">Widget for drawing a horizontal progress bar indicator.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.h:76</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_a6ea16235ae4f087a889ed8c2dfec29b4"><div class="ttname"><a href="classProgressDisplay.html#a6ea16235ae4f087a889ed8c2dfec29b4">ProgressDisplay::setColor</a></div><div class="ttdeci">void setColor(Color progress, Color background)</div><div class="ttdoc">Sets the progress fill and track background colors.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:34</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_aa7a15380790f0d2b541f522953c1d7da"><div class="ttname"><a href="classProgressDisplay.html#aa7a15380790f0d2b541f522953c1d7da">ProgressDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the outer widget background and the empty progress track groove.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:100</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_aaff00d2530e2a899527a813c5dabab1a"><div class="ttname"><a href="classProgressDisplay.html#aaff00d2530e2a899527a813c5dabab1a">ProgressDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the progress bar filling proportional to the given percentage value.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:55</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+2. Tri-State Alert Sensor Readout (<span class="tt">AlertValueDisplay</span>)</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;bsp.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="AlertValueDisplay_8h.html">ValueDisplay/AlertValueDisplay.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;font/Ubuntu_14_B.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;font/Ubuntu_20_B.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classAlertValueDisplay.html">AlertValueDisplay</a> coolantGauge;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setupCoolantGauge(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 1. Configure geometry and drawing surfaces</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">setFrameBuffer</a>(brush);</div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">setLcd</a>(lcd);</div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">setArea</a>({10, 40, 130, 60});</div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a>(0x20, 0x20, 0x20);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 2. Configure title label (&quot;COOLANT&quot; at top-left)</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classValueDisplay.html#ad21e5fe2648a19f1607cf87a9f5ab7fc">setTitleConfig</a>(Font_Ubuntu_14_B, {5, 5}, Color{0xAA, 0xAA, 0xAA}, <span class="stringliteral">&quot;COOLANT&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 3. Configure numeric value sub-box</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classValueDisplay.html#a51a0542aff986c4a0c1cd0407cc1cf1e">setValueConfig</a>(Font_Ubuntu_20_B, {5, 25, 80, 30}, {2, 5},</div>
+<div class="line">                                Color{0x00, 0xFF, 0x00}, Color{0x10, 0x10, 0x10}, <span class="stringliteral">&quot;%3.0f&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 4. Configure measurement unit (&quot;&#39;C&quot;)</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classValueDisplay.html#aa00da94eb32e1600b93dcf5482f9e973">setUnitConfig</a>(Font_Ubuntu_14_B, {90, 25, 35, 30}, Color{0xFF, 0xFF, 0xFF}, <span class="stringliteral">&quot;&#39;C&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 5. Configure alert thresholds: Low &lt; 50°C (Blue), High &gt;= 105°C (Red)</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classAlertValueDisplay.html#a4f3eb05fd720a173a11a3f516c5826de">setAlertValue</a>(50.0f, 105.0f);</div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classAlertValueDisplay.html#a74b9b324482d32f7ac87245bdee0bc0c">setAlertColor</a>(Color{0x00, 0x80, 0xFF}, Color{0x00, 0xFF, 0x00}, Color{0xFF, 0x00, 0x00});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 6. Draw static background, title, and unit</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classValueDisplay.html#a035a6edfd2be7db85fd4808e9b75033b">drawBackground</a>();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> updateCoolantTemperature(<span class="keywordtype">float</span> temperature)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Only the numeric sub-box is redrawn with dynamic color switching</span></div>
+<div class="line">    coolantGauge.<a class="code hl_function" href="classAlertValueDisplay.html#adcfd4a0e9ba4c78c4bbb3a6cca48ea61">drawValue</a>(temperature);</div>
+<div class="line">}</div>
+<div class="ttc" id="aAlertValueDisplay_8h_html"><div class="ttname"><a href="AlertValueDisplay_8h.html">AlertValueDisplay.h</a></div><div class="ttdoc">Display widget extending ValueDisplay with threshold-based alert colors.</div></div>
+<div class="ttc" id="aclassAlertValueDisplay_html"><div class="ttname"><a href="classAlertValueDisplay.html">AlertValueDisplay</a></div><div class="ttdoc">Specialized ValueDisplay that changes text color based on low/high threshold comparisons.</div><div class="ttdef"><b>Definition</b> AlertValueDisplay.h:77</div></div>
+<div class="ttc" id="aclassAlertValueDisplay_html_a4f3eb05fd720a173a11a3f516c5826de"><div class="ttname"><a href="classAlertValueDisplay.html#a4f3eb05fd720a173a11a3f516c5826de">AlertValueDisplay::setAlertValue</a></div><div class="ttdeci">void setAlertValue(float lowThreshold, float highThreshold)</div><div class="ttdoc">Sets the low and high alert threshold limits.</div><div class="ttdef"><b>Definition</b> AlertValueDisplay.cpp:77</div></div>
+<div class="ttc" id="aclassAlertValueDisplay_html_a74b9b324482d32f7ac87245bdee0bc0c"><div class="ttname"><a href="classAlertValueDisplay.html#a74b9b324482d32f7ac87245bdee0bc0c">AlertValueDisplay::setAlertColor</a></div><div class="ttdeci">void setAlertColor(Color lowColor, Color normalColor, Color highColor)</div><div class="ttdoc">Sets the alert colors for low, normal, and high value ranges.</div><div class="ttdef"><b>Definition</b> AlertValueDisplay.cpp:61</div></div>
+<div class="ttc" id="aclassAlertValueDisplay_html_adcfd4a0e9ba4c78c4bbb3a6cca48ea61"><div class="ttname"><a href="classAlertValueDisplay.html#adcfd4a0e9ba4c78c4bbb3a6cca48ea61">AlertValueDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Evaluates the value against thresholds to select the appropriate alert color, then renders it.</div><div class="ttdef"><b>Definition</b> AlertValueDisplay.cpp:38</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a035a6edfd2be7db85fd4808e9b75033b"><div class="ttname"><a href="classValueDisplay.html#a035a6edfd2be7db85fd4808e9b75033b">ValueDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the static background, title label, and unit string onto the LCD.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:104</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a51a0542aff986c4a0c1cd0407cc1cf1e"><div class="ttname"><a href="classValueDisplay.html#a51a0542aff986c4a0c1cd0407cc1cf1e">ValueDisplay::setValueConfig</a></div><div class="ttdeci">void setValueConfig(Font &amp;font, Area area, Position valuePos, Color fontColor, Color bgColor, const char *format)</div><div class="ttdoc">Configures font, area, position, colors, and format string for the numeric value.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:65</div></div>
+<div class="ttc" id="aclassValueDisplay_html_aa00da94eb32e1600b93dcf5482f9e973"><div class="ttname"><a href="classValueDisplay.html#aa00da94eb32e1600b93dcf5482f9e973">ValueDisplay::setUnitConfig</a></div><div class="ttdeci">void setUnitConfig(Font &amp;font, Area area, Color fontColor, const char *unit)</div><div class="ttdoc">Configures font, area, color, and text string for the unit label.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:41</div></div>
+<div class="ttc" id="aclassValueDisplay_html_ad21e5fe2648a19f1607cf87a9f5ab7fc"><div class="ttname"><a href="classValueDisplay.html#ad21e5fe2648a19f1607cf87a9f5ab7fc">ValueDisplay::setTitleConfig</a></div><div class="ttdeci">void setTitleConfig(Font &amp;font, Position pos, Color fontColor, const char *title)</div><div class="ttdoc">Configures font, position, color, and text string for the title.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:87</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+3. Engine Tachometer Bar (<span class="tt">RpmBarDisplay</span>)</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;bsp.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="RpmBarDisplay_8h.html">ValueDisplay/RpmBarDisplay.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classRpmBarDisplay.html">RpmBarDisplay</a> tachometer;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setupTachometer(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">setFrameBuffer</a>(brush);</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">setLcd</a>(lcd);</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">setArea</a>({20, 30, 200, 35});</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a>(Color{0x00, 0x00, 0x00});</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classRpmBarDisplay.html#a7d42bf4fb0786557b7f15d76f6028640">setBarBgColor</a>(Color{0x25, 0x25, 0x25});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Configure RPM full scale and operating zones</span></div>
+<div class="line">    tachometer.<a class="code hl_function" href="classRpmBarDisplay.html#a23eede38f9fef459cdf8a6a24126cdd4">setMaxRpm</a>(8000);</div>
+<div class="line">    tachometer.setZone(1000, 5500, 6800); <span class="comment">// Idle, Warning, Redline limits</span></div>
+<div class="line">    tachometer.<a class="code hl_function" href="classRpmBarDisplay.html#ade673b62adb2a1e5b7f62f44cdc2da7a">setToplineThickness</a>(3);</div>
+<div class="line"> </div>
+<div class="line">    tachometer.<a class="code hl_function" href="classRpmBarDisplay.html#a2e0fec8b40e13e57d002a67d36500943">drawBackground</a>();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> updateEngineRpm(<span class="keywordtype">float</span> currentRpm)</div>
+<div class="line">{</div>
+<div class="line">    tachometer.<a class="code hl_function" href="classRpmBarDisplay.html#aba4b45df1270b9d5234b4749838ae49c">drawValue</a>(currentRpm);</div>
+<div class="line">}</div>
+<div class="ttc" id="aRpmBarDisplay_8h_html"><div class="ttname"><a href="RpmBarDisplay_8h.html">RpmBarDisplay.h</a></div><div class="ttdoc">Multi-segment tachometer bar display widget for engine RPM visualization.</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html"><div class="ttname"><a href="classRpmBarDisplay.html">RpmBarDisplay</a></div><div class="ttdoc">Widget displaying engine RPM as a segmented colored bar and a colored top guideline.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.h:81</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a23eede38f9fef459cdf8a6a24126cdd4"><div class="ttname"><a href="classRpmBarDisplay.html#a23eede38f9fef459cdf8a6a24126cdd4">RpmBarDisplay::setMaxRpm</a></div><div class="ttdeci">void setMaxRpm(int32_t rpm)</div><div class="ttdoc">Sets the maximum scale value of the RPM gauge.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:220</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a2e0fec8b40e13e57d002a67d36500943"><div class="ttname"><a href="classRpmBarDisplay.html#a2e0fec8b40e13e57d002a67d36500943">RpmBarDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the widget background and the segmented top reference guideline.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:170</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a7d42bf4fb0786557b7f15d76f6028640"><div class="ttname"><a href="classRpmBarDisplay.html#a7d42bf4fb0786557b7f15d76f6028640">RpmBarDisplay::setBarBgColor</a></div><div class="ttdeci">void setBarBgColor(Color color)</div><div class="ttdoc">Sets the background color of the dynamic bar track.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:92</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_aba4b45df1270b9d5234b4749838ae49c"><div class="ttname"><a href="classRpmBarDisplay.html#aba4b45df1270b9d5234b4749838ae49c">RpmBarDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the dynamic RPM bar filled proportionally to the given RPM value.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:115</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_ade673b62adb2a1e5b7f62f44cdc2da7a"><div class="ttname"><a href="classRpmBarDisplay.html#ade673b62adb2a1e5b7f62f44cdc2da7a">RpmBarDisplay::setToplineThickness</a></div><div class="ttdeci">void setToplineThickness(int32_t thickness)</div><div class="ttdoc">Sets the vertical thickness of the top segmented guide bar.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:232</div></div>
+</div><!-- fragment --><hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+5. Documentation &amp; References</h1>
+<ul>
+<li><b>Doxygen API Reference</b>: <a href="https://mymy49.github.io/ValueDisplay/">https://mymy49.github.io/ValueDisplay/</a></li>
+<li><b>TurtleShip GUI Framework</b>: <a href="https://mymy49.github.io/TurtleShip/">https://mymy49.github.io/TurtleShip/</a></li>
+<li><b>Doxygen Main Page</b>: This <span class="tt">README.md</span> file serves as the main page of the generated Doxygen documentation (<span class="tt">USE_MDFILE_AS_MAINPAGE = README.md</span>).</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+6. License &amp; Author</h1>
+<ul>
+<li><b>Author</b>: Yoon-Ki Hong</li>
+<li><b>License</b>: MIT License. See [LICENSE](LICENSE) for full terms and conditions. </li>
+</ul>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 <!-- start footer part -->

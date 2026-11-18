@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['value_20protection_0',['Value Protection',['../classProgressDisplay.html#autotoc_md6',1,'']]],
-  ['valuedisplay_1',['ValueDisplay',['../md_README.html',1,'']]],
-  ['visual_20layout_2',['Visual Layout',['../classProgressDisplay.html#autotoc_md5',1,'']]]
+  ['key_20features_0',['Key Features',['../index.html#autotoc_md10',1,'1. Overview &amp;amp; Key Features'],['../classValueDisplay.html#autotoc_md31',1,'Key Features']]],
+  ['key_20highlights_1',['Key Highlights',['../index.html#autotoc_md11',1,'']]],
+  ['key_20responsibilities_2',['Key Responsibilities',['../classBaseDisplay.html#autotoc_md3',1,'']]]
 ];

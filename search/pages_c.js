@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['threshold_20zones_0',['Operating Threshold Zones',['../classAlertValueDisplay.html#autotoc_md0',1,'']]],
-  ['touch_20calibration_20application_1',['Example Usage (from Touch Calibration Application)',['../classProgressDisplay.html#autotoc_md7',1,'']]],
-  ['typical_20derived_20implementation_20example_2',['Typical Derived Implementation Example',['../classBaseDisplay.html#autotoc_md4',1,'']]]
+  ['hardware_20environment_0',['2. System Specifications &amp;amp; Hardware Environment',['../index.html#autotoc_md13',1,'']]],
+  ['highlights_1',['Key Highlights',['../index.html#autotoc_md11',1,'']]],
+  ['horizontal_20progress_20bar_20progressdisplay_2',['1. Horizontal Progress Bar (&lt;span class=&quot;tt&quot;&gt;ProgressDisplay&lt;/span&gt;)',['../index.html#autotoc_md22',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zones_0',['Operating Threshold Zones',['../classAlertValueDisplay.html#autotoc_md0',1,'']]]
+  ['layout_0',['Visual Layout',['../classProgressDisplay.html#autotoc_md5',1,'']]],
+  ['license_20author_1',['6. License &amp;amp; Author',['../index.html#autotoc_md28',1,'']]]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['bar_20architecture_0',['Dual-Bar Architecture',['../classRpmBarDisplay.html#autotoc_md9',1,'']]],
-  ['basedisplay_1',['BaseDisplay',['../classBaseDisplay.html',1,'BaseDisplay'],['../classBaseDisplay.html#ac4cd0d50d761ae71643c15c1c36d3ade',1,'BaseDisplay::BaseDisplay()']]],
-  ['basedisplay_2ecpp_2',['BaseDisplay.cpp',['../BaseDisplay_8cpp.html',1,'']]],
-  ['basedisplay_2eh_3',['BaseDisplay.h',['../BaseDisplay_8h.html',1,'']]]
+  ['2_20system_20specifications_20hardware_20environment_0',['2. System Specifications &amp;amp; Hardware Environment',['../index.html#autotoc_md13',1,'']]],
+  ['2_20tri_20state_20alert_20sensor_20readout_20alertvaluedisplay_1',['2. Tri-State Alert Sensor Readout (&lt;span class=&quot;tt&quot;&gt;AlertValueDisplay&lt;/span&gt;)',['../index.html#autotoc_md23',1,'']]]
 ];

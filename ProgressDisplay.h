@@ -8,6 +8,8 @@
 /**
  * @file ProgressDisplay.h
  * @brief Horizontal progress bar widget for displaying percentage (0 ~ 100%).
+ * @author Yoon-Ki Hong
+ * @date 2026-11-18
  */
 
 #ifndef PROGRESS_DISPLAY__H_
@@ -75,22 +77,49 @@
 class ProgressDisplay : public BaseDisplay
 {
 protected :
-	Color mProgressBgColor, mProgressColor;  ///< Background color of the groove and fill color of progress bar
+	Color mProgressBgColor; ///< Track groove background color of the progress bar.
+	Color mProgressColor;   ///< Active fill color of the progress bar.
 
 public :
 	/**
 	 * @brief Constructs a new ProgressDisplay object with default colors.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Surface pointers (`mFb` and `mLcd`) must be configured before invoking drawing methods.
+	 * @note Default colors: dark-gray outer bezel (`0x303030`), medium-gray groove (`0x808080`), bright-green fill (`0x30FF30`).
+	 * @pre none
+	 * @post `ProgressDisplay` instance is constructed with default colors.
+	 * @deprecated none
 	 */
 	ProgressDisplay();
 
 	/**
 	 * @brief Renders the progress bar filling proportional to the given percentage value.
 	 * @param[in] value Progress percentage value (clamped between 0.0f and 100.0f).
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Returns early without drawing if `mFb` or `mLcd` is `nullptr`.
+	 * @note Overrides `BaseDisplay::drawValue()`. Redraws only the inner 5-pixel inset groove region.
+	 * @pre `setFrameBuffer()`, `setLcd()`, `setArea()`, and `drawBackground()` should be called first.
+	 * @post The inner progress track is updated on the LCD to reflect `value`%.
+	 * @deprecated none
 	 */
 	void drawValue(float value) override;
 
 	/**
 	 * @brief Renders the outer widget background and the empty progress track groove.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Returns early without drawing if `mFb` or `mLcd` is `nullptr`.
+	 * @note Overrides `BaseDisplay::drawBackground()`.
+	 * @pre `setFrameBuffer()`, `setLcd()`, and `setArea()` must be called beforehand.
+	 * @post The outer bezel and empty 5-pixel inset track groove are blitted onto the LCD.
+	 * @deprecated none
 	 */
 	void drawBackground() override;
 
@@ -98,6 +127,14 @@ public :
 	 * @brief Sets the progress fill and track background colors.
 	 * @param[in] progress   Fill color for the active progress bar.
 	 * @param[in] background Track background color of the groove.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Takes effect on subsequent `drawBackground()` and `drawValue()` calls.
+	 * @pre none
+	 * @post `mProgressColor` and `mProgressBgColor` are updated.
+	 * @deprecated none
 	 */
 	void setColor(Color progress, Color background);
 };

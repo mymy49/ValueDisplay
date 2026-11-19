@@ -8,6 +8,8 @@
 /**
  * @file ValueDisplay.h
  * @brief Widget for displaying numerical values with optional title, unit text, and cursor blinking support.
+ * @author Yoon-Ki Hong
+ * @date 2026-11-18
  */
 
 #ifndef VALUE_DISPLAY__H_
@@ -98,12 +100,29 @@ protected :
 public :
 	/**
 	 * @brief Constructs a new ValueDisplay object with default values and styles.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Font and surface pointers are initialized to `nullptr` and must be configured prior to drawing.
+	 * @note Sets default background color to dark gray (`0x30, 0x30, 0x30`) and zeroes text buffers.
+	 * @pre none
+	 * @post `ValueDisplay` instance is constructed with default state.
+	 * @deprecated none
 	 */
 	ValueDisplay();
 
 	/**
 	 * @brief Formats and renders the given floating-point value onto the LCD.
 	 * @param[in] value The floating-point value to be displayed.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Returns without drawing if `mFb`, `mValueFont`, or `mLcd` is `nullptr`.
+	 * @note Overrides `BaseDisplay::drawValue()`. Redraws only `mValueArea` to minimize bus traffic.
+	 * @pre `setValueConfig()`, `setFrameBuffer()`, and `setLcd()` must be called first.
+	 * @post The formatted numeric value sub-box is rendered and blitted onto the LCD.
+	 * @deprecated none
 	 */
 	void drawValue(float value) override;
 
@@ -112,31 +131,64 @@ public :
 	 * @param[in] value The floating-point value to display.
 	 * @param[in] index 0-based character index within the formatted string where the cursor is placed.
 	 * @param[in] on    True to display the character normally; false to replace it with a space for blink effect.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning If `index` exceeds the formatted string length, no character is masked.
+	 * @note Useful for interactive digit-by-digit value editing UIs.
+	 * @pre `setValueConfig()`, `setFrameBuffer()`, and `setLcd()` must be called first.
+	 * @post The formatted numeric value (with cursor masking when `on == false`) is blitted onto the LCD.
+	 * @deprecated none
 	 */
 	void drawValueWithCursor(float value, uint8_t index, bool on);
 
 	/**
 	 * @brief Renders the static background, title label, and unit string onto the LCD.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Returns without drawing if `mFb` or `mLcd` is `nullptr`.
+	 * @note Overrides `BaseDisplay::drawBackground()`.
+	 * @pre `setFrameBuffer()`, `setLcd()`, and `setArea()` must be called beforehand.
+	 * @post The widget background, optional title text, and optional unit label box are drawn on the LCD.
+	 * @deprecated none
 	 */
 	void drawBackground() override;
 
 	/**
 	 * @brief Configures font, area, color, and text string for the unit label.
 	 * @param[in] font      Reference to the font to use for the unit.
-	 * @param[in] area      Display boundary area for the unit.
+	 * @param[in] area      Display boundary area for the unit (relative to widget top-left).
 	 * @param[in] fontColor Text color for the unit.
 	 * @param[in] unit      Null-terminated string representing the unit (e.g. "km/h", "°C").
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Strings longer than 31 characters are ignored to prevent buffer overflow.
+	 * @note Call `drawBackground()` after setting unit configuration to render the unit box.
+	 * @pre `unit` must be a valid null-terminated string.
+	 * @post Unit font, bounding box, color, and text string are stored.
+	 * @deprecated none
 	 */
 	void setUnitConfig(Font &font, Area area, Color fontColor, const char *unit);
 
 	/**
 	 * @brief Configures font, area, position, colors, and format string for the numeric value.
 	 * @param[in] font      Reference to the font to use for the value.
-	 * @param[in] area      Display boundary area for the value box.
+	 * @param[in] area      Display boundary area for the value box (relative to widget top-left).
 	 * @param[in] valuePos  Text drawing offset inside the value box.
 	 * @param[in] fontColor Text color for the numeric value.
 	 * @param[in] bgColor   Background fill color behind the value.
-	 * @param[in] format    Format string for sprintf (e.g. "%.1f", "%03d").
+	 * @param[in] format    Format string for sprintf (e.g. "%.1f", "%03.0f").
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Format strings longer than 63 characters are ignored.
+	 * @note `bgColor` is also used as the background color of the unit sub-box in `drawBackground()`.
+	 * @pre `format` must be a valid `printf`-compatible floating-point format string.
+	 * @post Value rendering parameters and format string are stored.
+	 * @deprecated none
 	 */
 	void setValueConfig(Font &font, Area area, Position valuePos, Color fontColor, Color bgColor, const char *format);
 
@@ -146,6 +198,14 @@ public :
 	 * @param[in] pos       Text coordinate offset relative to the widget area.
 	 * @param[in] fontColor Text color for the title.
 	 * @param[in] title     Null-terminated string for the widget title.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Strings longer than 31 characters are ignored to prevent buffer overflow.
+	 * @note Call `drawBackground()` after setting title configuration to render the title text.
+	 * @pre `title` must be a valid null-terminated string.
+	 * @post Title font, position, color, and text string are stored.
+	 * @deprecated none
 	 */
 	void setTitleConfig(Font &font, Position pos, Color fontColor, const char *title);
 };

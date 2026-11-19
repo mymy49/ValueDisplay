@@ -1,33 +1,40 @@
 /**
  * @file RpmBarDisplay.cpp
  * @brief Implementation of RpmBarDisplay member functions.
+ * @author Yoon-Ki Hong
+ * @date 2026-11-18
  */
 
 #include "RpmBarDisplay.h"
 
 /**
  * @details Initializes the RPM bar gauge with default automotive tachometer
- * thresholds and color schemes:
- * - Idle RPM threshold: 1100 RPM (Color: Blue, RGB: 0x00, 0x00, 0xFF)
- * - Warning RPM threshold: 5000 RPM (Color: Green, RGB: 0x00, 0xFF, 0x00)
- * - Over-rev RPM threshold: 6000 RPM (Color: Yellow, RGB: 0xFF, 0xFF, 0x00)
- * - Maximum RPM scale: 8000 RPM (Color: Red, RGB: 0xFF, 0x00, 0x00)
- * - Top guide line thickness: 5 pixels
- * - Background color: Black (RGB: 0x00, 0x00, 0x00)
- * - Bar groove background color: Dark gray (RGB: 0x30, 0x30, 0x30)
- *
- * Internal pointers to the off-screen frame buffer and LCD drawing brush are
- * initialized to nullptr.
+ *          thresholds and color schemes:
+ *          - Idle RPM threshold: 1100 RPM (Color: Blue, RGB: `0x00, 0x00, 0xFF`)
+ *          - Warning RPM threshold: 5000 RPM (Color: Green, RGB: `0x00, 0xFF, 0x00`)
+ *          - Over-rev RPM threshold: 6000 RPM (Color: Yellow, RGB: `0xFF, 0xFF, 0x00`)
+ *          - Maximum RPM scale: 8000 RPM (Color: Red, RGB: `0xFF, 0x00, 0x00`)
+ *          - Top guide line thickness: 5 pixels
+ *          - Background color: Black (RGB: `0x00, 0x00, 0x00`)
+ *          - Bar groove background color: Dark gray (RGB: `0x30, 0x30, 0x30`)
+ *          Internal pointers to the off-screen frame buffer and LCD drawing brush are
+ *          initialized to `nullptr`.
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 RpmBarDisplay::RpmBarDisplay(void)
 {
+	// Configure default RPM zone transition thresholds and full-scale limit
 	mIdleRpm = 1100;
 	mWarningRpm = 5000;
 	mOverRpm = 6000;
 	mMaxRpm = 8000;
 
+	// Configure default 5-pixel vertical thickness for the top guideline
 	mToplineThickness = 5;
 
+	// Configure default colors for each RPM zone and background tracks
 	mIdleColor.setColor({0x00, 0x00, 0xFF});
 	mNormalColor.setColor({0x00, 0xFF, 0x00});
 	mWarningColor.setColor({0xFF, 0xFF, 0x00});
@@ -35,85 +42,97 @@ RpmBarDisplay::RpmBarDisplay(void)
 	mBgColor.setColor({0x00, 0x00, 0x00});
 	mBarBgColor.setColor({0x30, 0x30, 0x30});
 
+	// Initialize surface pointers to nullptr
 	mFb = nullptr;
 	mLcd = nullptr;
 }
 
 /**
  * @details Configures the display color representing the engine idle zone (from
- * 0 up to mIdleRpm).
- *
- * @param[in] color The Color object for the idle zone.
+ *          0 up to `mIdleRpm`).
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setIdleColor(Color color)
 {
+	// Update idle RPM zone color
 	mIdleColor = color;
 }
 
 /**
  * @details Configures the display color representing the normal cruising engine
- * speed range (from mIdleRpm up to mWarningRpm).
- *
- * @param[in] color The Color object for the normal driving zone.
+ *          speed range (from `mIdleRpm` up to `mWarningRpm`).
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setNormalColor(Color color)
 {
+	// Update normal operating RPM zone color
 	mNormalColor = color;
 }
 
 /**
  * @details Configures the display color representing the high warning engine
- * speed range (from mWarningRpm up to mOverRpm).
- *
- * @param[in] color The Color object for the warning zone.
+ *          speed range (from `mWarningRpm` up to `mOverRpm`).
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setWarningColor(Color color)
 {
+	// Update warning RPM zone color
 	mWarningColor = color;
 }
 
 /**
  * @details Configures the display color representing the redline / over-rev danger
- * range (from mOverRpm up to mMaxRpm).
- *
- * @param[in] color The Color object for the over-rev zone.
+ *          range (from `mOverRpm` up to `mMaxRpm`).
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setOverColor(Color color)
 {
+	// Update over-rev / redline RPM zone color
 	mOverColor = color;
 }
 
 /**
  * @details Sets the background color of the dynamic RPM bar track behind the
- * active colored bar indicator.
- *
- * @param[in] color The Color object for the dynamic bar track background.
+ *          active colored bar indicator.
+ * @see RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setBarBgColor(Color color)
 {
+	// Update dynamic bar groove background color
 	mBarBgColor = color;
 }
 
 /**
  * @details Renders the dynamic RPM bar filled proportionally to the given RPM value.
- *
- * The method performs the following steps:
- * 1. Computes the inner bar area with a 3-pixel horizontal margin on each side and
- *    vertically positioned beneath the top reference guideline (offset by mToplineThickness + 6).
- * 2. Clears the bar area with mBarBgColor.
- * 3. Calculates the active bar width as `(value / mMaxRpm) * totalWidth`.
- * 4. Determines the fill brush color based on current RPM zone:
- *    - value < mIdleRpm: mIdleColor
- *    - value < mWarningRpm: mNormalColor
- *    - value < mOverRpm: mWarningColor
- *    - value >= mOverRpm: mOverColor
- * 5. Fills the dynamic bar rectangle and blits the resulting bitmap directly onto
- *    the target LCD surface at the appropriate screen coordinates.
- *
- * @param[in] value Current engine RPM value to display.
+ *          The method performs the following steps:
+ *          1. Computes the inner bar area with a 3-pixel horizontal margin on each side and
+ *             vertically positioned beneath the top reference guideline (offset by `mToplineThickness + 6`).
+ *          2. Clears the bar area with `mBarBgColor`.
+ *          3. Calculates the active bar width as `(value / mMaxRpm) * totalWidth`.
+ *          4. Determines the fill brush color based on current RPM zone:
+ *             - `value < mIdleRpm`: `mIdleColor`
+ *             - `value < mWarningRpm`: `mNormalColor`
+ *             - `value < mOverRpm`: `mWarningColor`
+ *             - `value >= mOverRpm`: `mOverColor`
+ *          5. Fills the dynamic bar rectangle and blits the resulting bitmap directly onto
+ *             the target LCD surface at the appropriate screen coordinates.
+ * @see BaseDisplay::drawValue, RpmBarDisplay::drawBackground
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::drawValue(float value)
 {
+	// Abort if off-screen framebuffer or target LCD surface is not attached
 	if (mFb == nullptr || mLcd == nullptr)
 		return;
 
@@ -157,18 +176,21 @@ void RpmBarDisplay::drawValue(float value)
 
 /**
  * @details Renders the widget background and the segmented top reference guideline.
- * The top reference guideline is partitioned into four colored segments proportional
- * to their respective RPM ranges relative to mMaxRpm:
- * 1. Idle segment: width proportional to `mIdleRpm / mMaxRpm`, drawn in `mIdleColor`.
- * 2. Normal segment: width proportional to `(mWarningRpm - mIdleRpm) / mMaxRpm`, drawn in `mNormalColor`.
- * 3. Warning segment: width proportional to `(mOverRpm - mWarningRpm) / mMaxRpm`, drawn in `mWarningColor`.
- * 4. Over-rev segment: width proportional to `(mMaxRpm - mOverRpm) / mMaxRpm`, drawn in `mOverColor`.
- *
- * Once all segments are rendered into the off-screen frame buffer, the composited
- * background is transferred to the LCD surface.
+ *          The top reference guideline is partitioned into four colored segments proportional
+ *          to their respective RPM ranges relative to `mMaxRpm`:
+ *          1. Idle segment: width proportional to `mIdleRpm / mMaxRpm`, drawn in `mIdleColor`.
+ *          2. Normal segment: width proportional to `(mWarningRpm - mIdleRpm) / mMaxRpm`, drawn in `mNormalColor`.
+ *          3. Warning segment: width proportional to `(mOverRpm - mWarningRpm) / mMaxRpm`, drawn in `mWarningColor`.
+ *          4. Over-rev segment: width proportional to `(mMaxRpm - mOverRpm) / mMaxRpm`, drawn in `mOverColor`.
+ *          Once all segments are rendered into the off-screen frame buffer, the composited
+ *          background is transferred to the LCD surface.
+ * @see BaseDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::drawBackground()
 {
+	// Abort if off-screen framebuffer or target LCD surface is not attached
 	if (mFb == nullptr || mLcd == nullptr)
 		return;
 
@@ -208,28 +230,33 @@ void RpmBarDisplay::drawBackground()
 	mFb->setBrushColor(mOverColor);
 	mFb->fillRectangular(area);
 
+	// Blit the composited background and segmented topline to the LCD
 	mLcd->drawBitmap(mArea.getPosition(), mFb->getBitmap());
 }
 
 /**
- * @details Configures the full-scale maximum RPM value used for calculating
- * relative bar widths and segment proportions across the widget.
- *
- * @param[in] rpm Maximum RPM scale limit (e.g. 8000, 9000).
+ * @details Configures the full-scale maximum RPM value (`mMaxRpm`) used for calculating
+ *          relative bar widths and segment proportions across the widget.
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setMaxRpm(int32_t rpm)
 {
+	// Store full-scale maximum RPM limit
 	mMaxRpm = rpm;
 }
 
 /**
  * @details Sets the vertical thickness of the top segmented reference guideline bar
- * in pixels. Adjusting this value alters both the guideline height and the vertical
- * offset of the main dynamic bar beneath it.
- *
- * @param[in] thickness Height in pixels for the top reference line.
+ *          in pixels (`mToplineThickness`). Adjusting this value alters both the guideline
+ *          height and the vertical offset of the main dynamic bar beneath it.
+ * @see RpmBarDisplay::drawBackground, RpmBarDisplay::drawValue
+ * @todo none
+ * @bug none
  */
 void RpmBarDisplay::setToplineThickness(int32_t thickness)
 {
+	// Store topline guide height in pixels
 	mToplineThickness = thickness;
 }

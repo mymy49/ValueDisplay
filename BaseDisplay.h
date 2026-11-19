@@ -8,6 +8,8 @@
 /**
  * @file BaseDisplay.h
  * @brief Base class for display widgets and value indicators.
+ * @author Yoon-Ki Hong
+ * @date 2026-11-18
  */
 
 #ifndef BASE_DISPLAY__H_
@@ -78,30 +80,71 @@ protected :
 public :
 	/**
 	 * @brief Constructs a new BaseDisplay object.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Working framebuffer (`mFb`) and LCD brush (`mLcd`) must be configured before rendering.
+	 * @note Initializes `mFb` and `mLcd` pointers to `nullptr`.
+	 * @pre none
+	 * @post `BaseDisplay` base members are initialized to safe defaults.
+	 * @deprecated none
 	 */
 	BaseDisplay(void);
 
 	/**
 	 * @brief Sets the framebuffer reference used for off-screen rendering.
-	 * @param[in] fb Reference to the framebuffer object.
+	 * @param[in] fb Reference to the `FrameBuffer` object.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning The referenced `FrameBuffer` must have sufficient memory allocated for the widget's sub-areas.
+	 * @note Stores the address of `fb` in `mFb`.
+	 * @pre `fb` must be allocated via `malloc()`.
+	 * @post `mFb` points to `fb`.
+	 * @deprecated none
 	 */
 	void setFrameBuffer(FrameBuffer &fb);
 
 	/**
 	 * @brief Sets the framebuffer pointer used for off-screen rendering.
-	 * @param[in] fb Pointer to the framebuffer object.
+	 * @param[in] fb Pointer to the `FrameBuffer` object, or `nullptr` to detach.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Drawing methods will return early without rendering if `mFb` is `nullptr`.
+	 * @note Stores `fb` directly in `mFb`.
+	 * @pre none
+	 * @post `mFb` is updated to `fb`.
+	 * @deprecated none
 	 */
 	void setFrameBuffer(FrameBuffer *fb);
 
 	/**
 	 * @brief Sets the widget display area (position and dimensions) by pointer.
-	 * @param[in] area Pointer to the Area object.
+	 * @param[in] area Pointer to the `Area` object defining top-left coordinates and size.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning `area` must not be `nullptr`.
+	 * @note Copies the dereferenced `Area` value into `mArea`.
+	 * @pre `area` must point to a valid `Area` instance.
+	 * @post `mArea` is updated with the new position and size.
+	 * @deprecated none
 	 */
 	void setArea(Area *area);
 
 	/**
 	 * @brief Sets the widget display area (position and dimensions) by value.
-	 * @param[in] area The Area object.
+	 * @param[in] area The `Area` object defining top-left coordinates and size.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Call `drawBackground()` after changing the widget area to refresh the screen.
+	 * @pre none
+	 * @post `mArea` is updated to `area`.
+	 * @deprecated none
 	 */
 	void setArea(Area area);
 
@@ -109,30 +152,70 @@ public :
 	 * @brief Sets the width and height of the display widget.
 	 * @param[in] width  Width in pixels.
 	 * @param[in] height Height in pixels.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Ensure the attached `FrameBuffer` (`mFb`) is large enough for the new dimensions.
+	 * @note Preserves the existing top-left screen position of `mArea`.
+	 * @pre none
+	 * @post `mArea` width and height are updated.
+	 * @deprecated none
 	 */
 	void setSize(uint16_t width, uint16_t height);
 
 	/**
-	 * @brief Sets the dimensions of the display widget using a Size object.
-	 * @param[in] size The Size object containing width and height.
+	 * @brief Sets the dimensions of the display widget using a `Size` object.
+	 * @param[in] size The `Size` object containing width and height in pixels.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Ensure the attached `FrameBuffer` (`mFb`) is large enough for the new dimensions.
+	 * @note Preserves the existing top-left screen position of `mArea`.
+	 * @pre none
+	 * @post `mArea` dimensions are updated to `size`.
+	 * @deprecated none
 	 */
 	void setSize(Size size);
 
 	/**
 	 * @brief Gets the current dimensions of the display widget.
-	 * @return Size The current size of the widget.
+	 * @param[in] none
+	 * @return `Size` object containing the current width and height of the widget in pixels.
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Queries `mArea.getSize()`.
+	 * @pre none
+	 * @post Widget state remains unchanged.
+	 * @deprecated none
 	 */
 	Size getSize();
 
 	/**
 	 * @brief Sets the screen position coordinates of the display widget.
-	 * @param[in] pos The target screen position.
+	 * @param[in] pos The target top-left screen `Position`.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Preserves the existing width and height of `mArea`.
+	 * @pre none
+	 * @post `mArea` top-left position is updated to `pos`.
+	 * @deprecated none
 	 */
 	void setPosition(Position pos);
 
 	/**
-	 * @brief Sets the background color of the widget using a Color object.
-	 * @param[in] color The background color.
+	 * @brief Sets the background color of the widget using a `Color` object.
+	 * @param[in] color The background `Color`.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Takes effect on the next `drawBackground()` call.
+	 * @pre none
+	 * @post `mBgColor` is updated to `color`.
+	 * @deprecated none
 	 */
 	void setBgColor(Color color);
 
@@ -142,41 +225,98 @@ public :
 	 * @param[in] green Green component (0 ~ 255).
 	 * @param[in] blue  Blue component (0 ~ 255).
 	 * @param[in] alpha Alpha transparency component (0 ~ 255, default: 0xFF).
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Takes effect on the next `drawBackground()` call.
+	 * @pre none
+	 * @post `mBgColor` is updated with the specified RGBA components.
+	 * @deprecated none
 	 */
 	void setBgColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
 
 	/**
 	 * @brief Gets the current screen position coordinates of the display widget.
-	 * @return Position The current screen position.
+	 * @param[in] none
+	 * @return `Position` representing the top-left screen coordinates of the widget.
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Queries `mArea.getPosition()`.
+	 * @pre none
+	 * @post Widget state remains unchanged.
+	 * @deprecated none
 	 */
 	Position getPosition(void);
 
 	/**
 	 * @brief Gets the pointer to the currently associated framebuffer.
-	 * @return FrameBuffer* Pointer to the framebuffer, or nullptr if not set.
+	 * @param[in] none
+	 * @return `FrameBuffer*` pointer to the attached working framebuffer, or `nullptr` if not set.
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning May return `nullptr` if `setFrameBuffer()` has not been called.
+	 * @note none
+	 * @pre none
+	 * @post Widget state remains unchanged.
+	 * @deprecated none
 	 */
 	FrameBuffer *getFrameBuffer(void);
 
 	/**
 	 * @brief Sets the font reference for text rendering.
-	 * @param[in] font Reference to the Font object.
+	 * @param[in] font Reference to the `Font` object.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Reserved prototype in `BaseDisplay`; use derived class font configuration methods (e.g. `ValueDisplay::setValueConfig()`).
+	 * @note none
+	 * @pre none
+	 * @post none
+	 * @deprecated none
 	 */
 	void setFont(Font &font);
 
 	/**
 	 * @brief Sets the target LCD display drawing brush/surface.
-	 * @param[in] brush Reference to the target Brush/display surface.
+	 * @param[in] brush Reference to the target `Brush` display surface.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning The referenced `Brush` instance must remain valid throughout the lifetime of this widget.
+	 * @note Stores `&brush` in `mLcd`.
+	 * @pre Target LCD driver must be initialized.
+	 * @post `mLcd` points to `brush`.
+	 * @deprecated none
 	 */
 	void setLcd(Brush &brush);
 
 	/**
 	 * @brief Renders the numerical value onto the display.
 	 * @param[in] value The floating-point value to display.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Pure virtual function; must be implemented by derived display widget classes.
+	 * @note Renders into `mFb` and blits the updated region onto `mLcd`.
+	 * @pre `mFb`, `mLcd`, and `mArea` must be configured before calling.
+	 * @post The dynamic value portion of the widget is updated on the LCD.
+	 * @deprecated none
 	 */
 	virtual void drawValue(float value) = 0;
 
 	/**
 	 * @brief Renders the static background graphics of the widget onto the display.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Pure virtual function; must be implemented by derived display widget classes.
+	 * @note Should be called once during page initialization or after layout changes.
+	 * @pre `mFb`, `mLcd`, and `mArea` must be configured before calling.
+	 * @post The static background and labels of the widget are drawn on the LCD.
+	 * @deprecated none
 	 */
 	virtual void drawBackground() = 0;
 };

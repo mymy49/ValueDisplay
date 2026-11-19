@@ -8,6 +8,8 @@
 /**
  * @file AlertValueDisplay.h
  * @brief Display widget extending ValueDisplay with threshold-based alert colors.
+ * @author Yoon-Ki Hong
+ * @date 2026-11-18
  */
 
 #ifndef ALERT_VALUE_DISPLAY__H_
@@ -85,20 +87,45 @@ protected :
 public :
 	/**
 	 * @brief Constructs a new AlertValueDisplay object with default thresholds (10 / 90) and colors.
+	 * @param[in] none
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Font and surface pointers inherited from `ValueDisplay` must be configured prior to drawing.
+	 * @note Default colors: Blue (`0x0000FF`) for low, Green (`0x00FF00`) for normal, Red (`0xFF0000`) for high.
+	 * @pre none
+	 * @post `AlertValueDisplay` instance is constructed with default thresholds (`10.0f` and `90.0f`).
+	 * @deprecated none
 	 */
 	AlertValueDisplay();
 
 	/**
 	 * @brief Evaluates the value against thresholds to select the appropriate alert color, then renders it.
 	 * @param[in] value The floating-point value to display.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning Overwrites `mValueColor` dynamically on each call according to the threshold comparison.
+	 * @note Overrides `ValueDisplay::drawValue()` and delegates rendering to `ValueDisplay::drawValue(value)`.
+	 * @pre `setValueConfig()`, `setFrameBuffer()`, and `setLcd()` must be called beforehand.
+	 * @post `mValueColor` is updated and the formatted value is blitted onto the LCD.
+	 * @deprecated none
 	 */
 	void drawValue(float value) override;
 
 	/**
 	 * @brief Sets the alert colors for low, normal, and high value ranges.
-	 * @param[in] lowColor    Color for values below the low threshold.
-	 * @param[in] normalColor Color for values within normal range.
-	 * @param[in] highColor   Color for values exceeding the high threshold.
+	 * @param[in] lowColor    Color for values below the low threshold (`value < mLowThreshold`).
+	 * @param[in] normalColor Color for values within normal range (`mLowThreshold <= value < mHighThreshold`).
+	 * @param[in] highColor   Color for values meeting or exceeding the high threshold (`value >= mHighThreshold`).
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning none
+	 * @note Takes effect on the next `drawValue()` invocation.
+	 * @pre none
+	 * @post `mLowColor`, `mNormalColor`, and `mHighColor` are updated.
+	 * @deprecated none
 	 */
 	void setAlertColor(Color lowColor, Color normalColor, Color highColor);
 
@@ -106,6 +133,14 @@ public :
 	 * @brief Sets the low and high alert threshold limits.
 	 * @param[in] lowThreshold  The lower threshold value.
 	 * @param[in] highThreshold The upper threshold value.
+	 * @return none
+	 * @author Yoon-Ki Hong
+	 * @date 2026-11-18
+	 * @warning `lowThreshold` should be less than or equal to `highThreshold` for valid normal-zone behavior.
+	 * @note Takes effect on the next `drawValue()` invocation.
+	 * @pre none
+	 * @post `mLowThreshold` and `mHighThreshold` are updated.
+	 * @deprecated none
 	 */
 	void setAlertValue(float lowThreshold, float highThreshold);
 };

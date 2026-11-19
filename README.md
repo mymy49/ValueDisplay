@@ -46,7 +46,7 @@ The **ValueDisplay** module provides a collection of reusable, flicker-free UI w
   - Any display controller supported by the **TurtleShip** graphics engine (e.g., ST7789V, ILI9341, ST7735).
   - Validated on the **2.8-inch TFT Touch Shield Rev2.1** (240x320 RGB565).
 - **Required Software & Toolchains**:
-  - Toolchain: ARM GNU Toolchain or CrossWorks for ARM (v5.x or higher).
+  - Toolchain: CrossWorks for ARM (v5.x or higher).
     - **Note on CrossWorks for ARM**: CrossWorks for ARM does not natively support the Nuvoton M251 series. You must install the custom [CrossworksForARM_Nuvoton_M251 Support Package](https://github.com/mymy49/CrossworksForARM_Nuvoton_M251) before building M251 projects.
   - Operating System: [yss OS](https://github.com/mymy49/yss) (embedded RTOS & HAL).
   - Graphics Framework: [TurtleShip](https://github.com/mymy49/TurtleShip) (providing `FrameBuffer`, `Brush`, `Area`, `Color`).

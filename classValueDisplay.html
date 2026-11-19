@@ -14,6 +14,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,24 +93,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ValueDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValueDisplay__inherit__graph.png" border="0" usemap="#aValueDisplay_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="aValueDisplay_inherit__map" id="aValueDisplay_inherit__map">
-<area shape="rect" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur..." alt="" coords="21,81,127,109"/>
-<area shape="rect" href="classAlertValueDisplay.html" title="Specialized ValueDisplay that changes text color based on low/high threshold comparisons." alt="" coords="5,157,143,184"/>
-<area shape="poly" title=" " alt="" coords="76,123,77,157,71,155,72,126"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="23,5,125,33"/>
-<area shape="poly" title=" " alt="" coords="75,46,77,81,71,80,73,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classValueDisplay__inherit__graph.svg" width="148" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for ValueDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classValueDisplay__coll__graph.png" border="0" usemap="#aValueDisplay_coll__map" loading="lazy" alt="Collaboration graph"/></div>
-<map name="aValueDisplay_coll__map" id="aValueDisplay_coll__map">
-<area shape="rect" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur..." alt="" coords="5,81,112,109"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="7,5,110,33"/>
-<area shape="poly" title=" " alt="" coords="60,47,61,81,56,80,57,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classValueDisplay__coll__graph.svg" width="118" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -136,13 +131,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay" id="r_a973a860a6dd9fbb27dcb6fac6faaf62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a973a860a6dd9fbb27dcb6fac6faaf62a">setSize</a> (uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width and height of the display widget.  <br /></td></tr>
 <tr class="memitem:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay" id="r_a502493591ecd9351491cc7e2766bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a502493591ecd9351491cc7e2766bba46">setSize</a> (Size size)</td></tr>
-<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a Size object.  <br /></td></tr>
+<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a <span class="tt">Size</span> object.  <br /></td></tr>
 <tr class="memitem:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay" id="r_a9978c590b9585bcb32942b45abbab343"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9978c590b9585bcb32942b45abbab343">getSize</a> ()</td></tr>
 <tr class="memdesc:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current dimensions of the display widget.  <br /></td></tr>
 <tr class="memitem:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay" id="r_a6d2b804ec3ccfa6773c1d92b651d308a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a6d2b804ec3ccfa6773c1d92b651d308a">setPosition</a> (Position pos)</td></tr>
 <tr class="memdesc:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the screen position coordinates of the display widget.  <br /></td></tr>
 <tr class="memitem:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay" id="r_ae011b4f768f68c7eb903778a507af20a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a> (Color color)</td></tr>
-<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a Color object.  <br /></td></tr>
+<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a <span class="tt">Color</span> object.  <br /></td></tr>
 <tr class="memitem:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay" id="r_a12f0bcbf1c1ff38fec8a39488c94781b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a12f0bcbf1c1ff38fec8a39488c94781b">setBgColor</a> (uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha=0xFF)</td></tr>
 <tr class="memdesc:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using RGBA color components.  <br /></td></tr>
 <tr class="memitem:a08b84fe7d6825e04e954e4c9134ec055 inherit pub_methods_classBaseDisplay" id="r_a08b84fe7d6825e04e954e4c9134ec055"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a08b84fe7d6825e04e954e4c9134ec055">getPosition</a> (void)</td></tr>
@@ -156,61 +151,43 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abccd18f5b597deab1469d02bd9666d12" id="r_abccd18f5b597deab1469d02bd9666d12"><td class="memItemLeft" align="right" valign="top"><a id="abccd18f5b597deab1469d02bd9666d12" name="abccd18f5b597deab1469d02bd9666d12"></a>
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mUnitArea</b></td></tr>
-<tr class="memdesc:abccd18f5b597deab1469d02bd9666d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area for the unit label. <br /></td></tr>
-<tr class="memitem:a8921e6b675d025197a130ba34501853a" id="r_a8921e6b675d025197a130ba34501853a"><td class="memItemLeft" align="right" valign="top"><a id="a8921e6b675d025197a130ba34501853a" name="a8921e6b675d025197a130ba34501853a"></a>
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mValueArea</b></td></tr>
-<tr class="memdesc:a8921e6b675d025197a130ba34501853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area for the formatted value text. <br /></td></tr>
-<tr class="memitem:acba3325610e6edcb511d264e23844536" id="r_acba3325610e6edcb511d264e23844536"><td class="memItemLeft" align="right" valign="top"><a id="acba3325610e6edcb511d264e23844536" name="acba3325610e6edcb511d264e23844536"></a>
-Position&#160;</td><td class="memItemRight" valign="bottom"><b>mTitlePos</b></td></tr>
-<tr class="memdesc:acba3325610e6edcb511d264e23844536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative text coordinates for the title. <br /></td></tr>
-<tr class="memitem:ad3422380454c0f9d0bb34974cba7f441" id="r_ad3422380454c0f9d0bb34974cba7f441"><td class="memItemLeft" align="right" valign="top"><a id="ad3422380454c0f9d0bb34974cba7f441" name="ad3422380454c0f9d0bb34974cba7f441"></a>
-Position&#160;</td><td class="memItemRight" valign="bottom"><b>mValuePos</b></td></tr>
-<tr class="memdesc:ad3422380454c0f9d0bb34974cba7f441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative text coordinates for the formatted value. <br /></td></tr>
-<tr class="memitem:a21492d592b5d2e0c45584169d3cc79a5" id="r_a21492d592b5d2e0c45584169d3cc79a5"><td class="memItemLeft" align="right" valign="top"><a id="a21492d592b5d2e0c45584169d3cc79a5" name="a21492d592b5d2e0c45584169d3cc79a5"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mUnitColor</b></td></tr>
-<tr class="memdesc:a21492d592b5d2e0c45584169d3cc79a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the unit label. <br /></td></tr>
-<tr class="memitem:a56d773260c44dcea26d4876d566c07a7" id="r_a56d773260c44dcea26d4876d566c07a7"><td class="memItemLeft" align="right" valign="top"><a id="a56d773260c44dcea26d4876d566c07a7" name="a56d773260c44dcea26d4876d566c07a7"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mValueColor</b></td></tr>
-<tr class="memdesc:a56d773260c44dcea26d4876d566c07a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the formatted value. <br /></td></tr>
-<tr class="memitem:ad62cebabad8129e1d29e0c16470234c2" id="r_ad62cebabad8129e1d29e0c16470234c2"><td class="memItemLeft" align="right" valign="top"><a id="ad62cebabad8129e1d29e0c16470234c2" name="ad62cebabad8129e1d29e0c16470234c2"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mTitleColor</b></td></tr>
-<tr class="memdesc:ad62cebabad8129e1d29e0c16470234c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the title. <br /></td></tr>
-<tr class="memitem:ae3db111d07d20521778a8683641c6cb2" id="r_ae3db111d07d20521778a8683641c6cb2"><td class="memItemLeft" align="right" valign="top"><a id="ae3db111d07d20521778a8683641c6cb2" name="ae3db111d07d20521778a8683641c6cb2"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mValueBgColor</b></td></tr>
-<tr class="memdesc:ae3db111d07d20521778a8683641c6cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background fill color for the value and unit areas. <br /></td></tr>
-<tr class="memitem:a268ebdd187a762f3009ca4635953a163" id="r_a268ebdd187a762f3009ca4635953a163"><td class="memItemLeft" align="right" valign="top"><a id="a268ebdd187a762f3009ca4635953a163" name="a268ebdd187a762f3009ca4635953a163"></a>
-Font *&#160;</td><td class="memItemRight" valign="bottom"><b>mUnitFont</b></td></tr>
-<tr class="memdesc:a268ebdd187a762f3009ca4635953a163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the unit text. <br /></td></tr>
-<tr class="memitem:a7d3f472ad33fb76ebb982f337f35a2ad" id="r_a7d3f472ad33fb76ebb982f337f35a2ad"><td class="memItemLeft" align="right" valign="top"><a id="a7d3f472ad33fb76ebb982f337f35a2ad" name="a7d3f472ad33fb76ebb982f337f35a2ad"></a>
-Font *&#160;</td><td class="memItemRight" valign="bottom"><b>mValueFont</b></td></tr>
-<tr class="memdesc:a7d3f472ad33fb76ebb982f337f35a2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the value text. <br /></td></tr>
-<tr class="memitem:a272db80fe4016c9cef2eb347016ad21b" id="r_a272db80fe4016c9cef2eb347016ad21b"><td class="memItemLeft" align="right" valign="top"><a id="a272db80fe4016c9cef2eb347016ad21b" name="a272db80fe4016c9cef2eb347016ad21b"></a>
-Font *&#160;</td><td class="memItemRight" valign="bottom"><b>mTitleFont</b></td></tr>
-<tr class="memdesc:a272db80fe4016c9cef2eb347016ad21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the title text. <br /></td></tr>
-<tr class="memitem:a6f49ae66034ce25e3fc94027400638f0" id="r_a6f49ae66034ce25e3fc94027400638f0"><td class="memItemLeft" align="right" valign="top"><a id="a6f49ae66034ce25e3fc94027400638f0" name="a6f49ae66034ce25e3fc94027400638f0"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>mUnit</b> [32]</td></tr>
-<tr class="memdesc:a6f49ae66034ce25e3fc94027400638f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the unit label. <br /></td></tr>
-<tr class="memitem:ab69788ae9265f4f97e0b22be8fcd706b" id="r_ab69788ae9265f4f97e0b22be8fcd706b"><td class="memItemLeft" align="right" valign="top"><a id="ab69788ae9265f4f97e0b22be8fcd706b" name="ab69788ae9265f4f97e0b22be8fcd706b"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>mFormat</b> [64]</td></tr>
-<tr class="memdesc:ab69788ae9265f4f97e0b22be8fcd706b"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the printf-compatible formatting string. <br /></td></tr>
-<tr class="memitem:a27a773609bd93f674bc3e38841db44c0" id="r_a27a773609bd93f674bc3e38841db44c0"><td class="memItemLeft" align="right" valign="top"><a id="a27a773609bd93f674bc3e38841db44c0" name="a27a773609bd93f674bc3e38841db44c0"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>mTitle</b> [32]</td></tr>
-<tr class="memdesc:a27a773609bd93f674bc3e38841db44c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the title text. <br /></td></tr>
+<tr class="memitem:abccd18f5b597deab1469d02bd9666d12" id="r_abccd18f5b597deab1469d02bd9666d12"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abccd18f5b597deab1469d02bd9666d12">mUnitArea</a></td></tr>
+<tr class="memdesc:abccd18f5b597deab1469d02bd9666d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area for the unit label.  <br /></td></tr>
+<tr class="memitem:a8921e6b675d025197a130ba34501853a" id="r_a8921e6b675d025197a130ba34501853a"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8921e6b675d025197a130ba34501853a">mValueArea</a></td></tr>
+<tr class="memdesc:a8921e6b675d025197a130ba34501853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area for the formatted value text.  <br /></td></tr>
+<tr class="memitem:acba3325610e6edcb511d264e23844536" id="r_acba3325610e6edcb511d264e23844536"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acba3325610e6edcb511d264e23844536">mTitlePos</a></td></tr>
+<tr class="memdesc:acba3325610e6edcb511d264e23844536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative text coordinates for the title.  <br /></td></tr>
+<tr class="memitem:ad3422380454c0f9d0bb34974cba7f441" id="r_ad3422380454c0f9d0bb34974cba7f441"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3422380454c0f9d0bb34974cba7f441">mValuePos</a></td></tr>
+<tr class="memdesc:ad3422380454c0f9d0bb34974cba7f441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative text coordinates for the formatted value.  <br /></td></tr>
+<tr class="memitem:a21492d592b5d2e0c45584169d3cc79a5" id="r_a21492d592b5d2e0c45584169d3cc79a5"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21492d592b5d2e0c45584169d3cc79a5">mUnitColor</a></td></tr>
+<tr class="memdesc:a21492d592b5d2e0c45584169d3cc79a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the unit label.  <br /></td></tr>
+<tr class="memitem:a56d773260c44dcea26d4876d566c07a7" id="r_a56d773260c44dcea26d4876d566c07a7"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56d773260c44dcea26d4876d566c07a7">mValueColor</a></td></tr>
+<tr class="memdesc:a56d773260c44dcea26d4876d566c07a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the formatted value.  <br /></td></tr>
+<tr class="memitem:ad62cebabad8129e1d29e0c16470234c2" id="r_ad62cebabad8129e1d29e0c16470234c2"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad62cebabad8129e1d29e0c16470234c2">mTitleColor</a></td></tr>
+<tr class="memdesc:ad62cebabad8129e1d29e0c16470234c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font color for the title.  <br /></td></tr>
+<tr class="memitem:ae3db111d07d20521778a8683641c6cb2" id="r_ae3db111d07d20521778a8683641c6cb2"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3db111d07d20521778a8683641c6cb2">mValueBgColor</a></td></tr>
+<tr class="memdesc:ae3db111d07d20521778a8683641c6cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background fill color for the value and unit areas.  <br /></td></tr>
+<tr class="memitem:a268ebdd187a762f3009ca4635953a163" id="r_a268ebdd187a762f3009ca4635953a163"><td class="memItemLeft" align="right" valign="top">Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a268ebdd187a762f3009ca4635953a163">mUnitFont</a></td></tr>
+<tr class="memdesc:a268ebdd187a762f3009ca4635953a163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the unit text.  <br /></td></tr>
+<tr class="memitem:a7d3f472ad33fb76ebb982f337f35a2ad" id="r_a7d3f472ad33fb76ebb982f337f35a2ad"><td class="memItemLeft" align="right" valign="top">Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3f472ad33fb76ebb982f337f35a2ad">mValueFont</a></td></tr>
+<tr class="memdesc:a7d3f472ad33fb76ebb982f337f35a2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the value text.  <br /></td></tr>
+<tr class="memitem:a272db80fe4016c9cef2eb347016ad21b" id="r_a272db80fe4016c9cef2eb347016ad21b"><td class="memItemLeft" align="right" valign="top">Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a272db80fe4016c9cef2eb347016ad21b">mTitleFont</a></td></tr>
+<tr class="memdesc:a272db80fe4016c9cef2eb347016ad21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to font used for the title text.  <br /></td></tr>
+<tr class="memitem:a6f49ae66034ce25e3fc94027400638f0" id="r_a6f49ae66034ce25e3fc94027400638f0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f49ae66034ce25e3fc94027400638f0">mUnit</a> [32]</td></tr>
+<tr class="memdesc:a6f49ae66034ce25e3fc94027400638f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the unit label.  <br /></td></tr>
+<tr class="memitem:ab69788ae9265f4f97e0b22be8fcd706b" id="r_ab69788ae9265f4f97e0b22be8fcd706b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69788ae9265f4f97e0b22be8fcd706b">mFormat</a> [64]</td></tr>
+<tr class="memdesc:ab69788ae9265f4f97e0b22be8fcd706b"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the printf-compatible formatting string.  <br /></td></tr>
+<tr class="memitem:a27a773609bd93f674bc3e38841db44c0" id="r_a27a773609bd93f674bc3e38841db44c0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27a773609bd93f674bc3e38841db44c0">mTitle</a> [32]</td></tr>
+<tr class="memdesc:a27a773609bd93f674bc3e38841db44c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">String buffer holding the title text.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classBaseDisplay"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classBaseDisplay')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classBaseDisplay.html">BaseDisplay</a></td></tr>
-<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">
-FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>mFb</b></td></tr>
-<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering. <br /></td></tr>
-<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mArea</b></td></tr>
-<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates. <br /></td></tr>
-<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mBgColor</b></td></tr>
-<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color. <br /></td></tr>
-<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">
-Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
-<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface). <br /></td></tr>
+<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3">mFb</a></td></tr>
+<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering.  <br /></td></tr>
+<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a29135f90659f9f2a950d10710191fee7">mArea</a></td></tr>
+<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates.  <br /></td></tr>
+<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9a75aaac93b74176c11a7738d0e4901a">mBgColor</a></td></tr>
+<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color.  <br /></td></tr>
+<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">Brush *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52">mLcd</a></td></tr>
+<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cursor blinking. </p>
@@ -266,17 +243,17 @@ Example Usage</h3>
 <div class="line">    speedGauge.<a class="code hl_function" href="#a26bd603b45a10759db4620b4ed2a3525">drawValueWithCursor</a>(targetValue, cursorIndex, cursorBlinkState);</div>
 <div class="line">}</div>
 <div class="ttc" id="aValueDisplay_8h_html"><div class="ttname"><a href="ValueDisplay_8h.html">ValueDisplay.h</a></div><div class="ttdoc">Widget for displaying numerical values with optional title, unit text, and cursor blinking support.</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:28</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:64</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:41</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:133</div></div>
-<div class="ttc" id="aclassValueDisplay_html_a035a6edfd2be7db85fd4808e9b75033b"><div class="ttname"><a href="#a035a6edfd2be7db85fd4808e9b75033b">ValueDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the static background, title label, and unit string onto the LCD.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:104</div></div>
-<div class="ttc" id="aclassValueDisplay_html_a08bb1d7b3710d7c167716f3c6468d197"><div class="ttname"><a href="#a08bb1d7b3710d7c167716f3c6468d197">ValueDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Formats and renders the given floating-point value onto the LCD.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:155</div></div>
-<div class="ttc" id="aclassValueDisplay_html_a26bd603b45a10759db4620b4ed2a3525"><div class="ttname"><a href="#a26bd603b45a10759db4620b4ed2a3525">ValueDisplay::drawValueWithCursor</a></div><div class="ttdeci">void drawValueWithCursor(float value, uint8_t index, bool on)</div><div class="ttdoc">Formats and renders the numerical value with an optional cursor blink effect at a specified character...</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:191</div></div>
-<div class="ttc" id="aclassValueDisplay_html_a51a0542aff986c4a0c1cd0407cc1cf1e"><div class="ttname"><a href="#a51a0542aff986c4a0c1cd0407cc1cf1e">ValueDisplay::setValueConfig</a></div><div class="ttdeci">void setValueConfig(Font &amp;font, Area area, Position valuePos, Color fontColor, Color bgColor, const char *format)</div><div class="ttdoc">Configures font, area, position, colors, and format string for the numeric value.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:65</div></div>
-<div class="ttc" id="aclassValueDisplay_html_a8ab3f4abb1ae836b5ce567537340d01b"><div class="ttname"><a href="#a8ab3f4abb1ae836b5ce567537340d01b">ValueDisplay::ValueDisplay</a></div><div class="ttdeci">ValueDisplay()</div><div class="ttdoc">Constructs a new ValueDisplay object with default values and styles.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:17</div></div>
-<div class="ttc" id="aclassValueDisplay_html_aa00da94eb32e1600b93dcf5482f9e973"><div class="ttname"><a href="#aa00da94eb32e1600b93dcf5482f9e973">ValueDisplay::setUnitConfig</a></div><div class="ttdeci">void setUnitConfig(Font &amp;font, Area area, Color fontColor, const char *unit)</div><div class="ttdoc">Configures font, area, color, and text string for the unit label.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:41</div></div>
-<div class="ttc" id="aclassValueDisplay_html_ad21e5fe2648a19f1607cf87a9f5ab7fc"><div class="ttname"><a href="#ad21e5fe2648a19f1607cf87a9f5ab7fc">ValueDisplay::setTitleConfig</a></div><div class="ttdeci">void setTitleConfig(Font &amp;font, Position pos, Color fontColor, const char *title)</div><div class="ttdoc">Configures font, position, color, and text string for the title.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:87</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:35</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:76</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:49</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:156</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a035a6edfd2be7db85fd4808e9b75033b"><div class="ttname"><a href="#a035a6edfd2be7db85fd4808e9b75033b">ValueDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the static background, title label, and unit string onto the LCD.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:113</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a08bb1d7b3710d7c167716f3c6468d197"><div class="ttname"><a href="#a08bb1d7b3710d7c167716f3c6468d197">ValueDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Formats and renders the given floating-point value onto the LCD.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:167</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a26bd603b45a10759db4620b4ed2a3525"><div class="ttname"><a href="#a26bd603b45a10759db4620b4ed2a3525">ValueDisplay::drawValueWithCursor</a></div><div class="ttdeci">void drawValueWithCursor(float value, uint8_t index, bool on)</div><div class="ttdoc">Formats and renders the numerical value with an optional cursor blink effect at a specified character...</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:203</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a51a0542aff986c4a0c1cd0407cc1cf1e"><div class="ttname"><a href="#a51a0542aff986c4a0c1cd0407cc1cf1e">ValueDisplay::setValueConfig</a></div><div class="ttdeci">void setValueConfig(Font &amp;font, Area area, Position valuePos, Color fontColor, Color bgColor, const char *format)</div><div class="ttdoc">Configures font, area, position, colors, and format string for the numeric value.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:69</div></div>
+<div class="ttc" id="aclassValueDisplay_html_a8ab3f4abb1ae836b5ce567537340d01b"><div class="ttname"><a href="#a8ab3f4abb1ae836b5ce567537340d01b">ValueDisplay::ValueDisplay</a></div><div class="ttdeci">ValueDisplay()</div><div class="ttdoc">Constructs a new ValueDisplay object with default values and styles.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:22</div></div>
+<div class="ttc" id="aclassValueDisplay_html_aa00da94eb32e1600b93dcf5482f9e973"><div class="ttname"><a href="#aa00da94eb32e1600b93dcf5482f9e973">ValueDisplay::setUnitConfig</a></div><div class="ttdeci">void setUnitConfig(Font &amp;font, Area area, Color fontColor, const char *unit)</div><div class="ttdoc">Configures font, area, color, and text string for the unit label.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:47</div></div>
+<div class="ttc" id="aclassValueDisplay_html_ad21e5fe2648a19f1607cf87a9f5ab7fc"><div class="ttname"><a href="#ad21e5fe2648a19f1607cf87a9f5ab7fc">ValueDisplay::setTitleConfig</a></div><div class="ttdeci">void setTitleConfig(Font &amp;font, Position pos, Color fontColor, const char *title)</div><div class="ttdoc">Configures font, position, color, and text string for the title.</div><div class="ttdef"><b>Definition</b> ValueDisplay.cpp:91</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ab3f4abb1ae836b5ce567537340d01b" name="a8ab3f4abb1ae836b5ce567537340d01b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ab3f4abb1ae836b5ce567537340d01b">&#9670;&#160;</a></span>ValueDisplay()</h2>
@@ -294,7 +271,23 @@ Example Usage</h3>
 </div><div class="memdoc">
 
 <p>Constructs a new <a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a> object with default values and styles. </p>
-<p>Initializes a new <a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a> instance. It sets internal pointers for the working frame buffer, LCD drawing surface brush, and fonts (value, unit, title) to nullptr to prevent invalid memory dereferences before explicit configuration. It sets the default background color to dark-gray (RGB: 0x30, 0x30, 0x30), and clears the unit and title character buffers with zeroes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Font and surface pointers are initialized to <span class="tt">nullptr</span> and must be configured prior to drawing. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Sets default background color to dark gray (<span class="tt">0x30, 0x30, 0x30</span>) and zeroes text buffers. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></span> instance is constructed with default state. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Initializes a new <span class="tt"><a class="el" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur...">ValueDisplay</a></span> instance. Sets internal pointers for the working frame buffer, LCD drawing surface brush, and fonts (value, unit, title) to <span class="tt">nullptr</span> to prevent invalid memory dereferences before explicit configuration. Sets the default background color to dark-gray (RGB: <span class="tt">0x30, 0x30, 0x30</span>), and clears the unit and title character buffers with zeroes. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad21e5fe2648a19f1607cf87a9f5ab7fc" title="Configures font, position, color, and text string for the title.">ValueDisplay::setTitleConfig</a>, <a class="el" href="#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">ValueDisplay::setValueConfig</a>, <a class="el" href="#aa00da94eb32e1600b93dcf5482f9e973" title="Configures font, area, color, and text string for the unit label.">ValueDisplay::setUnitConfig</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000033">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -323,7 +316,23 @@ Example Usage</h3>
 </div><div class="memdoc">
 
 <p>Renders the static background, title label, and unit string onto the LCD. </p>
-<p>Renders the static visual elements of the widget, including the overall widget background, the optional title text, and the unit label sub-box. The operation resizes the off-screen frame buffer, clears it with the background color, draws the title if configured, transfers the composited bitmap to the LCD, and subsequently draws the unit sub-box if its dimensions are non-zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground()</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span>, and <span class="tt"><a class="el" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e" title="Sets the widget display area (position and dimensions) by pointer.">setArea()</a></span> must be called beforehand. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The widget background, optional title text, and optional unit label box are drawn on the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Renders the static visual elements of the widget, including the overall widget background, the optional title text, and the unit label sub-box. The operation resizes the off-screen frame buffer, clears it with the background color, draws the title if configured, transfers the composited bitmap to the LCD, and subsequently draws the unit sub-box if its dimensions are non-zero. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground</a>, <a class="el" href="#ad21e5fe2648a19f1607cf87a9f5ab7fc" title="Configures font, position, color, and text string for the title.">ValueDisplay::setTitleConfig</a>, <a class="el" href="#aa00da94eb32e1600b93dcf5482f9e973" title="Configures font, area, color, and text string for the unit label.">ValueDisplay::setUnitConfig</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000037">Bug</a></b></dt><dd>none </dd></dl>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99">BaseDisplay</a>.</p>
 
@@ -355,17 +364,21 @@ Example Usage</h3>
 <p>Formats and renders the given floating-point value onto the LCD. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The floating-point value to be displayed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The floating-point value to be displayed. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Formats the given floating-point number into a string buffer according to the configured format string (mFormat). Then it resizes the off-screen frame buffer to match mValueArea, clears it with mValueBgColor, renders the formatted string using mValueFont, and blits the resulting bitmap directly onto the target LCD at the calculated absolute screen coordinates.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The floating-point numerical value to format and render. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>, <span class="tt"><a class="el" href="#a7d3f472ad33fb76ebb982f337f35a2ad" title="Pointer to font used for the value text.">mValueFont</a></span>, or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue()</a></span>. Redraws only <span class="tt"><a class="el" href="#a8921e6b675d025197a130ba34501853a" title="Display bounding area for the formatted value text.">mValueArea</a></span> to minimize bus traffic. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">setValueConfig()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, and <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span> must be called first. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The formatted numeric value sub-box is rendered and blitted onto the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Formats the given floating-point number into a string buffer according to the configured format string (<span class="tt"><a class="el" href="#ab69788ae9265f4f97e0b22be8fcd706b" title="String buffer holding the printf-compatible formatting string.">mFormat</a></span>). Resizes the off-screen frame buffer to match <span class="tt"><a class="el" href="#a8921e6b675d025197a130ba34501853a" title="Display bounding area for the formatted value text.">mValueArea</a></span>, clears it with <span class="tt"><a class="el" href="#ae3db111d07d20521778a8683641c6cb2" title="Background fill color for the value and unit areas.">mValueBgColor</a></span>, renders the formatted string using <span class="tt"><a class="el" href="#a7d3f472ad33fb76ebb982f337f35a2ad" title="Pointer to font used for the value text.">mValueFont</a></span>, and blits the resulting bitmap directly onto the target LCD at the calculated absolute screen coordinates. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue</a>, <a class="el" href="#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">ValueDisplay::setValueConfig</a>, <a class="el" href="#a26bd603b45a10759db4620b4ed2a3525" title="Formats and renders the numerical value with an optional cursor blink effect at a specified character...">ValueDisplay::drawValueWithCursor</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000038">Bug</a></b></dt><dd>none </dd></dl>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7">BaseDisplay</a>.</p>
 
@@ -400,20 +413,21 @@ Example Usage</h3>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The floating-point value to display. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>0-based character index within the formatted string where the cursor is placed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">on</td><td>True to display the character normally; false to replace it with a space for blink effect.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on</td><td>True to display the character normally; false to replace it with a space for blink effect. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Formats the given floating-point value into a string using mFormat and applies a cursor blinking effect at a specific character position (<span class="tt">index</span>).</p>
-<p>If <span class="tt">on</span> is false and <span class="tt">index</span> is within the valid length of the formatted string, the character at that index is replaced with an ASCII space (' '), simulating a blinking cursor. The resulting string is then rendered into the off-screen frame buffer and transferred to the LCD at the widget's value area position.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The floating-point numerical value to format. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Character position in the formatted string (0-based) where the cursor blinks. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">on</td><td>Blink phase state: true to render the character normally, false to hide it (blank). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>If <span class="tt">index</span> exceeds the formatted string length, no character is masked. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Useful for interactive digit-by-digit value editing UIs. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">setValueConfig()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, and <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span> must be called first. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The formatted numeric value (with cursor masking when <span class="tt">on == false</span>) is blitted onto the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Formats the given floating-point value into a string using <span class="tt"><a class="el" href="#ab69788ae9265f4f97e0b22be8fcd706b" title="String buffer holding the printf-compatible formatting string.">mFormat</a></span> and applies a cursor blinking effect at a specific character position (<span class="tt">index</span>). If <span class="tt">on</span> is <span class="tt">false</span> and <span class="tt">index</span> is within the valid length of the formatted string, the character at that index is replaced with an ASCII space (<span class="tt">' '</span>), simulating a blinking cursor. The resulting string is then rendered into the off-screen frame buffer and transferred to the LCD at the widget's value area position. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a08bb1d7b3710d7c167716f3c6468d197" title="Formats and renders the given floating-point value onto the LCD.">ValueDisplay::drawValue</a>, <a class="el" href="#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">ValueDisplay::setValueConfig</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000039">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -452,20 +466,21 @@ Example Usage</h3>
     <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font to use for the title. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>Text coordinate offset relative to the widget area. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Text color for the title. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Null-terminated string for the widget title.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Sets up the title label configuration. It stores the font reference, coordinate offset relative to the widget area, text color, and copies up to 31 characters of the title string into mTitle.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font used for the title label. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>Offset position of the title text relative to the widget top-left corner. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Color of the title text characters. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Null-terminated string for the widget title. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Strings longer than 31 characters are ignored to prevent buffer overflow. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a035a6edfd2be7db85fd4808e9b75033b" title="Renders the static background, title label, and unit string onto the LCD.">drawBackground()</a></span> after setting title configuration to render the title text. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">title</span> must be a valid null-terminated string. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Title font, position, color, and text string are stored. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Sets up the title label configuration. Stores the font reference, coordinate offset relative to the widget area, text color, and copies up to 31 characters of the title string into <span class="tt"><a class="el" href="#a27a773609bd93f674bc3e38841db44c0" title="String buffer holding the title text.">mTitle</a></span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a035a6edfd2be7db85fd4808e9b75033b" title="Renders the static background, title label, and unit string onto the LCD.">ValueDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000036">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -502,22 +517,23 @@ Example Usage</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font to use for the unit. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Display boundary area for the unit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Display boundary area for the unit (relative to widget top-left). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Text color for the unit. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unit</td><td>Null-terminated string representing the unit (e.g. "km/h", "°C").</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit</td><td>Null-terminated string representing the unit (e.g. "km/h", "°C"). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures all presentation properties for the measurement unit label. It stores the font reference, boundary area, and text color, and copies up to 31 characters of the unit string into the internal buffer mUnit, ensuring safe null-termination.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font to be used when rendering the unit string. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Display boundary area allocating screen space for the unit label. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Text brush color used to draw the unit characters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unit</td><td>Null-terminated C-string representing the measurement unit. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Strings longer than 31 characters are ignored to prevent buffer overflow. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a035a6edfd2be7db85fd4808e9b75033b" title="Renders the static background, title label, and unit string onto the LCD.">drawBackground()</a></span> after setting unit configuration to render the unit box. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">unit</span> must be a valid null-terminated string. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Unit font, bounding box, color, and text string are stored. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures all presentation properties for the measurement unit label. Stores the font reference, boundary area, and text color, and copies up to 31 characters of the unit string into the internal buffer <span class="tt"><a class="el" href="#a6f49ae66034ce25e3fc94027400638f0" title="String buffer holding the unit label.">mUnit</a></span>, ensuring safe null-termination. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a035a6edfd2be7db85fd4808e9b75033b" title="Renders the static background, title label, and unit string onto the LCD.">ValueDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000034">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000034">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -564,26 +580,362 @@ Example Usage</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font to use for the value. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Display boundary area for the value box. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Display boundary area for the value box (relative to widget top-left). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">valuePos</td><td>Text drawing offset inside the value box. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Text color for the numeric value. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bgColor</td><td>Background fill color behind the value. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format string for sprintf (e.g. "%.1f", "%03d").</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format string for sprintf (e.g. "%.1f", "%03.0f"). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the display parameters for the numeric value. It stores the font reference, value area box, relative text offset position, font color, background color, and the printf-compatible format specifier string (e.g. "%.1f", "%d"). Buffer length is safeguarded to a maximum of 63 characters to prevent buffer overflow.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the font used for rendering the numeric value. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Bounding area defining the size and offset of the value sub-box. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">valuePos</td><td>Internal text coordinate offset within the value sub-box. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fontColor</td><td>Color of the value text characters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bgColor</td><td>Background fill color behind the value text. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format specification string (e.g. "%.2f") used by sprintf. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Format strings longer than 63 characters are ignored. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><span class="tt">bgColor</span> is also used as the background color of the unit sub-box in <span class="tt"><a class="el" href="#a035a6edfd2be7db85fd4808e9b75033b" title="Renders the static background, title label, and unit string onto the LCD.">drawBackground()</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">format</span> must be a valid <span class="tt">printf</span>-compatible floating-point format string. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Value rendering parameters and format string are stored. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the display parameters for the numeric value. Stores the font reference, value area box, relative text offset position, font color, background color, and the <span class="tt">printf</span>-compatible format specifier string (e.g. <span class="tt">"%.1f"</span>, <span class="tt">"d"</span>). Buffer length is safeguarded to a maximum of 63 characters to prevent buffer overflow. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a08bb1d7b3710d7c167716f3c6468d197" title="Formats and renders the given floating-point value onto the LCD.">ValueDisplay::drawValue</a>, <a class="el" href="#a26bd603b45a10759db4620b4ed2a3525" title="Formats and renders the numerical value with an optional cursor blink effect at a specified character...">ValueDisplay::drawValueWithCursor</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000035">Bug</a></b></dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ab69788ae9265f4f97e0b22be8fcd706b" name="ab69788ae9265f4f97e0b22be8fcd706b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69788ae9265f4f97e0b22be8fcd706b">&#9670;&#160;</a></span>mFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ValueDisplay::mFormat[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>String buffer holding the printf-compatible formatting string. </p>
+
+</div>
+</div>
+<a id="a27a773609bd93f674bc3e38841db44c0" name="a27a773609bd93f674bc3e38841db44c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a773609bd93f674bc3e38841db44c0">&#9670;&#160;</a></span>mTitle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ValueDisplay::mTitle[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>String buffer holding the title text. </p>
+
+</div>
+</div>
+<a id="ad62cebabad8129e1d29e0c16470234c2" name="ad62cebabad8129e1d29e0c16470234c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62cebabad8129e1d29e0c16470234c2">&#9670;&#160;</a></span>mTitleColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ValueDisplay::mTitleColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Font color for the title. </p>
+
+</div>
+</div>
+<a id="a272db80fe4016c9cef2eb347016ad21b" name="a272db80fe4016c9cef2eb347016ad21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272db80fe4016c9cef2eb347016ad21b">&#9670;&#160;</a></span>mTitleFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Font* ValueDisplay::mTitleFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to font used for the title text. </p>
+
+</div>
+</div>
+<a id="acba3325610e6edcb511d264e23844536" name="acba3325610e6edcb511d264e23844536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba3325610e6edcb511d264e23844536">&#9670;&#160;</a></span>mTitlePos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Position ValueDisplay::mTitlePos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Relative text coordinates for the title. </p>
+
+</div>
+</div>
+<a id="a6f49ae66034ce25e3fc94027400638f0" name="a6f49ae66034ce25e3fc94027400638f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f49ae66034ce25e3fc94027400638f0">&#9670;&#160;</a></span>mUnit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ValueDisplay::mUnit[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>String buffer holding the unit label. </p>
+
+</div>
+</div>
+<a id="abccd18f5b597deab1469d02bd9666d12" name="abccd18f5b597deab1469d02bd9666d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccd18f5b597deab1469d02bd9666d12">&#9670;&#160;</a></span>mUnitArea</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Area ValueDisplay::mUnitArea</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display bounding area for the unit label. </p>
+
+</div>
+</div>
+<a id="a21492d592b5d2e0c45584169d3cc79a5" name="a21492d592b5d2e0c45584169d3cc79a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21492d592b5d2e0c45584169d3cc79a5">&#9670;&#160;</a></span>mUnitColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ValueDisplay::mUnitColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Font color for the unit label. </p>
+
+</div>
+</div>
+<a id="a268ebdd187a762f3009ca4635953a163" name="a268ebdd187a762f3009ca4635953a163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268ebdd187a762f3009ca4635953a163">&#9670;&#160;</a></span>mUnitFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Font* ValueDisplay::mUnitFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to font used for the unit text. </p>
+
+</div>
+</div>
+<a id="a8921e6b675d025197a130ba34501853a" name="a8921e6b675d025197a130ba34501853a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8921e6b675d025197a130ba34501853a">&#9670;&#160;</a></span>mValueArea</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Area ValueDisplay::mValueArea</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display bounding area for the formatted value text. </p>
+
+</div>
+</div>
+<a id="ae3db111d07d20521778a8683641c6cb2" name="ae3db111d07d20521778a8683641c6cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3db111d07d20521778a8683641c6cb2">&#9670;&#160;</a></span>mValueBgColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ValueDisplay::mValueBgColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Background fill color for the value and unit areas. </p>
+
+</div>
+</div>
+<a id="a56d773260c44dcea26d4876d566c07a7" name="a56d773260c44dcea26d4876d566c07a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d773260c44dcea26d4876d566c07a7">&#9670;&#160;</a></span>mValueColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ValueDisplay::mValueColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Font color for the formatted value. </p>
+
+</div>
+</div>
+<a id="a7d3f472ad33fb76ebb982f337f35a2ad" name="a7d3f472ad33fb76ebb982f337f35a2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3f472ad33fb76ebb982f337f35a2ad">&#9670;&#160;</a></span>mValueFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Font* ValueDisplay::mValueFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to font used for the value text. </p>
+
+</div>
+</div>
+<a id="ad3422380454c0f9d0bb34974cba7f441" name="ad3422380454c0f9d0bb34974cba7f441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3422380454c0f9d0bb34974cba7f441">&#9670;&#160;</a></span>mValuePos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Position ValueDisplay::mValuePos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Relative text coordinates for the formatted value. </p>
 
 </div>
 </div>

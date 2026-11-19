@@ -6,5 +6,6 @@ var searchData=
   ['basedisplay_3',['BaseDisplay',['../classBaseDisplay.html',1,'BaseDisplay'],['../classBaseDisplay.html#ac4cd0d50d761ae71643c15c1c36d3ade',1,'BaseDisplay::BaseDisplay()']]],
   ['basedisplay_2ecpp_4',['BaseDisplay.cpp',['../BaseDisplay_8cpp.html',1,'']]],
   ['basedisplay_2eh_5',['BaseDisplay.h',['../BaseDisplay_8h.html',1,'']]],
-  ['build_20and_20firmware_20flashing_6',['Build and Firmware Flashing',['../index.html#autotoc_md19',1,'']]]
+  ['bug_20list_6',['Bug List',['../bug.html',1,'']]],
+  ['build_20and_20firmware_20flashing_7',['Build and Firmware Flashing',['../index.html#autotoc_md19',1,'']]]
 ];

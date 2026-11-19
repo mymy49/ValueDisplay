@@ -14,6 +14,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,22 +93,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ProgressDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classProgressDisplay__inherit__graph.png" border="0" usemap="#aProgressDisplay_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="aProgressDisplay_inherit__map" id="aProgressDisplay_inherit__map">
-<area shape="rect" title="Widget for drawing a horizontal progress bar indicator." alt="" coords="5,81,132,109"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="17,5,120,33"/>
-<area shape="poly" title=" " alt="" coords="70,47,71,81,66,80,67,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classProgressDisplay__inherit__graph.svg" width="138" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for ProgressDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classProgressDisplay__coll__graph.png" border="0" usemap="#aProgressDisplay_coll__map" loading="lazy" alt="Collaboration graph"/></div>
-<map name="aProgressDisplay_coll__map" id="aProgressDisplay_coll__map">
-<area shape="rect" title="Widget for drawing a horizontal progress bar indicator." alt="" coords="5,81,132,109"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="17,5,120,33"/>
-<area shape="poly" title=" " alt="" coords="70,47,71,81,66,80,67,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classProgressDisplay__coll__graph.svg" width="138" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -128,13 +125,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay" id="r_a973a860a6dd9fbb27dcb6fac6faaf62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a973a860a6dd9fbb27dcb6fac6faaf62a">setSize</a> (uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width and height of the display widget.  <br /></td></tr>
 <tr class="memitem:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay" id="r_a502493591ecd9351491cc7e2766bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a502493591ecd9351491cc7e2766bba46">setSize</a> (Size size)</td></tr>
-<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a Size object.  <br /></td></tr>
+<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a <span class="tt">Size</span> object.  <br /></td></tr>
 <tr class="memitem:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay" id="r_a9978c590b9585bcb32942b45abbab343"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9978c590b9585bcb32942b45abbab343">getSize</a> ()</td></tr>
 <tr class="memdesc:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current dimensions of the display widget.  <br /></td></tr>
 <tr class="memitem:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay" id="r_a6d2b804ec3ccfa6773c1d92b651d308a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a6d2b804ec3ccfa6773c1d92b651d308a">setPosition</a> (Position pos)</td></tr>
 <tr class="memdesc:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the screen position coordinates of the display widget.  <br /></td></tr>
 <tr class="memitem:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay" id="r_ae011b4f768f68c7eb903778a507af20a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a> (Color color)</td></tr>
-<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a Color object.  <br /></td></tr>
+<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a <span class="tt">Color</span> object.  <br /></td></tr>
 <tr class="memitem:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay" id="r_a12f0bcbf1c1ff38fec8a39488c94781b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a12f0bcbf1c1ff38fec8a39488c94781b">setBgColor</a> (uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha=0xFF)</td></tr>
 <tr class="memdesc:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using RGBA color components.  <br /></td></tr>
 <tr class="memitem:a08b84fe7d6825e04e954e4c9134ec055 inherit pub_methods_classBaseDisplay" id="r_a08b84fe7d6825e04e954e4c9134ec055"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a08b84fe7d6825e04e954e4c9134ec055">getPosition</a> (void)</td></tr>
@@ -148,24 +145,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4f892abbddf1e53ecbc55b0ce72a6033" id="r_a4f892abbddf1e53ecbc55b0ce72a6033"><td class="memItemLeft" align="right" valign="top"><a id="a4f892abbddf1e53ecbc55b0ce72a6033" name="a4f892abbddf1e53ecbc55b0ce72a6033"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mProgressBgColor</b></td></tr>
-<tr class="memitem:a4ee7c3d1c41bf2c57d4537d7f34553e9" id="r_a4ee7c3d1c41bf2c57d4537d7f34553e9"><td class="memItemLeft" align="right" valign="top"><a id="a4ee7c3d1c41bf2c57d4537d7f34553e9" name="a4ee7c3d1c41bf2c57d4537d7f34553e9"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mProgressColor</b></td></tr>
-<tr class="memdesc:a4ee7c3d1c41bf2c57d4537d7f34553e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background color of the groove and fill color of progress bar. <br /></td></tr>
+<tr class="memitem:a4f892abbddf1e53ecbc55b0ce72a6033" id="r_a4f892abbddf1e53ecbc55b0ce72a6033"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033">mProgressBgColor</a></td></tr>
+<tr class="memdesc:a4f892abbddf1e53ecbc55b0ce72a6033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Track groove background color of the progress bar.  <br /></td></tr>
+<tr class="memitem:a4ee7c3d1c41bf2c57d4537d7f34553e9" id="r_a4ee7c3d1c41bf2c57d4537d7f34553e9"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9">mProgressColor</a></td></tr>
+<tr class="memdesc:a4ee7c3d1c41bf2c57d4537d7f34553e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active fill color of the progress bar.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classBaseDisplay"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classBaseDisplay')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classBaseDisplay.html">BaseDisplay</a></td></tr>
-<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">
-FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>mFb</b></td></tr>
-<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering. <br /></td></tr>
-<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mArea</b></td></tr>
-<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates. <br /></td></tr>
-<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mBgColor</b></td></tr>
-<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color. <br /></td></tr>
-<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">
-Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
-<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface). <br /></td></tr>
+<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3">mFb</a></td></tr>
+<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering.  <br /></td></tr>
+<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a29135f90659f9f2a950d10710191fee7">mArea</a></td></tr>
+<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates.  <br /></td></tr>
+<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9a75aaac93b74176c11a7738d0e4901a">mBgColor</a></td></tr>
+<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color.  <br /></td></tr>
+<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">Brush *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52">mLcd</a></td></tr>
+<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Widget for drawing a horizontal progress bar indicator. </p>
@@ -174,8 +166,8 @@ Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
 Visual Layout</h3>
 <ul>
 <li><b>Outer Background</b>: Filled with <span class="tt"><a class="el" href="classBaseDisplay.html#a9a75aaac93b74176c11a7738d0e4901a" title="Widget background color.">mBgColor</a></span> across the entire widget area.</li>
-<li><b>Track Groove</b>: Inset by 5 pixels on all sides (top, bottom, left, right) and filled with <span class="tt">mProgressBgColor</span>.</li>
-<li><b>Active Bar</b>: Drawn inside the track groove starting from the left edge, with its width proportional to <span class="tt">(value / 100.0f) * trackWidth</span> and filled with <span class="tt"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9" title="Background color of the groove and fill color of progress bar.">mProgressColor</a></span>.</li>
+<li><b>Track Groove</b>: Inset by 5 pixels on all sides (top, bottom, left, right) and filled with <span class="tt"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033" title="Track groove background color of the progress bar.">mProgressBgColor</a></span>.</li>
+<li><b>Active Bar</b>: Drawn inside the track groove starting from the left edge, with its width proportional to <span class="tt">(value / 100.0f) * trackWidth</span> and filled with <span class="tt"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9" title="Active fill color of the progress bar.">mProgressColor</a></span>.</li>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Value Protection</h3>
@@ -216,14 +208,14 @@ Example Usage (from Touch Calibration Application)</h3>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aProgressDisplay_8h_html"><div class="ttname"><a href="ProgressDisplay_8h.html">ProgressDisplay.h</a></div><div class="ttdoc">Horizontal progress bar widget for displaying percentage (0 ~ 100%).</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:28</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:64</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:41</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:133</div></div>
-<div class="ttc" id="aclassProgressDisplay_html_a6ea16235ae4f087a889ed8c2dfec29b4"><div class="ttname"><a href="#a6ea16235ae4f087a889ed8c2dfec29b4">ProgressDisplay::setColor</a></div><div class="ttdeci">void setColor(Color progress, Color background)</div><div class="ttdoc">Sets the progress fill and track background colors.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:34</div></div>
-<div class="ttc" id="aclassProgressDisplay_html_aa7a15380790f0d2b541f522953c1d7da"><div class="ttname"><a href="#aa7a15380790f0d2b541f522953c1d7da">ProgressDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the outer widget background and the empty progress track groove.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:100</div></div>
-<div class="ttc" id="aclassProgressDisplay_html_aaff00d2530e2a899527a813c5dabab1a"><div class="ttname"><a href="#aaff00d2530e2a899527a813c5dabab1a">ProgressDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the progress bar filling proportional to the given percentage value.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:55</div></div>
-<div class="ttc" id="aclassProgressDisplay_html_ab1dcc93996e3117272936b7ac3cc43a1"><div class="ttname"><a href="#ab1dcc93996e3117272936b7ac3cc43a1">ProgressDisplay::ProgressDisplay</a></div><div class="ttdeci">ProgressDisplay()</div><div class="ttdoc">Constructs a new ProgressDisplay object with default colors.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:17</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:35</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:76</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:49</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:156</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_a6ea16235ae4f087a889ed8c2dfec29b4"><div class="ttname"><a href="#a6ea16235ae4f087a889ed8c2dfec29b4">ProgressDisplay::setColor</a></div><div class="ttdeci">void setColor(Color progress, Color background)</div><div class="ttdoc">Sets the progress fill and track background colors.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:40</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_aa7a15380790f0d2b541f522953c1d7da"><div class="ttname"><a href="#aa7a15380790f0d2b541f522953c1d7da">ProgressDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the outer widget background and the empty progress track groove.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:112</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_aaff00d2530e2a899527a813c5dabab1a"><div class="ttname"><a href="#aaff00d2530e2a899527a813c5dabab1a">ProgressDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the progress bar filling proportional to the given percentage value.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:62</div></div>
+<div class="ttc" id="aclassProgressDisplay_html_ab1dcc93996e3117272936b7ac3cc43a1"><div class="ttname"><a href="#ab1dcc93996e3117272936b7ac3cc43a1">ProgressDisplay::ProgressDisplay</a></div><div class="ttdeci">ProgressDisplay()</div><div class="ttdoc">Constructs a new ProgressDisplay object with default colors.</div><div class="ttdef"><b>Definition</b> ProgressDisplay.cpp:21</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab1dcc93996e3117272936b7ac3cc43a1" name="ab1dcc93996e3117272936b7ac3cc43a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1dcc93996e3117272936b7ac3cc43a1">&#9670;&#160;</a></span>ProgressDisplay()</h2>
@@ -241,12 +233,28 @@ Example Usage (from Touch Calibration Application)</h3>
 </div><div class="memdoc">
 
 <p>Constructs a new <a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a> object with default colors. </p>
-<p>Initializes a <a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a> instance with default colors:</p><ul>
-<li>Outer widget background: dark-gray (RGB: 0x30, 0x30, 0x30)</li>
-<li>Active progress indicator: bright green (RGB: 0x30, 0xFF, 0x30)</li>
-<li>Track/groove background: medium-gray (RGB: 0x80, 0x80, 0x80)</li>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Surface pointers (<span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> and <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>) must be configured before invoking drawing methods. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Default colors: dark-gray outer bezel (<span class="tt">0x303030</span>), medium-gray groove (<span class="tt">0x808080</span>), bright-green fill (<span class="tt">0x30FF30</span>). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a></span> instance is constructed with default colors. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Initializes a <span class="tt"><a class="el" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator.">ProgressDisplay</a></span> instance with default colors:</p><ul>
+<li>Outer widget background: dark-gray (RGB: <span class="tt">0x30, 0x30, 0x30</span>)</li>
+<li>Active progress indicator: bright green (RGB: <span class="tt">0x30, 0xFF, 0x30</span>)</li>
+<li>Track/groove background: medium-gray (RGB: <span class="tt">0x80, 0x80, 0x80</span>) Internal pointers to the off-screen frame buffer and display surface brush are initialized to <span class="tt">nullptr</span>. <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6ea16235ae4f087a889ed8c2dfec29b4" title="Sets the progress fill and track background colors.">ProgressDisplay::setColor</a>, <a class="el" href="#aa7a15380790f0d2b541f522953c1d7da" title="Renders the outer widget background and the empty progress track groove.">ProgressDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000019">Bug</a></b></dt><dd>none </dd></dl>
+</li>
 </ul>
-<p>Internal pointers to the off-screen frame buffer and display surface brush are initialized to nullptr. </p>
 
 </div>
 </div>
@@ -275,7 +283,23 @@ Example Usage (from Touch Calibration Application)</h3>
 </div><div class="memdoc">
 
 <p>Renders the outer widget background and the empty progress track groove. </p>
-<p>Renders the static widget background and the un-filled progress track. It configures the frame buffer to match the entire widget area, clears it with the outer background color (mBgColor), draws an inner groove rectangle using mProgressBgColor with a 5-pixel inset margin on all sides, and blits the complete background bitmap to the LCD display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns early without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground()</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span>, and <span class="tt"><a class="el" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e" title="Sets the widget display area (position and dimensions) by pointer.">setArea()</a></span> must be called beforehand. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The outer bezel and empty 5-pixel inset track groove are blitted onto the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Renders the static widget background and the unfilled progress track. Configures the frame buffer to match the entire widget area, clears it with the outer background color (<span class="tt"><a class="el" href="classBaseDisplay.html#a9a75aaac93b74176c11a7738d0e4901a" title="Widget background color.">mBgColor</a></span>), draws an inner groove rectangle using <span class="tt"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033" title="Track groove background color of the progress bar.">mProgressBgColor</a></span> with a 5-pixel inset margin on all sides, and blits the complete background bitmap to the LCD display. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground</a>, <a class="el" href="#aaff00d2530e2a899527a813c5dabab1a" title="Renders the progress bar filling proportional to the given percentage value.">ProgressDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000022">Bug</a></b></dt><dd>none </dd></dl>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99">BaseDisplay</a>.</p>
 
@@ -307,24 +331,28 @@ Example Usage (from Touch Calibration Application)</h3>
 <p>Renders the progress bar filling proportional to the given percentage value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Progress percentage value (clamped between 0.0f and 100.0f).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Progress percentage value (clamped between 0.0f and 100.0f). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Clamps the provided value between 0.0f and 100.0f to prevent visual rendering artifacts or overflow outside the allocated boundaries. It calculates the inner progress bar area by applying a 5-pixel margin on all four sides of the widget area.</p>
-<p>The method then:</p><ol type="1">
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns early without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue()</a></span>. Redraws only the inner 5-pixel inset groove region. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e" title="Sets the widget display area (position and dimensions) by pointer.">setArea()</a></span>, and <span class="tt"><a class="el" href="#aa7a15380790f0d2b541f522953c1d7da" title="Renders the outer widget background and the empty progress track groove.">drawBackground()</a></span> should be called first. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The inner progress track is updated on the LCD to reflect <span class="tt">value</span>%. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Clamps the provided value between <span class="tt">0.0f</span> and <span class="tt">100.0f</span> to prevent visual rendering artifacts or overflow outside the allocated boundaries. Calculates the inner progress bar area by applying a 5-pixel margin on all four sides of the widget area. The method then:</p><ol type="1">
 <li>Resizes the frame buffer to the inner track dimensions.</li>
-<li>Clears it with the groove background color (mProgressBgColor).</li>
-<li>Computes the active bar width proportional to the percentage (value / 100.0f * totalWidth).</li>
-<li>Draws a solid filled rectangle with the active progress color (mProgressColor).</li>
-<li>Blits the composited progress bar bitmap onto the target LCD at the offset position.</li>
+<li>Clears it with the groove background color (<span class="tt"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033" title="Track groove background color of the progress bar.">mProgressBgColor</a></span>).</li>
+<li>Computes the active bar width proportional to the percentage (<span class="tt">value / 100.0f * totalWidth</span>).</li>
+<li>Draws a solid filled rectangle with the active progress color (<span class="tt"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9" title="Active fill color of the progress bar.">mProgressColor</a></span>).</li>
+<li>Blits the composited progress bar bitmap onto the target LCD at the offset position. <dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue</a>, <a class="el" href="#aa7a15380790f0d2b541f522953c1d7da" title="Renders the outer widget background and the empty progress track groove.">ProgressDisplay::drawBackground</a>, <a class="el" href="#a6ea16235ae4f087a889ed8c2dfec29b4" title="Sets the progress fill and track background colors.">ProgressDisplay::setColor</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000021">Bug</a></b></dt><dd>none </dd></dl>
+</li>
 </ol>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Current progress percentage, clamped between 0.0f and 100.0f. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7">BaseDisplay</a>.</p>
 
@@ -353,18 +381,70 @@ Example Usage (from Touch Calibration Application)</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">progress</td><td>Fill color for the active progress bar. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Track background color of the groove.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Track background color of the groove. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Updates the color configuration for the active progress bar fill and the background track groove.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">progress</td><td>Color to use for the active filled portion of the progress bar. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Color to use for the background groove/track of the progress bar. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Takes effect on subsequent <span class="tt"><a class="el" href="#aa7a15380790f0d2b541f522953c1d7da" title="Renders the outer widget background and the empty progress track groove.">drawBackground()</a></span> and <span class="tt"><a class="el" href="#aaff00d2530e2a899527a813c5dabab1a" title="Renders the progress bar filling proportional to the given percentage value.">drawValue()</a></span> calls. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9" title="Active fill color of the progress bar.">mProgressColor</a></span> and <span class="tt"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033" title="Track groove background color of the progress bar.">mProgressBgColor</a></span> are updated. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Updates the color configuration for the active progress bar fill (<span class="tt"><a class="el" href="#a4ee7c3d1c41bf2c57d4537d7f34553e9" title="Active fill color of the progress bar.">mProgressColor</a></span>) and the background track groove (<span class="tt"><a class="el" href="#a4f892abbddf1e53ecbc55b0ce72a6033" title="Track groove background color of the progress bar.">mProgressBgColor</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#aaff00d2530e2a899527a813c5dabab1a" title="Renders the progress bar filling proportional to the given percentage value.">ProgressDisplay::drawValue</a>, <a class="el" href="#aa7a15380790f0d2b541f522953c1d7da" title="Renders the outer widget background and the empty progress track groove.">ProgressDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000020">Bug</a></b></dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a4f892abbddf1e53ecbc55b0ce72a6033" name="a4f892abbddf1e53ecbc55b0ce72a6033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f892abbddf1e53ecbc55b0ce72a6033">&#9670;&#160;</a></span>mProgressBgColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ProgressDisplay::mProgressBgColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Track groove background color of the progress bar. </p>
+
+</div>
+</div>
+<a id="a4ee7c3d1c41bf2c57d4537d7f34553e9" name="a4ee7c3d1c41bf2c57d4537d7f34553e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee7c3d1c41bf2c57d4537d7f34553e9">&#9670;&#160;</a></span>mProgressColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color ProgressDisplay::mProgressColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active fill color of the progress bar. </p>
 
 </div>
 </div>

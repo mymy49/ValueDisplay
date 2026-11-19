@@ -14,6 +14,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,22 +93,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for RpmBarDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classRpmBarDisplay__inherit__graph.png" border="0" usemap="#aRpmBarDisplay_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="aRpmBarDisplay_inherit__map" id="aRpmBarDisplay_inherit__map">
-<area shape="rect" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline." alt="" coords="5,81,128,109"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="15,5,118,33"/>
-<area shape="poly" title=" " alt="" coords="68,47,69,81,64,80,65,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classRpmBarDisplay__inherit__graph.svg" width="134" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for RpmBarDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classRpmBarDisplay__coll__graph.png" border="0" usemap="#aRpmBarDisplay_coll__map" loading="lazy" alt="Collaboration graph"/></div>
-<map name="aRpmBarDisplay_coll__map" id="aRpmBarDisplay_coll__map">
-<area shape="rect" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline." alt="" coords="5,81,128,109"/>
-<area shape="rect" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="15,5,118,33"/>
-<area shape="poly" title=" " alt="" coords="68,47,69,81,64,80,65,51"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classRpmBarDisplay__coll__graph.svg" width="134" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -140,13 +137,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay" id="r_a973a860a6dd9fbb27dcb6fac6faaf62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a973a860a6dd9fbb27dcb6fac6faaf62a">setSize</a> (uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:a973a860a6dd9fbb27dcb6fac6faaf62a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width and height of the display widget.  <br /></td></tr>
 <tr class="memitem:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay" id="r_a502493591ecd9351491cc7e2766bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a502493591ecd9351491cc7e2766bba46">setSize</a> (Size size)</td></tr>
-<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a Size object.  <br /></td></tr>
+<tr class="memdesc:a502493591ecd9351491cc7e2766bba46 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a <span class="tt">Size</span> object.  <br /></td></tr>
 <tr class="memitem:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay" id="r_a9978c590b9585bcb32942b45abbab343"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9978c590b9585bcb32942b45abbab343">getSize</a> ()</td></tr>
 <tr class="memdesc:a9978c590b9585bcb32942b45abbab343 inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current dimensions of the display widget.  <br /></td></tr>
 <tr class="memitem:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay" id="r_a6d2b804ec3ccfa6773c1d92b651d308a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a6d2b804ec3ccfa6773c1d92b651d308a">setPosition</a> (Position pos)</td></tr>
 <tr class="memdesc:a6d2b804ec3ccfa6773c1d92b651d308a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the screen position coordinates of the display widget.  <br /></td></tr>
 <tr class="memitem:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay" id="r_ae011b4f768f68c7eb903778a507af20a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">setBgColor</a> (Color color)</td></tr>
-<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a Color object.  <br /></td></tr>
+<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a <span class="tt">Color</span> object.  <br /></td></tr>
 <tr class="memitem:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay" id="r_a12f0bcbf1c1ff38fec8a39488c94781b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a12f0bcbf1c1ff38fec8a39488c94781b">setBgColor</a> (uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha=0xFF)</td></tr>
 <tr class="memdesc:a12f0bcbf1c1ff38fec8a39488c94781b inherit pub_methods_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using RGBA color components.  <br /></td></tr>
 <tr class="memitem:a08b84fe7d6825e04e954e4c9134ec055 inherit pub_methods_classBaseDisplay" id="r_a08b84fe7d6825e04e954e4c9134ec055"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a08b84fe7d6825e04e954e4c9134ec055">getPosition</a> (void)</td></tr>
@@ -160,41 +157,35 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac9c8bfcfab46d52ae532c6649875afbd" id="r_ac9c8bfcfab46d52ae532c6649875afbd"><td class="memItemLeft" align="right" valign="top"><a id="ac9c8bfcfab46d52ae532c6649875afbd" name="ac9c8bfcfab46d52ae532c6649875afbd"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mIdleColor</b></td></tr>
-<tr class="memitem:a4dd87f6b27e3e01158cf1059da00fff0" id="r_a4dd87f6b27e3e01158cf1059da00fff0"><td class="memItemLeft" align="right" valign="top"><a id="a4dd87f6b27e3e01158cf1059da00fff0" name="a4dd87f6b27e3e01158cf1059da00fff0"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mNormalColor</b></td></tr>
-<tr class="memitem:a4cfb3a4a070b650ba7d8cffad512af7a" id="r_a4cfb3a4a070b650ba7d8cffad512af7a"><td class="memItemLeft" align="right" valign="top"><a id="a4cfb3a4a070b650ba7d8cffad512af7a" name="a4cfb3a4a070b650ba7d8cffad512af7a"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mWarningColor</b></td></tr>
-<tr class="memitem:a1b20475718fcedba3f421eec7d9afa98" id="r_a1b20475718fcedba3f421eec7d9afa98"><td class="memItemLeft" align="right" valign="top"><a id="a1b20475718fcedba3f421eec7d9afa98" name="a1b20475718fcedba3f421eec7d9afa98"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mOverColor</b></td></tr>
-<tr class="memitem:afe823cbbb641d90056c80ceabdde9485" id="r_afe823cbbb641d90056c80ceabdde9485"><td class="memItemLeft" align="right" valign="top"><a id="afe823cbbb641d90056c80ceabdde9485" name="afe823cbbb641d90056c80ceabdde9485"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mBarBgColor</b></td></tr>
-<tr class="memdesc:afe823cbbb641d90056c80ceabdde9485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segment and track colors. <br /></td></tr>
-<tr class="memitem:a416572e146992f2806f035807554d39a" id="r_a416572e146992f2806f035807554d39a"><td class="memItemLeft" align="right" valign="top"><a id="a416572e146992f2806f035807554d39a" name="a416572e146992f2806f035807554d39a"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>mIdleRpm</b></td></tr>
-<tr class="memitem:abcc5d0f005e34d2504a717261fb275a2" id="r_abcc5d0f005e34d2504a717261fb275a2"><td class="memItemLeft" align="right" valign="top"><a id="abcc5d0f005e34d2504a717261fb275a2" name="abcc5d0f005e34d2504a717261fb275a2"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>mWarningRpm</b></td></tr>
-<tr class="memitem:a106c84fb391faac7bb97e1f161ce27ca" id="r_a106c84fb391faac7bb97e1f161ce27ca"><td class="memItemLeft" align="right" valign="top"><a id="a106c84fb391faac7bb97e1f161ce27ca" name="a106c84fb391faac7bb97e1f161ce27ca"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>mOverRpm</b></td></tr>
-<tr class="memitem:aaecfcae0f14a593168fa21ff1589fc9e" id="r_aaecfcae0f14a593168fa21ff1589fc9e"><td class="memItemLeft" align="right" valign="top"><a id="aaecfcae0f14a593168fa21ff1589fc9e" name="aaecfcae0f14a593168fa21ff1589fc9e"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxRpm</b></td></tr>
-<tr class="memitem:a765307fdcec9f10b3a37e00fe5010886" id="r_a765307fdcec9f10b3a37e00fe5010886"><td class="memItemLeft" align="right" valign="top"><a id="a765307fdcec9f10b3a37e00fe5010886" name="a765307fdcec9f10b3a37e00fe5010886"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>mToplineThickness</b></td></tr>
-<tr class="memdesc:a765307fdcec9f10b3a37e00fe5010886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threshold RPM limits and topline height. <br /></td></tr>
+<tr class="memitem:ac9c8bfcfab46d52ae532c6649875afbd" id="r_ac9c8bfcfab46d52ae532c6649875afbd"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9c8bfcfab46d52ae532c6649875afbd">mIdleColor</a></td></tr>
+<tr class="memdesc:ac9c8bfcfab46d52ae532c6649875afbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill and topline color for the idle RPM zone (<span class="tt">0 ~ <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>).  <br /></td></tr>
+<tr class="memitem:a4dd87f6b27e3e01158cf1059da00fff0" id="r_a4dd87f6b27e3e01158cf1059da00fff0"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dd87f6b27e3e01158cf1059da00fff0">mNormalColor</a></td></tr>
+<tr class="memdesc:a4dd87f6b27e3e01158cf1059da00fff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill and topline color for the normal RPM zone (<span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a> ~ <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>).  <br /></td></tr>
+<tr class="memitem:a4cfb3a4a070b650ba7d8cffad512af7a" id="r_a4cfb3a4a070b650ba7d8cffad512af7a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cfb3a4a070b650ba7d8cffad512af7a">mWarningColor</a></td></tr>
+<tr class="memdesc:a4cfb3a4a070b650ba7d8cffad512af7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill and topline color for the warning RPM zone (<span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a> ~ <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>).  <br /></td></tr>
+<tr class="memitem:a1b20475718fcedba3f421eec7d9afa98" id="r_a1b20475718fcedba3f421eec7d9afa98"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b20475718fcedba3f421eec7d9afa98">mOverColor</a></td></tr>
+<tr class="memdesc:a1b20475718fcedba3f421eec7d9afa98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill and topline color for the over-rev / redline RPM zone (<span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a> ~ <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>).  <br /></td></tr>
+<tr class="memitem:afe823cbbb641d90056c80ceabdde9485" id="r_afe823cbbb641d90056c80ceabdde9485"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe823cbbb641d90056c80ceabdde9485">mBarBgColor</a></td></tr>
+<tr class="memdesc:afe823cbbb641d90056c80ceabdde9485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background fill color of the dynamic RPM bar groove.  <br /></td></tr>
+<tr class="memitem:a416572e146992f2806f035807554d39a" id="r_a416572e146992f2806f035807554d39a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a416572e146992f2806f035807554d39a">mIdleRpm</a></td></tr>
+<tr class="memdesc:a416572e146992f2806f035807554d39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper RPM boundary of the idle zone.  <br /></td></tr>
+<tr class="memitem:abcc5d0f005e34d2504a717261fb275a2" id="r_abcc5d0f005e34d2504a717261fb275a2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2">mWarningRpm</a></td></tr>
+<tr class="memdesc:abcc5d0f005e34d2504a717261fb275a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower RPM boundary of the warning zone.  <br /></td></tr>
+<tr class="memitem:a106c84fb391faac7bb97e1f161ce27ca" id="r_a106c84fb391faac7bb97e1f161ce27ca"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca">mOverRpm</a></td></tr>
+<tr class="memdesc:a106c84fb391faac7bb97e1f161ce27ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower RPM boundary of the over-rev / redline zone.  <br /></td></tr>
+<tr class="memitem:aaecfcae0f14a593168fa21ff1589fc9e" id="r_aaecfcae0f14a593168fa21ff1589fc9e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e">mMaxRpm</a></td></tr>
+<tr class="memdesc:aaecfcae0f14a593168fa21ff1589fc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full-scale maximum RPM value of the gauge.  <br /></td></tr>
+<tr class="memitem:a765307fdcec9f10b3a37e00fe5010886" id="r_a765307fdcec9f10b3a37e00fe5010886"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886">mToplineThickness</a></td></tr>
+<tr class="memdesc:a765307fdcec9f10b3a37e00fe5010886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical height in pixels of the top segmented reference guideline.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classBaseDisplay"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classBaseDisplay')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classBaseDisplay.html">BaseDisplay</a></td></tr>
-<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">
-FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>mFb</b></td></tr>
-<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering. <br /></td></tr>
-<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mArea</b></td></tr>
-<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates. <br /></td></tr>
-<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mBgColor</b></td></tr>
-<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color. <br /></td></tr>
-<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">
-Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
-<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface). <br /></td></tr>
+<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3">mFb</a></td></tr>
+<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering.  <br /></td></tr>
+<tr class="memitem:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a29135f90659f9f2a950d10710191fee7">mArea</a></td></tr>
+<tr class="memdesc:a29135f90659f9f2a950d10710191fee7 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates.  <br /></td></tr>
+<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#a9a75aaac93b74176c11a7738d0e4901a">mBgColor</a></td></tr>
+<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color.  <br /></td></tr>
+<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">Brush *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52">mLcd</a></td></tr>
+<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52 inherit pro_attribs_classBaseDisplay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Widget displaying engine RPM as a segmented colored bar and a colored top guideline. </p>
@@ -202,14 +193,14 @@ Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Dual-Bar Architecture</h3>
 <ol type="1">
-<li><b>Top Segmented Guideline</b>: Drawn across the top with a thickness of <span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Threshold RPM limits and topline height.">mToplineThickness</a></span> pixels. It remains statically divided into four color segments proportional to their respective operating RPM zones:<ul>
-<li><b>Idle Zone</b> (<span class="tt">0 ~ mIdleRpm</span>): Rendered in <span class="tt">mIdleColor</span> (Default: Blue).</li>
-<li><b>Normal Zone</b> (<span class="tt">mIdleRpm ~ mWarningRpm</span>): Rendered in <span class="tt">mNormalColor</span> (Default: Green).</li>
-<li><b>Warning Zone</b> (<span class="tt">mWarningRpm ~ mOverRpm</span>): Rendered in <span class="tt">mWarningColor</span> (Default: Yellow).</li>
-<li><b>Over-rev / Redline Zone</b> (<span class="tt">mOverRpm ~ mMaxRpm</span>): Rendered in <span class="tt">mOverColor</span> (Default: Red).</li>
+<li><b>Top Segmented Guideline</b>: Drawn across the top with a thickness of <span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Vertical height in pixels of the top segmented reference guideline.">mToplineThickness</a></span> pixels. It remains statically divided into four color segments proportional to their respective operating RPM zones:<ul>
+<li><b>Idle Zone</b> (<span class="tt">0 ~ <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>): Rendered in <span class="tt"><a class="el" href="#ac9c8bfcfab46d52ae532c6649875afbd" title="Fill and topline color for the idle RPM zone (0 ~ mIdleRpm).">mIdleColor</a></span> (Default: Blue).</li>
+<li><b>Normal Zone</b> (<span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a> ~ <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>): Rendered in <span class="tt"><a class="el" href="#a4dd87f6b27e3e01158cf1059da00fff0" title="Fill and topline color for the normal RPM zone (mIdleRpm ~ mWarningRpm).">mNormalColor</a></span> (Default: Green).</li>
+<li><b>Warning Zone</b> (<span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a> ~ <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>): Rendered in <span class="tt"><a class="el" href="#a4cfb3a4a070b650ba7d8cffad512af7a" title="Fill and topline color for the warning RPM zone (mWarningRpm ~ mOverRpm).">mWarningColor</a></span> (Default: Yellow).</li>
+<li><b>Over-rev / Redline Zone</b> (<span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a> ~ <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>): Rendered in <span class="tt"><a class="el" href="#a1b20475718fcedba3f421eec7d9afa98" title="Fill and topline color for the over-rev / redline RPM zone (mOverRpm ~ mMaxRpm).">mOverColor</a></span> (Default: Red).</li>
 </ul>
 </li>
-<li><b>Dynamic RPM Bar</b>: Positioned beneath the top guideline and inset by 3 pixels horizontally. Its width expands proportionately to <span class="tt">(value / mMaxRpm) * trackWidth</span>. The bar's color dynamically switches to match the active zone that the current RPM falls into.</li>
+<li><b>Dynamic RPM Bar</b>: Positioned beneath the top guideline and inset by 3 pixels horizontally. Its width expands proportionately to <span class="tt">(value / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a>) * trackWidth</span>. The bar's color dynamically switches to match the active zone that the current RPM falls into.</li>
 </ol>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Example Usage</h3>
@@ -248,20 +239,20 @@ Example Usage</h3>
 <div class="line">    tachometer.<a class="code hl_function" href="#aba4b45df1270b9d5234b4749838ae49c">drawValue</a>(currentRpm);</div>
 <div class="line">}</div>
 <div class="ttc" id="aRpmBarDisplay_8h_html"><div class="ttname"><a href="RpmBarDisplay_8h.html">RpmBarDisplay.h</a></div><div class="ttdoc">Multi-segment tachometer bar display widget for engine RPM visualization.</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:28</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:64</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:41</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:133</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a0494284a8b96e0b7ecec3523e5c1e11b"><div class="ttname"><a href="#a0494284a8b96e0b7ecec3523e5c1e11b">RpmBarDisplay::RpmBarDisplay</a></div><div class="ttdeci">RpmBarDisplay()</div><div class="ttdoc">Constructs a new RpmBarDisplay object with default thresholds (1100, 5000, 6000, 8000 RPM) and colors...</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:22</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a17a216b6795730ae04a5d7719a8237ba"><div class="ttname"><a href="#a17a216b6795730ae04a5d7719a8237ba">RpmBarDisplay::setIdleColor</a></div><div class="ttdeci">void setIdleColor(Color color)</div><div class="ttdoc">Sets the color representing the idle RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:48</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a1cae7c9693382f0a96b6003a007a4f24"><div class="ttname"><a href="#a1cae7c9693382f0a96b6003a007a4f24">RpmBarDisplay::setNormalColor</a></div><div class="ttdeci">void setNormalColor(Color color)</div><div class="ttdoc">Sets the color representing the normal RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:59</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a23eede38f9fef459cdf8a6a24126cdd4"><div class="ttname"><a href="#a23eede38f9fef459cdf8a6a24126cdd4">RpmBarDisplay::setMaxRpm</a></div><div class="ttdeci">void setMaxRpm(int32_t rpm)</div><div class="ttdoc">Sets the maximum scale value of the RPM gauge.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:220</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a2e0fec8b40e13e57d002a67d36500943"><div class="ttname"><a href="#a2e0fec8b40e13e57d002a67d36500943">RpmBarDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the widget background and the segmented top reference guideline.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:170</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a3a326a827e3eb960e182167aac6221bf"><div class="ttname"><a href="#a3a326a827e3eb960e182167aac6221bf">RpmBarDisplay::setOverColor</a></div><div class="ttdeci">void setOverColor(Color color)</div><div class="ttdoc">Sets the color representing the over-rev / redline RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:81</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_a7d42bf4fb0786557b7f15d76f6028640"><div class="ttname"><a href="#a7d42bf4fb0786557b7f15d76f6028640">RpmBarDisplay::setBarBgColor</a></div><div class="ttdeci">void setBarBgColor(Color color)</div><div class="ttdoc">Sets the background color of the dynamic bar track.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:92</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_aba4b45df1270b9d5234b4749838ae49c"><div class="ttname"><a href="#aba4b45df1270b9d5234b4749838ae49c">RpmBarDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the dynamic RPM bar filled proportionally to the given RPM value.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:115</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_ad8405c376ab2db51afeed492ece06abf"><div class="ttname"><a href="#ad8405c376ab2db51afeed492ece06abf">RpmBarDisplay::setWarningColor</a></div><div class="ttdeci">void setWarningColor(Color color)</div><div class="ttdoc">Sets the color representing the warning RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:70</div></div>
-<div class="ttc" id="aclassRpmBarDisplay_html_ade673b62adb2a1e5b7f62f44cdc2da7a"><div class="ttname"><a href="#ade673b62adb2a1e5b7f62f44cdc2da7a">RpmBarDisplay::setToplineThickness</a></div><div class="ttdeci">void setToplineThickness(int32_t thickness)</div><div class="ttdoc">Sets the vertical thickness of the top segmented guide bar.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:232</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a626bb7b332c2c5323d26285192eb668d"><div class="ttname"><a href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d">BaseDisplay::setLcd</a></div><div class="ttdeci">void setLcd(Brush &amp;brush)</div><div class="ttdoc">Sets the target LCD display drawing brush/surface.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:35</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ab7ac1ef1a8afe4902083216e0c65a74e"><div class="ttname"><a href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e">BaseDisplay::setArea</a></div><div class="ttdeci">void setArea(Area *area)</div><div class="ttdoc">Sets the widget display area (position and dimensions) by pointer.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:76</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ac83c002aba8cf4043fb6e4124b1bed85"><div class="ttname"><a href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85">BaseDisplay::setFrameBuffer</a></div><div class="ttdeci">void setFrameBuffer(FrameBuffer &amp;fb)</div><div class="ttdoc">Sets the framebuffer reference used for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:49</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ae011b4f768f68c7eb903778a507af20a"><div class="ttname"><a href="classBaseDisplay.html#ae011b4f768f68c7eb903778a507af20a">BaseDisplay::setBgColor</a></div><div class="ttdeci">void setBgColor(Color color)</div><div class="ttdoc">Sets the background color of the widget using a Color object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:156</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a0494284a8b96e0b7ecec3523e5c1e11b"><div class="ttname"><a href="#a0494284a8b96e0b7ecec3523e5c1e11b">RpmBarDisplay::RpmBarDisplay</a></div><div class="ttdeci">RpmBarDisplay()</div><div class="ttdoc">Constructs a new RpmBarDisplay object with default thresholds (1100, 5000, 6000, 8000 RPM) and colors...</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:26</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a17a216b6795730ae04a5d7719a8237ba"><div class="ttname"><a href="#a17a216b6795730ae04a5d7719a8237ba">RpmBarDisplay::setIdleColor</a></div><div class="ttdeci">void setIdleColor(Color color)</div><div class="ttdoc">Sets the color representing the idle RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:57</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a1cae7c9693382f0a96b6003a007a4f24"><div class="ttname"><a href="#a1cae7c9693382f0a96b6003a007a4f24">RpmBarDisplay::setNormalColor</a></div><div class="ttdeci">void setNormalColor(Color color)</div><div class="ttdoc">Sets the color representing the normal RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:70</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a23eede38f9fef459cdf8a6a24126cdd4"><div class="ttname"><a href="#a23eede38f9fef459cdf8a6a24126cdd4">RpmBarDisplay::setMaxRpm</a></div><div class="ttdeci">void setMaxRpm(int32_t rpm)</div><div class="ttdoc">Sets the maximum scale value of the RPM gauge.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:244</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a2e0fec8b40e13e57d002a67d36500943"><div class="ttname"><a href="#a2e0fec8b40e13e57d002a67d36500943">RpmBarDisplay::drawBackground</a></div><div class="ttdeci">void drawBackground() override</div><div class="ttdoc">Renders the widget background and the segmented top reference guideline.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:191</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a3a326a827e3eb960e182167aac6221bf"><div class="ttname"><a href="#a3a326a827e3eb960e182167aac6221bf">RpmBarDisplay::setOverColor</a></div><div class="ttdeci">void setOverColor(Color color)</div><div class="ttdoc">Sets the color representing the over-rev / redline RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:96</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_a7d42bf4fb0786557b7f15d76f6028640"><div class="ttname"><a href="#a7d42bf4fb0786557b7f15d76f6028640">RpmBarDisplay::setBarBgColor</a></div><div class="ttdeci">void setBarBgColor(Color color)</div><div class="ttdoc">Sets the background color of the dynamic bar track.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:109</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_aba4b45df1270b9d5234b4749838ae49c"><div class="ttname"><a href="#aba4b45df1270b9d5234b4749838ae49c">RpmBarDisplay::drawValue</a></div><div class="ttdeci">void drawValue(float value) override</div><div class="ttdoc">Renders the dynamic RPM bar filled proportionally to the given RPM value.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:133</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_ad8405c376ab2db51afeed492ece06abf"><div class="ttname"><a href="#ad8405c376ab2db51afeed492ece06abf">RpmBarDisplay::setWarningColor</a></div><div class="ttdeci">void setWarningColor(Color color)</div><div class="ttdoc">Sets the color representing the warning RPM range.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:83</div></div>
+<div class="ttc" id="aclassRpmBarDisplay_html_ade673b62adb2a1e5b7f62f44cdc2da7a"><div class="ttname"><a href="#ade673b62adb2a1e5b7f62f44cdc2da7a">RpmBarDisplay::setToplineThickness</a></div><div class="ttdeci">void setToplineThickness(int32_t thickness)</div><div class="ttdoc">Sets the vertical thickness of the top segmented guide bar.</div><div class="ttdef"><b>Definition</b> RpmBarDisplay.cpp:258</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0494284a8b96e0b7ecec3523e5c1e11b" name="a0494284a8b96e0b7ecec3523e5c1e11b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0494284a8b96e0b7ecec3523e5c1e11b">&#9670;&#160;</a></span>RpmBarDisplay()</h2>
@@ -279,16 +270,32 @@ Example Usage</h3>
 </div><div class="memdoc">
 
 <p>Constructs a new <a class="el" href="classRpmBarDisplay.html" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline.">RpmBarDisplay</a> object with default thresholds (1100, 5000, 6000, 8000 RPM) and colors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Surface pointers (<span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> and <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>) must be configured before invoking drawing methods. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Sets topline thickness to 5 pixels and zone colors to Blue (idle), Green (normal), Yellow (warning), Red (over-rev). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="classRpmBarDisplay.html" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline.">RpmBarDisplay</a></span> instance is constructed with default tachometer parameters. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>none </dd></dl>
 <p>Initializes the RPM bar gauge with default automotive tachometer thresholds and color schemes:</p><ul>
-<li>Idle RPM threshold: 1100 RPM (Color: Blue, RGB: 0x00, 0x00, 0xFF)</li>
-<li>Warning RPM threshold: 5000 RPM (Color: Green, RGB: 0x00, 0xFF, 0x00)</li>
-<li>Over-rev RPM threshold: 6000 RPM (Color: Yellow, RGB: 0xFF, 0xFF, 0x00)</li>
-<li>Maximum RPM scale: 8000 RPM (Color: Red, RGB: 0xFF, 0x00, 0x00)</li>
+<li>Idle RPM threshold: 1100 RPM (Color: Blue, RGB: <span class="tt">0x00, 0x00, 0xFF</span>)</li>
+<li>Warning RPM threshold: 5000 RPM (Color: Green, RGB: <span class="tt">0x00, 0xFF, 0x00</span>)</li>
+<li>Over-rev RPM threshold: 6000 RPM (Color: Yellow, RGB: <span class="tt">0xFF, 0xFF, 0x00</span>)</li>
+<li>Maximum RPM scale: 8000 RPM (Color: Red, RGB: <span class="tt">0xFF, 0x00, 0x00</span>)</li>
 <li>Top guide line thickness: 5 pixels</li>
-<li>Background color: Black (RGB: 0x00, 0x00, 0x00)</li>
-<li>Bar groove background color: Dark gray (RGB: 0x30, 0x30, 0x30)</li>
+<li>Background color: Black (RGB: <span class="tt">0x00, 0x00, 0x00</span>)</li>
+<li>Bar groove background color: Dark gray (RGB: <span class="tt">0x30, 0x30, 0x30</span>) Internal pointers to the off-screen frame buffer and LCD drawing brush are initialized to <span class="tt">nullptr</span>. <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000023">Bug</a></b></dt><dd>none </dd></dl>
+</li>
 </ul>
-<p>Internal pointers to the off-screen frame buffer and LCD drawing brush are initialized to nullptr. </p>
 
 </div>
 </div>
@@ -317,13 +324,29 @@ Example Usage</h3>
 </div><div class="memdoc">
 
 <p>Renders the widget background and the segmented top reference guideline. </p>
-<p>Renders the widget background and the segmented top reference guideline. The top reference guideline is partitioned into four colored segments proportional to their respective RPM ranges relative to mMaxRpm:</p><ol type="1">
-<li>Idle segment: width proportional to <span class="tt">mIdleRpm / mMaxRpm</span>, drawn in <span class="tt">mIdleColor</span>.</li>
-<li>Normal segment: width proportional to <span class="tt">(mWarningRpm - mIdleRpm) / mMaxRpm</span>, drawn in <span class="tt">mNormalColor</span>.</li>
-<li>Warning segment: width proportional to <span class="tt">(mOverRpm - mWarningRpm) / mMaxRpm</span>, drawn in <span class="tt">mWarningColor</span>.</li>
-<li>Over-rev segment: width proportional to <span class="tt">(mMaxRpm - mOverRpm) / mMaxRpm</span>, drawn in <span class="tt">mOverColor</span>.</li>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns early without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground()</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span>, and <span class="tt"><a class="el" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e" title="Sets the widget display area (position and dimensions) by pointer.">setArea()</a></span> must be called beforehand. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The outer background and 4-segment colored top reference line are blitted onto the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Renders the widget background and the segmented top reference guideline. The top reference guideline is partitioned into four colored segments proportional to their respective RPM ranges relative to <span class="tt"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>:</p><ol type="1">
+<li>Idle segment: width proportional to <span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a> / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>, drawn in <span class="tt"><a class="el" href="#ac9c8bfcfab46d52ae532c6649875afbd" title="Fill and topline color for the idle RPM zone (0 ~ mIdleRpm).">mIdleColor</a></span>.</li>
+<li>Normal segment: width proportional to <span class="tt">(<a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a> - <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a>) / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>, drawn in <span class="tt"><a class="el" href="#a4dd87f6b27e3e01158cf1059da00fff0" title="Fill and topline color for the normal RPM zone (mIdleRpm ~ mWarningRpm).">mNormalColor</a></span>.</li>
+<li>Warning segment: width proportional to <span class="tt">(<a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a> - <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a>) / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>, drawn in <span class="tt"><a class="el" href="#a4cfb3a4a070b650ba7d8cffad512af7a" title="Fill and topline color for the warning RPM zone (mWarningRpm ~ mOverRpm).">mWarningColor</a></span>.</li>
+<li>Over-rev segment: width proportional to <span class="tt">(<a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a> - <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a>) / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>, drawn in <span class="tt"><a class="el" href="#a1b20475718fcedba3f421eec7d9afa98" title="Fill and topline color for the over-rev / redline RPM zone (mOverRpm ~ mMaxRpm).">mOverColor</a></span>. Once all segments are rendered into the off-screen frame buffer, the composited background is transferred to the LCD surface. <dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000030">Bug</a></b></dt><dd>none </dd></dl>
+</li>
 </ol>
-<p>Once all segments are rendered into the off-screen frame buffer, the composited background is transferred to the LCD surface. </p>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#a0a14a702c2df4739c58e4ab08facaf99">BaseDisplay</a>.</p>
 
@@ -355,30 +378,34 @@ Example Usage</h3>
 <p>Renders the dynamic RPM bar filled proportionally to the given RPM value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Current engine RPM value.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Current engine RPM value. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Renders the dynamic RPM bar filled proportionally to the given RPM value.</p>
-<p>The method performs the following steps:</p><ol type="1">
-<li>Computes the inner bar area with a 3-pixel horizontal margin on each side and vertically positioned beneath the top reference guideline (offset by mToplineThickness + 6).</li>
-<li>Clears the bar area with mBarBgColor.</li>
-<li>Calculates the active bar width as <span class="tt">(value / mMaxRpm) * totalWidth</span>.</li>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Returns early without drawing if <span class="tt"><a class="el" href="classBaseDisplay.html#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> or <span class="tt"><a class="el" href="classBaseDisplay.html#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Overrides <span class="tt"><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue()</a></span>. Automatically selects the active zone color for the bar. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">setLcd()</a></span>, <span class="tt"><a class="el" href="classBaseDisplay.html#ab7ac1ef1a8afe4902083216e0c65a74e" title="Sets the widget display area (position and dimensions) by pointer.">setArea()</a></span>, and <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> should be called first. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The dynamic lower RPM bar is rendered and blitted onto the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Renders the dynamic RPM bar filled proportionally to the given RPM value. The method performs the following steps:</p><ol type="1">
+<li>Computes the inner bar area with a 3-pixel horizontal margin on each side and vertically positioned beneath the top reference guideline (offset by <span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Vertical height in pixels of the top segmented reference guideline.">mToplineThickness</a> + 6</span>).</li>
+<li>Clears the bar area with <span class="tt"><a class="el" href="#afe823cbbb641d90056c80ceabdde9485" title="Background fill color of the dynamic RPM bar groove.">mBarBgColor</a></span>.</li>
+<li>Calculates the active bar width as <span class="tt">(value / <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a>) * totalWidth</span>.</li>
 <li>Determines the fill brush color based on current RPM zone:<ul>
-<li>value &lt; mIdleRpm: mIdleColor</li>
-<li>value &lt; mWarningRpm: mNormalColor</li>
-<li>value &lt; mOverRpm: mWarningColor</li>
-<li>value &gt;= mOverRpm: mOverColor</li>
+<li><span class="tt">value &lt; <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>: <span class="tt"><a class="el" href="#ac9c8bfcfab46d52ae532c6649875afbd" title="Fill and topline color for the idle RPM zone (0 ~ mIdleRpm).">mIdleColor</a></span></li>
+<li><span class="tt">value &lt; <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>: <span class="tt"><a class="el" href="#a4dd87f6b27e3e01158cf1059da00fff0" title="Fill and topline color for the normal RPM zone (mIdleRpm ~ mWarningRpm).">mNormalColor</a></span></li>
+<li><span class="tt">value &lt; <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>: <span class="tt"><a class="el" href="#a4cfb3a4a070b650ba7d8cffad512af7a" title="Fill and topline color for the warning RPM zone (mWarningRpm ~ mOverRpm).">mWarningColor</a></span></li>
+<li><span class="tt">value &gt;= <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>: <span class="tt"><a class="el" href="#a1b20475718fcedba3f421eec7d9afa98" title="Fill and topline color for the over-rev / redline RPM zone (mOverRpm ~ mMaxRpm).">mOverColor</a></span></li>
 </ul>
 </li>
-<li>Fills the dynamic bar rectangle and blits the resulting bitmap directly onto the target LCD surface at the appropriate screen coordinates.</li>
+<li>Fills the dynamic bar rectangle and blits the resulting bitmap directly onto the target LCD surface at the appropriate screen coordinates. <dl class="section see"><dt>See also</dt><dd><a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7" title="Renders the numerical value onto the display.">BaseDisplay::drawValue</a>, <a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000029">Bug</a></b></dt><dd>none </dd></dl>
+</li>
 </ol>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Current engine RPM value to display. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 <p>Implements <a class="el" href="classBaseDisplay.html#af5b3bffb81f612b55dc86045b3d51db7">BaseDisplay</a>.</p>
 
@@ -402,17 +429,21 @@ Example Usage</h3>
 <p>Sets the background color of the dynamic bar track. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Background color of the bar groove.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Background color of the bar groove. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the background color of the dynamic RPM bar track behind the active colored bar indicator.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color object for the dynamic bar track background. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Takes effect on the next <span class="tt"><a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">drawValue()</a></span> invocation. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#afe823cbbb641d90056c80ceabdde9485" title="Background fill color of the dynamic RPM bar groove.">mBarBgColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Sets the background color of the dynamic RPM bar track behind the active colored bar indicator. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000028">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -434,17 +465,21 @@ Example Usage</h3>
 <p>Sets the color representing the idle RPM range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for idle RPM.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for idle RPM (<span class="tt">0 ~ <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the display color representing the engine idle zone (from 0 up to mIdleRpm).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color object for the idle zone. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after modifying topline zone colors to refresh the top guideline. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#ac9c8bfcfab46d52ae532c6649875afbd" title="Fill and topline color for the idle RPM zone (0 ~ mIdleRpm).">mIdleColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the display color representing the engine idle zone (from 0 up to <span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000024">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -466,17 +501,21 @@ Example Usage</h3>
 <p>Sets the maximum scale value of the RPM gauge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rpm</td><td>Maximum RPM value (e.g. 8000).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rpm</td><td>Maximum RPM value (e.g. 8000). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the full-scale maximum RPM value used for calculating relative bar widths and segment proportions across the widget.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rpm</td><td>Maximum RPM scale limit (e.g. 8000, 9000). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><span class="tt">rpm</span> must be greater than <span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span> and non-zero to avoid division by zero. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after changing <span class="tt"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span> to recalculate top guideline segment widths. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">rpm &gt; 0</span> </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span> is updated to <span class="tt">rpm</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the full-scale maximum RPM value (<span class="tt"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>) used for calculating relative bar widths and segment proportions across the widget. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000031">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -498,17 +537,21 @@ Example Usage</h3>
 <p>Sets the color representing the normal RPM range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for normal RPM.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for normal RPM (<span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a> ~ <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the display color representing the normal cruising engine speed range (from mIdleRpm up to mWarningRpm).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color object for the normal driving zone. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after modifying topline zone colors to refresh the top guideline. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a4dd87f6b27e3e01158cf1059da00fff0" title="Fill and topline color for the normal RPM zone (mIdleRpm ~ mWarningRpm).">mNormalColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the display color representing the normal cruising engine speed range (from <span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span> up to <span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000025">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -530,17 +573,21 @@ Example Usage</h3>
 <p>Sets the color representing the over-rev / redline RPM range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for over-rev RPM.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for over-rev RPM (<span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a> ~ <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the display color representing the redline / over-rev danger range (from mOverRpm up to mMaxRpm).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color object for the over-rev zone. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after modifying topline zone colors to refresh the top guideline. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a1b20475718fcedba3f421eec7d9afa98" title="Fill and topline color for the over-rev / redline RPM zone (mOverRpm ~ mMaxRpm).">mOverColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the display color representing the redline / over-rev danger range (from <span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span> up to <span class="tt"><a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000027">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -562,17 +609,21 @@ Example Usage</h3>
 <p>Sets the vertical thickness of the top segmented guide bar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>Height in pixels.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>Height in pixels. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the vertical thickness of the top segmented reference guideline bar in pixels. Adjusting this value alters both the guideline height and the vertical offset of the main dynamic bar beneath it.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>Height in pixels for the top reference line. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><span class="tt">thickness + 6</span> must be less than the total widget height. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after changing topline thickness. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Vertical height in pixels of the top segmented reference guideline.">mToplineThickness</a></span> is updated to <span class="tt">thickness</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Sets the vertical thickness of the top segmented reference guideline bar in pixels (<span class="tt"><a class="el" href="#a765307fdcec9f10b3a37e00fe5010886" title="Vertical height in pixels of the top segmented reference guideline.">mToplineThickness</a></span>). Adjusting this value alters both the guideline height and the vertical offset of the main dynamic bar beneath it. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000032">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -594,17 +645,262 @@ Example Usage</h3>
 <p>Sets the color representing the warning RPM range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for warning RPM.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color for warning RPM (<span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a> ~ <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the display color representing the high warning engine speed range (from mWarningRpm up to mOverRpm).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color object for the warning zone. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">drawBackground()</a></span> after modifying topline zone colors to refresh the top guideline. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a4cfb3a4a070b650ba7d8cffad512af7a" title="Fill and topline color for the warning RPM zone (mWarningRpm ~ mOverRpm).">mWarningColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the display color representing the high warning engine speed range (from <span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span> up to <span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2e0fec8b40e13e57d002a67d36500943" title="Renders the widget background and the segmented top reference guideline.">RpmBarDisplay::drawBackground</a>, <a class="el" href="#aba4b45df1270b9d5234b4749838ae49c" title="Renders the dynamic RPM bar filled proportionally to the given RPM value.">RpmBarDisplay::drawValue</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000026">Bug</a></b></dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="afe823cbbb641d90056c80ceabdde9485" name="afe823cbbb641d90056c80ceabdde9485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe823cbbb641d90056c80ceabdde9485">&#9670;&#160;</a></span>mBarBgColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RpmBarDisplay::mBarBgColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Background fill color of the dynamic RPM bar groove. </p>
+
+</div>
+</div>
+<a id="ac9c8bfcfab46d52ae532c6649875afbd" name="ac9c8bfcfab46d52ae532c6649875afbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9c8bfcfab46d52ae532c6649875afbd">&#9670;&#160;</a></span>mIdleColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RpmBarDisplay::mIdleColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill and topline color for the idle RPM zone (<span class="tt">0 ~ <a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a></span>). </p>
+
+</div>
+</div>
+<a id="a416572e146992f2806f035807554d39a" name="a416572e146992f2806f035807554d39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416572e146992f2806f035807554d39a">&#9670;&#160;</a></span>mIdleRpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t RpmBarDisplay::mIdleRpm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Upper RPM boundary of the idle zone. </p>
+
+</div>
+</div>
+<a id="aaecfcae0f14a593168fa21ff1589fc9e" name="aaecfcae0f14a593168fa21ff1589fc9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecfcae0f14a593168fa21ff1589fc9e">&#9670;&#160;</a></span>mMaxRpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t RpmBarDisplay::mMaxRpm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Full-scale maximum RPM value of the gauge. </p>
+
+</div>
+</div>
+<a id="a4dd87f6b27e3e01158cf1059da00fff0" name="a4dd87f6b27e3e01158cf1059da00fff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd87f6b27e3e01158cf1059da00fff0">&#9670;&#160;</a></span>mNormalColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RpmBarDisplay::mNormalColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill and topline color for the normal RPM zone (<span class="tt"><a class="el" href="#a416572e146992f2806f035807554d39a" title="Upper RPM boundary of the idle zone.">mIdleRpm</a> ~ <a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a></span>). </p>
+
+</div>
+</div>
+<a id="a1b20475718fcedba3f421eec7d9afa98" name="a1b20475718fcedba3f421eec7d9afa98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b20475718fcedba3f421eec7d9afa98">&#9670;&#160;</a></span>mOverColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RpmBarDisplay::mOverColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill and topline color for the over-rev / redline RPM zone (<span class="tt"><a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a> ~ <a class="el" href="#aaecfcae0f14a593168fa21ff1589fc9e" title="Full-scale maximum RPM value of the gauge.">mMaxRpm</a></span>). </p>
+
+</div>
+</div>
+<a id="a106c84fb391faac7bb97e1f161ce27ca" name="a106c84fb391faac7bb97e1f161ce27ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106c84fb391faac7bb97e1f161ce27ca">&#9670;&#160;</a></span>mOverRpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t RpmBarDisplay::mOverRpm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lower RPM boundary of the over-rev / redline zone. </p>
+
+</div>
+</div>
+<a id="a765307fdcec9f10b3a37e00fe5010886" name="a765307fdcec9f10b3a37e00fe5010886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765307fdcec9f10b3a37e00fe5010886">&#9670;&#160;</a></span>mToplineThickness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t RpmBarDisplay::mToplineThickness</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vertical height in pixels of the top segmented reference guideline. </p>
+
+</div>
+</div>
+<a id="a4cfb3a4a070b650ba7d8cffad512af7a" name="a4cfb3a4a070b650ba7d8cffad512af7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfb3a4a070b650ba7d8cffad512af7a">&#9670;&#160;</a></span>mWarningColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RpmBarDisplay::mWarningColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill and topline color for the warning RPM zone (<span class="tt"><a class="el" href="#abcc5d0f005e34d2504a717261fb275a2" title="Lower RPM boundary of the warning zone.">mWarningRpm</a> ~ <a class="el" href="#a106c84fb391faac7bb97e1f161ce27ca" title="Lower RPM boundary of the over-rev / redline zone.">mOverRpm</a></span>). </p>
+
+</div>
+</div>
+<a id="abcc5d0f005e34d2504a717261fb275a2" name="abcc5d0f005e34d2504a717261fb275a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc5d0f005e34d2504a717261fb275a2">&#9670;&#160;</a></span>mWarningRpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t RpmBarDisplay::mWarningRpm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lower RPM boundary of the warning zone. </p>
 
 </div>
 </div>

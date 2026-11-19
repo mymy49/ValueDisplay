@@ -14,6 +14,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,18 +93,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for BaseDisplay:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBaseDisplay__inherit__graph.png" border="0" usemap="#aBaseDisplay_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="aBaseDisplay_inherit__map" id="aBaseDisplay_inherit__map">
-<area shape="rect" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget..." alt="" coords="165,5,268,33"/>
-<area shape="rect" href="classProgressDisplay.html" title="Widget for drawing a horizontal progress bar indicator." alt="" coords="5,81,132,109"/>
-<area shape="poly" title=" " alt="" coords="175,42,96,83,93,78,178,38"/>
-<area shape="rect" href="classRpmBarDisplay.html" title="Widget displaying engine RPM as a segmented colored bar and a colored top guideline." alt="" coords="155,81,278,109"/>
-<area shape="poly" title=" " alt="" coords="218,47,219,82,214,79,215,51"/>
-<area shape="rect" href="classValueDisplay.html" title="Display widget capable of rendering a formatted numeric value, unit label, title, and interactive cur..." alt="" coords="302,81,408,109"/>
-<area shape="poly" title=" " alt="" coords="255,38,333,80,328,81,254,43"/>
-<area shape="rect" href="classAlertValueDisplay.html" title="Specialized ValueDisplay that changes text color based on low/high threshold comparisons." alt="" coords="286,157,424,184"/>
-<area shape="poly" title=" " alt="" coords="357,123,357,158,353,155,353,126"/>
-</map>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classBaseDisplay__inherit__graph.svg" width="430" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -115,13 +111,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973a860a6dd9fbb27dcb6fac6faaf62a" id="r_a973a860a6dd9fbb27dcb6fac6faaf62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a973a860a6dd9fbb27dcb6fac6faaf62a">setSize</a> (uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:a973a860a6dd9fbb27dcb6fac6faaf62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width and height of the display widget.  <br /></td></tr>
 <tr class="memitem:a502493591ecd9351491cc7e2766bba46" id="r_a502493591ecd9351491cc7e2766bba46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a502493591ecd9351491cc7e2766bba46">setSize</a> (Size size)</td></tr>
-<tr class="memdesc:a502493591ecd9351491cc7e2766bba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a Size object.  <br /></td></tr>
+<tr class="memdesc:a502493591ecd9351491cc7e2766bba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimensions of the display widget using a <span class="tt">Size</span> object.  <br /></td></tr>
 <tr class="memitem:a9978c590b9585bcb32942b45abbab343" id="r_a9978c590b9585bcb32942b45abbab343"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9978c590b9585bcb32942b45abbab343">getSize</a> ()</td></tr>
 <tr class="memdesc:a9978c590b9585bcb32942b45abbab343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current dimensions of the display widget.  <br /></td></tr>
 <tr class="memitem:a6d2b804ec3ccfa6773c1d92b651d308a" id="r_a6d2b804ec3ccfa6773c1d92b651d308a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d2b804ec3ccfa6773c1d92b651d308a">setPosition</a> (Position pos)</td></tr>
 <tr class="memdesc:a6d2b804ec3ccfa6773c1d92b651d308a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the screen position coordinates of the display widget.  <br /></td></tr>
 <tr class="memitem:ae011b4f768f68c7eb903778a507af20a" id="r_ae011b4f768f68c7eb903778a507af20a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae011b4f768f68c7eb903778a507af20a">setBgColor</a> (Color color)</td></tr>
-<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a Color object.  <br /></td></tr>
+<tr class="memdesc:ae011b4f768f68c7eb903778a507af20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using a <span class="tt">Color</span> object.  <br /></td></tr>
 <tr class="memitem:a12f0bcbf1c1ff38fec8a39488c94781b" id="r_a12f0bcbf1c1ff38fec8a39488c94781b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12f0bcbf1c1ff38fec8a39488c94781b">setBgColor</a> (uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha=0xFF)</td></tr>
 <tr class="memdesc:a12f0bcbf1c1ff38fec8a39488c94781b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color of the widget using RGBA color components.  <br /></td></tr>
 <tr class="memitem:a08b84fe7d6825e04e954e4c9134ec055" id="r_a08b84fe7d6825e04e954e4c9134ec055"><td class="memItemLeft" align="right" valign="top">Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08b84fe7d6825e04e954e4c9134ec055">getPosition</a> (void)</td></tr>
@@ -139,18 +135,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top"><a id="ad2fa954aef2feb387f6ecab7df9c43b3" name="ad2fa954aef2feb387f6ecab7df9c43b3"></a>
-FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><b>mFb</b></td></tr>
-<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering. <br /></td></tr>
-<tr class="memitem:a29135f90659f9f2a950d10710191fee7" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top"><a id="a29135f90659f9f2a950d10710191fee7" name="a29135f90659f9f2a950d10710191fee7"></a>
-Area&#160;</td><td class="memItemRight" valign="bottom"><b>mArea</b></td></tr>
-<tr class="memdesc:a29135f90659f9f2a950d10710191fee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates. <br /></td></tr>
-<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top"><a id="a9a75aaac93b74176c11a7738d0e4901a" name="a9a75aaac93b74176c11a7738d0e4901a"></a>
-Color&#160;</td><td class="memItemRight" valign="bottom"><b>mBgColor</b></td></tr>
-<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color. <br /></td></tr>
-<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top"><a id="ab0aa6cf255202d8b99c6b13e622e1e52" name="ab0aa6cf255202d8b99c6b13e622e1e52"></a>
-Brush *&#160;</td><td class="memItemRight" valign="bottom"><b>mLcd</b></td></tr>
-<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface). <br /></td></tr>
+<tr class="memitem:ad2fa954aef2feb387f6ecab7df9c43b3" id="r_ad2fa954aef2feb387f6ecab7df9c43b3"><td class="memItemLeft" align="right" valign="top">FrameBuffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3">mFb</a></td></tr>
+<tr class="memdesc:ad2fa954aef2feb387f6ecab7df9c43b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to working framebuffer for off-screen rendering.  <br /></td></tr>
+<tr class="memitem:a29135f90659f9f2a950d10710191fee7" id="r_a29135f90659f9f2a950d10710191fee7"><td class="memItemLeft" align="right" valign="top">Area&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29135f90659f9f2a950d10710191fee7">mArea</a></td></tr>
+<tr class="memdesc:a29135f90659f9f2a950d10710191fee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display bounding area and screen coordinates.  <br /></td></tr>
+<tr class="memitem:a9a75aaac93b74176c11a7738d0e4901a" id="r_a9a75aaac93b74176c11a7738d0e4901a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a75aaac93b74176c11a7738d0e4901a">mBgColor</a></td></tr>
+<tr class="memdesc:a9a75aaac93b74176c11a7738d0e4901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget background color.  <br /></td></tr>
+<tr class="memitem:ab0aa6cf255202d8b99c6b13e622e1e52" id="r_ab0aa6cf255202d8b99c6b13e622e1e52"><td class="memItemLeft" align="right" valign="top">Brush *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52">mLcd</a></td></tr>
+<tr class="memdesc:ab0aa6cf255202d8b99c6b13e622e1e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to target drawing surface (LCD display interface).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widgets. </p>
@@ -200,11 +192,11 @@ Typical Derived Implementation Example</h3>
 <div class="line">gauge.drawBackground();</div>
 <div class="line">gauge.drawValue(42.0f);</div>
 <div class="ttc" id="aclassBaseDisplay_html_a0a14a702c2df4739c58e4ab08facaf99"><div class="ttname"><a href="#a0a14a702c2df4739c58e4ab08facaf99">BaseDisplay::drawBackground</a></div><div class="ttdeci">virtual void drawBackground()=0</div><div class="ttdoc">Renders the static background graphics of the widget onto the display.</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_a29135f90659f9f2a950d10710191fee7"><div class="ttname"><a href="#a29135f90659f9f2a950d10710191fee7">BaseDisplay::mArea</a></div><div class="ttdeci">Area mArea</div><div class="ttdoc">Display bounding area and screen coordinates.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:74</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_a9a75aaac93b74176c11a7738d0e4901a"><div class="ttname"><a href="#a9a75aaac93b74176c11a7738d0e4901a">BaseDisplay::mBgColor</a></div><div class="ttdeci">Color mBgColor</div><div class="ttdoc">Widget background color.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:75</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ab0aa6cf255202d8b99c6b13e622e1e52"><div class="ttname"><a href="#ab0aa6cf255202d8b99c6b13e622e1e52">BaseDisplay::mLcd</a></div><div class="ttdeci">Brush * mLcd</div><div class="ttdoc">Pointer to target drawing surface (LCD display interface).</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:76</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ac4cd0d50d761ae71643c15c1c36d3ade"><div class="ttname"><a href="#ac4cd0d50d761ae71643c15c1c36d3ade">BaseDisplay::BaseDisplay</a></div><div class="ttdeci">BaseDisplay(void)</div><div class="ttdoc">Constructs a new BaseDisplay object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:15</div></div>
-<div class="ttc" id="aclassBaseDisplay_html_ad2fa954aef2feb387f6ecab7df9c43b3"><div class="ttname"><a href="#ad2fa954aef2feb387f6ecab7df9c43b3">BaseDisplay::mFb</a></div><div class="ttdeci">FrameBuffer * mFb</div><div class="ttdoc">Pointer to working framebuffer for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:73</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a29135f90659f9f2a950d10710191fee7"><div class="ttname"><a href="#a29135f90659f9f2a950d10710191fee7">BaseDisplay::mArea</a></div><div class="ttdeci">Area mArea</div><div class="ttdoc">Display bounding area and screen coordinates.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:76</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_a9a75aaac93b74176c11a7738d0e4901a"><div class="ttname"><a href="#a9a75aaac93b74176c11a7738d0e4901a">BaseDisplay::mBgColor</a></div><div class="ttdeci">Color mBgColor</div><div class="ttdoc">Widget background color.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:77</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ab0aa6cf255202d8b99c6b13e622e1e52"><div class="ttname"><a href="#ab0aa6cf255202d8b99c6b13e622e1e52">BaseDisplay::mLcd</a></div><div class="ttdeci">Brush * mLcd</div><div class="ttdoc">Pointer to target drawing surface (LCD display interface).</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:78</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ac4cd0d50d761ae71643c15c1c36d3ade"><div class="ttname"><a href="#ac4cd0d50d761ae71643c15c1c36d3ade">BaseDisplay::BaseDisplay</a></div><div class="ttdeci">BaseDisplay(void)</div><div class="ttdoc">Constructs a new BaseDisplay object.</div><div class="ttdef"><b>Definition</b> BaseDisplay.cpp:20</div></div>
+<div class="ttc" id="aclassBaseDisplay_html_ad2fa954aef2feb387f6ecab7df9c43b3"><div class="ttname"><a href="#ad2fa954aef2feb387f6ecab7df9c43b3">BaseDisplay::mFb</a></div><div class="ttdeci">FrameBuffer * mFb</div><div class="ttdoc">Pointer to working framebuffer for off-screen rendering.</div><div class="ttdef"><b>Definition</b> BaseDisplay.h:75</div></div>
 <div class="ttc" id="aclassBaseDisplay_html_af5b3bffb81f612b55dc86045b3d51db7"><div class="ttname"><a href="#af5b3bffb81f612b55dc86045b3d51db7">BaseDisplay::drawValue</a></div><div class="ttdeci">virtual void drawValue(float value)=0</div><div class="ttdoc">Renders the numerical value onto the display.</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4cd0d50d761ae71643c15c1c36d3ade" name="ac4cd0d50d761ae71643c15c1c36d3ade"></a>
@@ -223,7 +215,23 @@ Typical Derived Implementation Example</h3>
 </div><div class="memdoc">
 
 <p>Constructs a new <a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a> object. </p>
-<p>Initializes a new instance of the <a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a> class. It resets the internal off-screen framebuffer pointer (mFb) and the target display drawing interface brush (mLcd) to nullptr, ensuring that rendering methods will safely return early until both drawing targets are configured. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Working framebuffer (<span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>) and LCD brush (<span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>) must be configured before rendering. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Initializes <span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> and <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> pointers to <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a></span> base members are initialized to safe defaults. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Initializes a new instance of the <span class="tt"><a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a></span> class. Resets the internal off-screen framebuffer pointer (<span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>) and the target display drawing interface brush (<span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>) to <span class="tt">nullptr</span>, ensuring that rendering methods safely return early until both drawing targets are configured. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">BaseDisplay::setFrameBuffer</a>, <a class="el" href="#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">BaseDisplay::setLcd</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000005">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -252,6 +260,20 @@ Typical Derived Implementation Example</h3>
 </div><div class="memdoc">
 
 <p>Renders the static background graphics of the widget onto the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Pure virtual function; must be implemented by derived display widget classes. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Should be called once during page initialization or after layout changes. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>, <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>, and <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> must be configured before calling. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The static background and labels of the widget are drawn on the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated</a></b></dt><dd>none </dd></dl>
 
 <p>Implemented in <a class="el" href="classProgressDisplay.html#aa7a15380790f0d2b541f522953c1d7da">ProgressDisplay</a>, <a class="el" href="classRpmBarDisplay.html#a2e0fec8b40e13e57d002a67d36500943">RpmBarDisplay</a>, and <a class="el" href="classValueDisplay.html#a035a6edfd2be7db85fd4808e9b75033b">ValueDisplay</a>.</p>
 
@@ -287,6 +309,14 @@ Typical Derived Implementation Example</h3>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Pure virtual function; must be implemented by derived display widget classes. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Renders into <span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> and blits the updated region onto <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>, <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>, and <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> must be configured before calling. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The dynamic value portion of the widget is updated on the LCD. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>none </dd></dl>
 
 <p>Implemented in <a class="el" href="classAlertValueDisplay.html#adcfd4a0e9ba4c78c4bbb3a6cca48ea61">AlertValueDisplay</a>, <a class="el" href="classProgressDisplay.html#aaff00d2530e2a899527a813c5dabab1a">ProgressDisplay</a>, <a class="el" href="classRpmBarDisplay.html#aba4b45df1270b9d5234b4749838ae49c">RpmBarDisplay</a>, and <a class="el" href="classValueDisplay.html#a08bb1d7b3710d7c167716f3c6468d197">ValueDisplay</a>.</p>
 
@@ -308,9 +338,23 @@ Typical Derived Implementation Example</h3>
 </div><div class="memdoc">
 
 <p>Gets the pointer to the currently associated framebuffer. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameBuffer* Pointer to the framebuffer, or nullptr if not set.</dd></dl>
-<p>Returns the pointer to the currently assigned off-screen FrameBuffer object, allowing caller inspection or external modifications.</p>
-<dl class="section return"><dt>Returns</dt><dd>FrameBuffer* Pointer to the current FrameBuffer instance, or nullptr if none is configured. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">FrameBuffer*</span> pointer to the attached working framebuffer, or <span class="tt">nullptr</span> if not set. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>May return <span class="tt">nullptr</span> if <span class="tt"><a class="el" href="#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">setFrameBuffer()</a></span> has not been called. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Widget state remains unchanged. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Returns the pointer to the currently assigned off-screen <span class="tt">FrameBuffer</span> object (<span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>), allowing caller inspection or external modifications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">BaseDisplay::setFrameBuffer</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000018">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -330,9 +374,23 @@ Typical Derived Implementation Example</h3>
 </div><div class="memdoc">
 
 <p>Gets the current screen position coordinates of the display widget. </p>
-<dl class="section return"><dt>Returns</dt><dd>Position The current screen position.</dd></dl>
-<p>Retrieves the current screen placement coordinates (X, Y) of the widget relative to the display root.</p>
-<dl class="section return"><dt>Returns</dt><dd>Position The current top-left screen position. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">Position</span> representing the top-left screen coordinates of the widget. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Queries <span class="tt">mArea.getPosition()</span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Widget state remains unchanged. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Retrieves the current screen placement coordinates (X, Y) of the widget relative to the display root. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6d2b804ec3ccfa6773c1d92b651d308a" title="Sets the screen position coordinates of the display widget.">BaseDisplay::setPosition</a>, Area::getPosition </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000017">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -352,9 +410,23 @@ Typical Derived Implementation Example</h3>
 </div><div class="memdoc">
 
 <p>Gets the current dimensions of the display widget. </p>
-<dl class="section return"><dt>Returns</dt><dd>Size The current size of the widget.</dd></dl>
-<p>Retrieves the current visual dimensions (width and height) of the widget bounding area.</p>
-<dl class="section return"><dt>Returns</dt><dd>Size A Size object containing the width and height in pixels. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">Size</span> object containing the current width and height of the widget in pixels. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Queries <span class="tt">mArea.getSize()</span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Widget state remains unchanged. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Retrieves the current visual dimensions (width and height) of the widget bounding area (<span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a973a860a6dd9fbb27dcb6fac6faaf62a" title="Sets the width and height of the display widget.">BaseDisplay::setSize</a>, Area::getSize </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000013">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -376,17 +448,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the widget display area (position and dimensions) by pointer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Pointer to the Area object.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Pointer to the <span class="tt">Area</span> object defining top-left coordinates and size. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Updates the widget's bounding area by dereferencing the provided Area pointer. The screen coordinates (X, Y) and dimensions (width, height) are copied directly into member variable mArea.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>Pointer to the Area structure containing position and dimension settings. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><span class="tt">area</span> must not be <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Copies the dereferenced <span class="tt">Area</span> value into <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">area</span> must point to a valid <span class="tt">Area</span> instance. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> is updated with the new position and size. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Updates the widget's bounding area by dereferencing the provided <span class="tt">Area</span> pointer. The screen coordinates (X, Y) and dimensions (width, height) are copied directly into member variable <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a973a860a6dd9fbb27dcb6fac6faaf62a" title="Sets the width and height of the display widget.">BaseDisplay::setSize</a>, <a class="el" href="#a6d2b804ec3ccfa6773c1d92b651d308a" title="Sets the screen position coordinates of the display widget.">BaseDisplay::setPosition</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000009">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -408,17 +484,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the widget display area (position and dimensions) by value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>The Area object.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>The <span class="tt">Area</span> object defining top-left coordinates and size. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Overwrites the widget's bounding area with the passed Area value, defining its screen placement and visual dimensions.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">area</td><td>The Area object containing position and dimension settings. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt"><a class="el" href="#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">drawBackground()</a></span> after changing the widget area to refresh the screen. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> is updated to <span class="tt">area</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Overwrites the widget's bounding area with the passed <span class="tt">Area</span> value, defining its screen placement and visual dimensions. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a973a860a6dd9fbb27dcb6fac6faaf62a" title="Sets the width and height of the display widget.">BaseDisplay::setSize</a>, <a class="el" href="#a6d2b804ec3ccfa6773c1d92b651d308a" title="Sets the screen position coordinates of the display widget.">BaseDisplay::setPosition</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000010">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -437,20 +517,24 @@ Typical Derived Implementation Example</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the background color of the widget using a Color object. </p>
+<p>Sets the background color of the widget using a <span class="tt">Color</span> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The background color.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The background <span class="tt">Color</span>. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the default background fill color for the widget using a Color object. This color is used when clearing or redrawing the base widget area.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>The Color to apply to the widget background. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Takes effect on the next <span class="tt"><a class="el" href="#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">drawBackground()</a></span> call. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a9a75aaac93b74176c11a7738d0e4901a" title="Widget background color.">mBgColor</a></span> is updated to <span class="tt">color</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the default background fill color for the widget using a <span class="tt">Color</span> object. This color is used when clearing or redrawing the base widget area. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000015">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -489,20 +573,21 @@ Typical Derived Implementation Example</h3>
     <tr><td class="paramdir">[in]</td><td class="paramname">red</td><td>Red component (0 ~ 255). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">green</td><td>Green component (0 ~ 255). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">blue</td><td>Blue component (0 ~ 255). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Alpha transparency component (0 ~ 255, default: 0xFF).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Alpha transparency component (0 ~ 255, default: 0xFF). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Configures the default background color by specifying individual 8-bit RGBA channel intensities.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">red</td><td>Intensity of the red color component (0 to 255). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">green</td><td>Intensity of the green color component (0 to 255). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">blue</td><td>Intensity of the blue color component (0 to 255). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>Opacity/alpha transparency level (0 to 255, where 255 is fully opaque). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Takes effect on the next <span class="tt"><a class="el" href="#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">drawBackground()</a></span> call. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a9a75aaac93b74176c11a7738d0e4901a" title="Widget background color.">mBgColor</a></span> is updated with the specified RGBA components. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Configures the default background color by specifying individual 8-bit RGBA channel intensities. </p><dl class="section see"><dt>See also</dt><dd>Color::setColor, <a class="el" href="#a0a14a702c2df4739c58e4ab08facaf99" title="Renders the static background graphics of the widget onto the display.">BaseDisplay::drawBackground</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000016">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -524,10 +609,18 @@ Typical Derived Implementation Example</h3>
 <p>Sets the font reference for text rendering. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the Font object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Reference to the <span class="tt">Font</span> object. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Reserved prototype in <span class="tt"><a class="el" href="classBaseDisplay.html" title="Abstract base class providing common geometry, framebuffer, and drawing interfaces for display widget...">BaseDisplay</a></span>; use derived class font configuration methods (e.g. <span class="tt"><a class="el" href="classValueDisplay.html#a51a0542aff986c4a0c1cd0407cc1cf1e" title="Configures font, area, position, colors, and format string for the numeric value.">ValueDisplay::setValueConfig()</a></span>). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>none </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -549,17 +642,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the framebuffer reference used for off-screen rendering. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Reference to the framebuffer object.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Reference to the <span class="tt">FrameBuffer</span> object. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Associates a working off-screen FrameBuffer with the widget by storing its memory address. Off-screen rendering techniques are utilized by this widget to prevent visual flickering before the final composited bitmap is blitted to the display surface.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Reference to the FrameBuffer instance to be used. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The referenced <span class="tt">FrameBuffer</span> must have sufficient memory allocated for the widget's sub-areas. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Stores the address of <span class="tt">fb</span> in <span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">fb</span> must be allocated via <span class="tt">malloc()</span>. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> points to <span class="tt">fb</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Associates a working off-screen <span class="tt">FrameBuffer</span> with the widget by storing its memory address. Off-screen rendering prevents visual flickering before the final composited bitmap is blitted to the display surface. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a360c2560fb69db94b273574bc12ca7bd" title="Gets the pointer to the currently associated framebuffer.">BaseDisplay::getFrameBuffer</a>, <a class="el" href="#a626bb7b332c2c5323d26285192eb668d" title="Sets the target LCD display drawing brush/surface.">BaseDisplay::setLcd</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000007">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -581,17 +678,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the framebuffer pointer used for off-screen rendering. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Pointer to the framebuffer object.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Pointer to the <span class="tt">FrameBuffer</span> object, or <span class="tt">nullptr</span> to detach. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Stores the pointer to an off-screen FrameBuffer instance. Can be passed as nullptr to detach the current framebuffer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>Pointer to the target FrameBuffer object, or nullptr to disassociate. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Drawing methods will return early without rendering if <span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> is <span class="tt">nullptr</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Stores <span class="tt">fb</span> directly in <span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span> is updated to <span class="tt">fb</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Stores the pointer to an off-screen <span class="tt">FrameBuffer</span> instance. Can be passed as <span class="tt">nullptr</span> to detach the current framebuffer. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a360c2560fb69db94b273574bc12ca7bd" title="Gets the pointer to the currently associated framebuffer.">BaseDisplay::getFrameBuffer</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000008">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -613,17 +714,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the target LCD display drawing brush/surface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">brush</td><td>Reference to the target Brush/display surface.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">brush</td><td>Reference to the target <span class="tt">Brush</span> display surface. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Assigns the target LCD drawing surface (brush) by storing its address into mLcd. All subsequent screen output operations (such as copying off-screen framebuffers to the display) will be directed to this brush.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">brush</td><td>Reference to the target LCD Brush/surface to draw on. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The referenced <span class="tt">Brush</span> instance must remain valid throughout the lifetime of this widget. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Stores <span class="tt">&amp;brush</span> in <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Target LCD driver must be initialized. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span> points to <span class="tt">brush</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Assigns the target LCD drawing surface (<span class="tt">brush</span>) by storing its address into <span class="tt"><a class="el" href="#ab0aa6cf255202d8b99c6b13e622e1e52" title="Pointer to target drawing surface (LCD display interface).">mLcd</a></span>. All subsequent screen output operations (such as blitting off-screen framebuffers to the display) are directed to this brush. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac83c002aba8cf4043fb6e4124b1bed85" title="Sets the framebuffer reference used for off-screen rendering.">BaseDisplay::setFrameBuffer</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000006">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -645,17 +750,21 @@ Typical Derived Implementation Example</h3>
 <p>Sets the screen position coordinates of the display widget. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>The target screen position.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>The target top-left screen <span class="tt">Position</span>. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Relocates the widget on the display surface by updating the top-left X and Y coordinates within mArea, preserving its current width and height.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>The new screen coordinate Position. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>none </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Preserves the existing width and height of <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> top-left position is updated to <span class="tt">pos</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Relocates the widget on the display surface by updating the top-left X and Y coordinates within <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>, preserving its current width and height. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a08b84fe7d6825e04e954e4c9134ec055" title="Gets the current screen position coordinates of the display widget.">BaseDisplay::getPosition</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000014">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -674,20 +783,24 @@ Typical Derived Implementation Example</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the dimensions of the display widget using a Size object. </p>
+<p>Sets the dimensions of the display widget using a <span class="tt">Size</span> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The Size object containing width and height.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The <span class="tt">Size</span> object containing width and height in pixels. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the widget dimensions from a Size object while preserving the existing top-left screen position coordinates.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The Size structure specifying the width and height in pixels. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure the attached <span class="tt">FrameBuffer</span> (<span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>) is large enough for the new dimensions. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Preserves the existing top-left screen position of <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> dimensions are updated to <span class="tt">size</span>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Sets the widget dimensions from a <span class="tt">Size</span> object while preserving the existing top-left screen position coordinates. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a9978c590b9585bcb32942b45abbab343" title="Gets the current dimensions of the display widget.">BaseDisplay::getSize</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000012">Bug</a></b></dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -714,18 +827,118 @@ Typical Derived Implementation Example</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Width in pixels. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Height in pixels.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Height in pixels. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Explicitly modifies the horizontal and vertical pixel dimensions of the widget bounding area without altering its current screen coordinate offsets (X and Y).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>The width of the display widget in pixels. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Height of the display widget in pixels. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Yoon-Ki Hong </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2026-11-18 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure the attached <span class="tt">FrameBuffer</span> (<span class="tt"><a class="el" href="#ad2fa954aef2feb387f6ecab7df9c43b3" title="Pointer to working framebuffer for off-screen rendering.">mFb</a></span>) is large enough for the new dimensions. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Preserves the existing top-left screen position of <span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>none </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd><span class="tt"><a class="el" href="#a29135f90659f9f2a950d10710191fee7" title="Display bounding area and screen coordinates.">mArea</a></span> width and height are updated. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated</a></b></dt><dd>none </dd></dl>
+<p>Explicitly modifies the horizontal and vertical pixel dimensions of the widget bounding area without altering its current screen coordinate offsets (X and Y). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a9978c590b9585bcb32942b45abbab343" title="Gets the current dimensions of the display widget.">BaseDisplay::getSize</a>, Area::setWidth, Area::setHeight </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo</a></b></dt><dd>none </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000011">Bug</a></b></dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a29135f90659f9f2a950d10710191fee7" name="a29135f90659f9f2a950d10710191fee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29135f90659f9f2a950d10710191fee7">&#9670;&#160;</a></span>mArea</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Area BaseDisplay::mArea</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display bounding area and screen coordinates. </p>
+
+</div>
+</div>
+<a id="a9a75aaac93b74176c11a7738d0e4901a" name="a9a75aaac93b74176c11a7738d0e4901a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a75aaac93b74176c11a7738d0e4901a">&#9670;&#160;</a></span>mBgColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color BaseDisplay::mBgColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Widget background color. </p>
+
+</div>
+</div>
+<a id="ad2fa954aef2feb387f6ecab7df9c43b3" name="ad2fa954aef2feb387f6ecab7df9c43b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2fa954aef2feb387f6ecab7df9c43b3">&#9670;&#160;</a></span>mFb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameBuffer* BaseDisplay::mFb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to working framebuffer for off-screen rendering. </p>
+
+</div>
+</div>
+<a id="ab0aa6cf255202d8b99c6b13e622e1e52" name="ab0aa6cf255202d8b99c6b13e622e1e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0aa6cf255202d8b99c6b13e622e1e52">&#9670;&#160;</a></span>mLcd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Brush* BaseDisplay::mLcd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to target drawing surface (LCD display interface). </p>
 
 </div>
 </div>
